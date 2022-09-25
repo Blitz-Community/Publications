@@ -25,7 +25,7 @@ If you are the original author and would like your works removed, please contact
 ## 2D GameCreator Beginner Tutorials
 **By Assari**
 
-* [Learning 2D Game Programming](assari/Learning 2D Game Programming.md) [ZIP](assari/assari-learning-2d-game-programming.zip)  :free:
-* [How to write a BreakOut Game](assari/How to write a Breakout game.html) :free:
-* [MaxGUI beginner tutorial](assari/MaxGUI beginner tutorial.html) :free:
-* [Using SQLite with BlitzMax](assari/using-sqlite-with-blitzmax/Beginner Tutorial: Using SQLite with BlitzMax - Part 1.html) :free:
+* [Learning 2D Game Programming](assari/learning-2d-game-programming.md) [ZIP](assari/assari-learning-2d-game-programming.zip) :free:
+* [How to write a BreakOut Game](assari/assari-how-to-write-a-breakout-game.md) [ZIP](assari/assari-how-to-write-a-breakout-game.zip) :free:
+* [MaxGUI beginner tutorial](assari/maxgui-beginner-tutorial.md) [ZIP](assari/assari-maxgui-beginner-tutorial.zip) :free:
+* [Using SQLite with BlitzMax](assari/assari-using-sqlite-with-blitzmax.pdf) [ZIP](assari/assari-using-sqlite-with-blitzmax.zip) :free:

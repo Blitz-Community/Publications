@@ -1,0 +1,2745 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0136)http://web.archive.org/web/20070520052354/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/F5%20-%20Adding%20Missiles.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><script src="./Learning 2D Game Programming: Basic FrameWork Part 5 - Adding Missiles_files/analytics.js" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app210.us.archive.org';v.server_ms=316;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="./Learning 2D Game Programming: Basic FrameWork Part 5 - Adding Missiles_files/bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="./Learning 2D Game Programming: Basic FrameWork Part 5 - Adding Missiles_files/wombat.js" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("http://web.archive.org/web");
+  __wm.wombat("http://www.2dgamecreators.com:80/tutorials/gameprogramming/basics/F5%20-%20Adding%20Missiles.html","20070520052354","http://web.archive.org/","web","/_static/",
+	      "1179638634");
+</script>
+<link rel="stylesheet" type="text/css" href="./Learning 2D Game Programming: Basic FrameWork Part 5 - Adding Missiles_files/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="./Learning 2D Game Programming: Basic FrameWork Part 5 - Adding Missiles_files/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <title>Learning 2D Game Programming: Basic FrameWork Part 5 - Adding Missiles</title>
+  <meta content="Assari" name="author">
+</head>
+
+
+<body><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  /*min-width:800px !important;*/
+}
+</style>
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr;">
+</div><div id="wm-ipp-print">The Wayback Machine - http://web.archive.org/web/20070520052354/http://www.2dgamecreators.com:80/tutorials/gameprogramming/basics/F5%20-%20Adding%20Missiles.html</div>
+<div id="donato" style="position:relative;width:100%;">
+  <div id="donato-base">
+    <iframe id="donato-if" src="./Learning 2D Game Programming: Basic FrameWork Part 5 - Adding Missiles_files/donate.html" scrolling="no" frameborder="0" style="width:100%; height:100%">
+    </iframe>
+  </div>
+</div><script type="text/javascript">
+__wm.bt(650,27,25,2,"web","http://www.2dgamecreators.com/tutorials/gameprogramming/basics/F5 - Adding Missiles.html","20070520052354",1996,"/_static/",["/_static/css/banner-styles.css?v=omkqRugM","/_static/css/iconochive.css?v=qtvMKcIJ"], "False");
+  __wm.rw(1);
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;">Learning 2D Game Programming: Basic FrameWork Part 5 - Adding Missiles </span></span></span><br>
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</span>(c) Assari 2006<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Table of Contents<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</span></span>
+<ol style="font-family: Tahoma;" id="mozToc">
+
+
+<!--mozToc h1 1 h2 2 h3 3 h4 4 h5 5 h6 6--><li><a href="http://web.archive.org/web/20070520052354/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/F5%20-%20Adding%20Missiles.html#mozTocId578655">Introduction</a></li>
+
+
+  <li><a href="http://web.archive.org/web/20070520052354/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/F5%20-%20Adding%20Missiles.html#mozTocId156559">The New Game Program</a></li>
+
+
+  <li><a href="http://web.archive.org/web/20070520052354/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/F5%20-%20Adding%20Missiles.html#mozTocId838494">The Missile Type</a></li>
+
+
+  <li><a href="http://web.archive.org/web/20070520052354/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/F5%20-%20Adding%20Missiles.html#mozTocId753178">Modifying the TSpaceShip Type</a></li>
+
+
+  <li><a href="http://web.archive.org/web/20070520052354/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/F5%20-%20Adding%20Missiles.html#mozTocId578655">Summary</a></li>
+
+
+  <li><a href="http://web.archive.org/web/20070520052354/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/F5%20-%20Adding%20Missiles.html#mozTocId873993">Blitzmax commands introduced in this tutorial</a></li>
+
+
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1><a class="mozTocH1" name="mozTocId578655"></a><small><small><span style="font-family: Tahoma;">Introduction</span></small></small></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;"></span>Now
+that we have a good framework in place, adding more&nbsp;objects into
+our game becomes relatively easier. To add missile firing capability we
+will need to things.<br>
+
+
+</span></span>
+<ul>
+
+
+  <li><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">A missile firing behaviour from our player. We will add the capability to fire missiles when the spacebar is pressed</span></span></li>
+
+
+  <li><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">A missile type to create our missile from</span></span></li>
+
+
+</ul>
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">OK, lets us gets started</span></span>
+
+
+
+<h1><a class="mozTocH1" name="mozTocId156559"></a><small><small><small><span style="font-family: Tahoma;">The New Game Program</span></small></small></small></h1>
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">I'm
+presenting you the new additions below. Go ahead and build and run the
+program so you can see what it does. The highlighted text are our new
+changes:-<br>
+
+
+</span></span><span style="font-family: Arial;"></span>
+<table style="text-align: left; width: 732px; height: 89px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="width: 36px;" align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255); width: 639px;"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(102, 204, 204);"></span></span></span></span></span></span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+
+
+
+
+
+
+      <span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">' -----------------SETUP GAME CONDITIONS--------------------</span></span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+
+
+
+
+
+
+      <span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">
+
+Global GameObjectList:TList=CreateList()</span></span><br style="color: rgb(153, 153, 153);">
+
+
+      <span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">Graphics 640,480,0<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </span><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+
+
+
+      Local URL:String="http::www.2dgamecreators.com/tutorials/gameprogramming/basic/"<br>
+
+
+
+
+
+Local Player:TSpaceShip = TSpaceShip.Create(URL+"/blobship_1-1.png",320,420)<br>
+
+
+
+
+
+      </span><span style="font-family: Tahoma;"></span><span style="font-family: Tahoma;">
+Local Alien:TAlienShip = TAlienShip.Create(URL+"/cartoonufo_1-1.png",320,0)<br>
+
+
+
+
+      <br>
+
+
+
+
+      </span><span style="font-family: Tahoma;">&nbsp;</span><span style="font-family: Tahoma;">' ---------------------MAIN LOOP-------------------------<br>
+
+
+
+
+
+
+
+
+
+
+Repeat<br>
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Cls<br>
+
+
+
+
+
+
+
+
+
+
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; For o:TGameObject=EachIn GameObjectList<br>
+
+
+
+
+
+
+
+
+
+
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;o.DrawSelf()<br>
+
+
+
+
+
+
+      </span><span style="font-family: Tahoma;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;o.UpdateState()<br>
+
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Next<br>
+
+
+
+
+
+
+
+
+
+
+      </span><span style="font-family: Tahoma;">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Flip&nbsp;<br>
+
+
+Until KeyDown(KEY_ESCAPE) Or AppTerminate()<br>
+
+
+
+
+
+
+
+
+
+
+End</span><span style="font-family: Tahoma;">&nbsp;&nbsp;&nbsp; </span><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+
+      <br>
+
+
+
+
+
+
+
+
+
+
+      </span><span style="font-family: Tahoma;">' ---------------------TYPES, ATTRIBUTES AND BEHAVIOURS-------------------------</span></span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+
+
+
+
+
+
+      <span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">Type TGameObject<br>
+
+
+
+
+
+
+
+
+
+
+
+
+      
+      <br>
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; Field X:Int = 320<br>
+
+
+
+
+
+
+
+
+
+
+
+
+      
+&nbsp;&nbsp;&nbsp; Field Y:Int = 420</span><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; Field Speed:Int=3<br>
+
+
+
+
+
+      </span><span style="font-family: Tahoma;">&nbsp; &nbsp; Field Image:TImage<br>
+
+
+
+      <br>
+
+
+
+&nbsp; &nbsp; </span><span style="font-family: Tahoma;">Method DrawSelf()<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; DrawImage Image,X,Y<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      &nbsp;&nbsp;&nbsp; End Method</span><span style="font-family: Tahoma;">&nbsp;&nbsp;&nbsp;&nbsp; </span></span><br style="color: rgb(153, 153, 153);">
+
+
+
+      <span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"><br>
+
+
+
+      </span><span style="font-family: Tahoma;">&nbsp; &nbsp; &nbsp;Method UpdateState() Abstract<br>
+
+
+
+
+      <br>
+
+
+
+
+      </span><span style="font-family: Tahoma;">
+      End Type <br>
+
+
+      <br>
+
+
+      </span><span style="font-family: Tahoma;">&nbsp;Type TSpaceShip Extends TGameObject<br>
+
+
+
+
+
+
+
+
+
+
+
+
+      </span><span style="font-family: Tahoma;"></span><span style="font-family: Tahoma;"><br>
+
+
+      </span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">&nbsp; <span style="color: rgb(255, 255, 102);">&nbsp; &nbsp;Field</span> </span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);">MissileDelay:<span style="color: rgb(255, 255, 102);">Int<br>
+
+
+      </span></span></span></span></span></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">&nbsp;&nbsp;&nbsp; <br>
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; Function Create:TSpaceShip(File:String,xstart:Int,ystart:Int)<br>
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Local Ship:TSpaceShip=New TSpaceShip<br>
+
+
+
+
+
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Ship.X=xstart<br>
+
+
+
+
+
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Ship.Y=ystart<br>
+
+
+
+
+
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Ship.Image=LoadImage(LoadBank(File))<br>
+
+
+
+
+
+      <br>
+
+
+
+
+
+      </span><span style="font-family: Tahoma;">&nbsp; &nbsp; &nbsp; &nbsp;If&nbsp;Ship.Image=Null<br>
+
+
+
+
+
+
+
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Print "Not able to load image file. Program aborting"<br>
+
+
+
+
+
+
+
+      &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; End<br>
+
+
+
+
+
+
+
+      &nbsp; &nbsp; &nbsp; &nbsp;EndIf<br>
+
+
+      <br>
+
+
+      </span><span style="font-family: Tahoma;">
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </span><span style="font-family: Tahoma;">ListAddLast GameObjectList, Ship</span></span><br style="color: rgb(153, 153, 153);">
+
+
+      <span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Return Ship<br>
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; End Function<br>
+
+
+
+
+
+      <br>
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; Method UpdateState()<br>
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; <br>
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; If KeyDown(KEY_LEFT)<br>
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; X :- Speed<br>
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; EndIf&nbsp;&nbsp;&nbsp; <br>
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; If KeyDown(KEY_RIGHT)<br>
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; X :+ Speed<br>
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; EndIf<br>
+
+
+
+
+
+
+
+
+
+
+      </span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">
+
+
+
+
+
+
+
+&nbsp;</span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If KeyDown<span style="color: rgb(255, 255, 255);">(KEY_SPACE) </span><br style="color: rgb(255, 255, 255);">
+
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FireMissile()</span><br>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EndIf<br>
+
+
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);">MissileDelay :- 1&nbsp;</span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><br>
+
+
+      <br style="color: rgb(153, 153, 153);">
+
+
+      </span></span></span></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; If X&lt;0 Then X=0<br>
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; If X&gt;620 Then X=620<br>
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; End Method</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><br>
+
+
+&nbsp;&nbsp; <br>
+
+
+      </span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">&nbsp;&nbsp;&nbsp; Method <span style="color: rgb(255, 255, 255);">FireMissile()<br>
+
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: rgb(255, 255, 102);">If</span> MissileDelay&lt;0<br>
+
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: rgb(255, 255, 102);"> &nbsp; Local <span style="color: rgb(255, 255, 255);">FileName</span>:string</span>=</span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);"></span><span style="color: rgb(51, 255, 51);">"D:\Program Files\BlitzMax\samples\firepaint\bullet.png"</span></span></span></span></span></span><br>
+
+
+      <span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);"></span>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;Local <span style="color: rgb(255, 255, 255);">Missile:TMissile=TMissile.Create(</span>FileName, X+23,Y)<br>
+
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: rgb(255, 255, 255);">MissileDelay=10</span><br>
+
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;End If<br>
+
+
+&nbsp;&nbsp;&nbsp; End Method&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;</span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</span></span></span></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
+
+
+
+
+
+
+
+
+
+
+&nbsp;</span><span style="font-family: Tahoma;"></span><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+
+End Type<br>
+
+
+
+
+      <br>
+
+
+
+
+      </span></span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+
+
+
+
+
+
+
+      <span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"></span><span style="font-family: Tahoma;">Type TAlienShip </span><span style="font-family: Tahoma;">Extends TGameObject</span></span><br style="color: rgb(153, 153, 153);">
+
+
+      <span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">
+
+
+
+
+
+
+
+
+
+
+      </span><span style="font-family: Tahoma;"></span><span style="font-family: Tahoma;"></span></span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+
+
+
+
+
+
+
+      <span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"></span><span style="font-family: Tahoma;">
+&nbsp;&nbsp;&nbsp; Function Create:TAlienShip(File:String,xstart:Int,ystart:Int)<br>
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Local Ship:TAlienShip=New TAlienShip<br>
+
+
+
+
+
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Ship.X=xstart<br>
+
+
+
+
+
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Ship.Y=ystart<br>
+
+
+
+
+
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Ship.Image=LoadImage(LoadBank(File))<br>
+
+
+
+
+
+      <br>
+
+
+
+
+
+      </span><span style="font-family: Tahoma;">&nbsp; &nbsp; &nbsp; &nbsp;If&nbsp;Ship.Image=Null<br>
+
+
+
+
+
+
+
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Print "Not able to load image file. Program aborting"<br>
+
+
+
+
+
+
+
+      &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; End<br>
+
+
+
+
+
+
+
+      &nbsp; &nbsp; &nbsp; &nbsp;EndIf<br>
+
+
+      <br>
+
+
+      </span><span style="font-family: Tahoma;">
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </span><span style="font-family: Tahoma;">ListAddLast GameObjectList, Ship</span></span><br style="color: rgb(153, 153, 153);">
+
+
+      <span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Return Ship<br>
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; End Function<br>
+
+
+
+
+      <br>
+
+
+
+
+      </span><span style="font-family: Tahoma;">&nbsp;&nbsp;&nbsp; Method UpdateState()<br>
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; X :- Speed<br>
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;If X&lt;-ImageWidth(Image) Then X=620<br>
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp; End Method<br>
+
+
+
+
+      <br>
+
+
+
+
+      </span><span style="font-family: Tahoma;">&nbsp;</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(153, 153, 153);">End Type<br>
+
+
+      <br>
+
+
+      </span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">&nbsp;</span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 0);"><span style="color: rgb(255, 255, 0);">
+Type <span style="color: rgb(255, 255, 255);">TMissile </span></span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 0);"><span style="color: rgb(255, 255, 0);">Extends <span style="color: rgb(255, 255, 255);">TGameObject</span></span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 0);"><span style="color: rgb(255, 255, 0);"><span style="color: rgb(255, 255, 255);"></span></span><br style="color: rgb(255, 255, 0);">
+
+
+
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 0);"></span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);"></span> <br>
+
+
+
+      </span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">
+
+&nbsp;&nbsp;&nbsp; Function <span style="color: rgb(255, 255, 255);">Create:TMissile(File:</span>String<span style="color: rgb(255, 255, 255);">,xstart:</span>Int<span style="color: rgb(255, 255, 255);">,ystart:</span>Int<span style="color: rgb(255, 255, 255);">)</span><br>
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Local <span style="color: rgb(255, 255, 255);">Ship:TMissile=</span>New <span style="color: rgb(255, 255, 255);">TMissile</span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);"></span><br>
+
+
+
+
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Ship.X=xstart</span><br style="color: rgb(255, 255, 255);">
+
+
+
+
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Ship.Y=ystart</span><br style="color: rgb(255, 255, 255);">
+
+
+
+
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Ship.Image=</span>LoadImage<span style="color: rgb(255, 255, 255);">(</span>LoadBank<span style="color: rgb(255, 255, 255);">(File))</span><br>
+
+
+
+
+
+      <br>
+
+
+
+
+
+      </span></span></span></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; &nbsp; &nbsp; &nbsp;If&nbsp;<span style="color: rgb(255, 255, 255);">Ship.Image=</span>Null</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Print <span style="color: rgb(51, 255, 51);">"Not able to load image file. Program aborting"</span></span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; End</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp; &nbsp; &nbsp; &nbsp;EndIf<br>
+
+
+      <br>
+
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">
+
+
+      </span></span></span></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);"><span style="color: rgb(255, 255, 102);">ListAddLast</span> GameObjectList, Ship</span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Return Ship<br>
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; End Function<br>
+
+
+
+
+      <br>
+
+
+
+
+      </span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">&nbsp;&nbsp;&nbsp; Method <span style="color: rgb(255, 255, 255);">UpdateState()</span><span style="color: rgb(255, 255, 255);"></span><br>
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<span style="color: rgb(255, 255, 255);"> Y :- Speed</span><br>
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;If <span style="color: rgb(255, 255, 255);">Y&lt;0&nbsp;</span><span style="color: rgb(255, 255, 255);"></span> Then<span style="color: rgb(255, 255, 255);">&nbsp;</span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">ListRemove<span style="color: rgb(255, 255, 255);">(GameObjectList,</span>Self<span style="color: rgb(255, 255, 255);">)</span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);"></span><br>
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp; End Method</span></span></span></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 0);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><br>
+
+
+
+
+      <br>
+
+
+
+
+End Type</span></span></span></span></span><br>
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+<span style="font-family: Arial;">-.</span><span style="font-family: Arial;"><br>
+
+
+
+
+Running the above program will give our game the ability to start firing missiles at our alien ship.<br>
+
+
+</span>
+<table style="text-align: left; width: 732px; height: 92px; font-family: Tahoma;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="width: 27px;" align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="color: rgb(255, 255, 255); background-color: rgb(255, 255, 255); width: 411px;"><img style="width: 400px; height: 317px;" alt="" src="./Learning 2D Game Programming: Basic FrameWork Part 5 - Adding Missiles_files/F5 001.png"><br>
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="width: 266px;" align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+    
+
+    
+
+
+
+
+    
+    
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+    
+
+
+
+
+
+    
+
+
+
+
+
+    
+
+
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+    
+
+
+    
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+<span style="font-family: Arial;"></span>
+<h1><a class="mozTocH1" name="mozTocId838494"></a><small><small><small><span style="font-family: Tahoma;">The Missile Type</span></small></small></small></h1>
+
+
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"></span></span><span style="font-family: Arial;">Note the small differences between the TMissile Type and the TAlienShip Type. The
+main difference is the UpdateState() behaviour. For our missiles, once they
+leave the upper part of the graphic screen we should remove them from
+our game.&nbsp;<br>
+
+
+
+
+
+
+<br>
+
+
+
+
+
+</span>
+<table style="text-align: left; width: 732px; height: 89px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="width: 36px;" align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255); width: 639px;"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(102, 204, 204);"></span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">&nbsp;</span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 0);"><span style="color: rgb(255, 255, 0);">
+      <span style="color: rgb(153, 153, 153);">Type&nbsp;</span></span></span></span></span></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 255);">TMissile</span></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 0);"><span style="color: rgb(255, 255, 0);"><span style="color: rgb(153, 153, 153);"> </span></span></span></span></span></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">Extends TGameObject</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 0);"><span style="color: rgb(255, 255, 0);"><span style="color: rgb(255, 255, 255);"></span></span><br style="color: rgb(255, 255, 0);">
+
+
+
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 0);"></span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);"></span> <br>
+
+
+
+      </span></span></span></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">
+
+&nbsp;&nbsp;&nbsp; Function Create:<span style="color: rgb(255, 255, 255);">TMissile</span>(File:String,xstart:Int,ystart:Int)<br>
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Local Ship:</span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">:<span style="color: rgb(255, 255, 255);">TMissile</span></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">=New&nbsp;</span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">:<span style="color: rgb(255, 255, 255);">TMissile</span></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"></span><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Ship.X=xstart<br>
+
+
+
+
+
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Ship.Y=ystart<br>
+
+
+
+
+
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Ship.Image=LoadImage(LoadBank(File))<br>
+
+
+
+
+
+      <br>
+
+
+
+
+
+      </span><span style="font-family: Tahoma;">&nbsp; &nbsp; &nbsp; &nbsp;If&nbsp;Ship.Image=Null<br>
+
+
+
+
+
+
+
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Print "Not able to load image file. Program aborting"<br>
+
+
+
+
+
+
+
+      &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; End<br>
+
+
+
+
+
+
+
+      &nbsp; &nbsp; &nbsp; &nbsp;EndIf<br>
+
+
+      <br>
+
+
+      </span><span style="font-family: Tahoma;">
+
+
+      </span><span style="font-family: Tahoma;">
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </span><span style="font-family: Tahoma;">ListAddLast GameObjectList, Ship</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </span><br style="color: rgb(153, 153, 153);">
+
+
+      <span style="color: rgb(153, 153, 153);">
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Return Ship</span><br style="color: rgb(153, 153, 153);">
+
+
+      <span style="color: rgb(153, 153, 153);">
+
+
+&nbsp;&nbsp;&nbsp; End Function</span><br>
+
+
+
+
+      <br>
+
+
+
+
+      </span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">&nbsp;&nbsp;&nbsp; Method <span style="color: rgb(255, 255, 255);">UpdateState()</span><span style="color: rgb(255, 255, 255);"></span><br>
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<span style="color: rgb(255, 255, 255);"> Y :- Speed</span><br>
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;If <span style="color: rgb(255, 255, 255);">Y&lt;0&nbsp;</span><span style="color: rgb(255, 255, 255);"></span> Then<span style="color: rgb(255, 255, 255);">&nbsp;</span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">ListRemove<span style="color: rgb(255, 255, 255);">(GameObjectList,</span>Self<span style="color: rgb(255, 255, 255);">)</span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);"></span><br>
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp; End Method</span></span></span></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 0);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><br>
+
+
+
+
+      <br>
+
+
+      <span style="color: rgb(153, 153, 153);">
+
+End Type</span><br>
+
+
+      </span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">
+
+
+      </span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">
+      </span></span></span></span></span></td>
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+<span style="font-family: Arial;"><br>
+
+
+</span><span style="font-family: Arial;">The <span style="font-weight: bold;">ListRemove</span>
+function will remove/delete the missile from the GameObjectList as once
+they leave the screen we do not need them anymore. Remember that during
+our Create function, we inserted the created missile into the
+GameObjectList so that they will be updated and displayed during the
+Main Loop.</span><br>
+
+
+<h1><a class="mozTocH1" name="mozTocId753178"></a><small><small><small><span style="font-family: Tahoma;">Modifying the TSpaceShip Type</span></small></small></small></h1>
+
+
+<span style="font-family: Arial;">We need to add the ability to detect the SPACEBAR and then add in the <span style="font-weight: bold;">FireMissile</span> method to our &nbsp;TSpaceShip type</span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"> plus adding some sort of delay to our Missile Reload Mechanism:-<br>
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+</span></span>
+<table style="text-align: left; width: 732px; height: 89px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="width: 36px;" align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255); width: 639px;"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(102, 204, 204);"></span></span></span></span></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">&nbsp;</span><span style="font-family: Tahoma;">
+Type&nbsp;</span><span style="font-family: Tahoma;">TSpaceShip</span><span style="font-family: Tahoma;"> </span><span style="font-family: Tahoma;">Extends TGameObject</span><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+
+
+
+      </span><span style="font-family: Tahoma;"> <br>
+
+
+&nbsp; &nbsp; <span style="color: rgb(255, 255, 102);">Field</span> </span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);">MissileDelay:<span style="color: rgb(255, 255, 102);">Int</span><br>
+
+
+      <br>
+
+
+      </span></span></span></span></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">
+      </span><span style="font-family: Tahoma;">
+
+&nbsp;&nbsp;&nbsp; Function Create:TSpaceShip(File:String,xstart:Int,ystart:Int)<br>
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Local Ship:</span><span style="font-family: Tahoma;">TSpaceShip</span><span style="font-family: Tahoma;">=New TSpaceShip<br>
+
+
+
+
+
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Ship.X=xstart<br>
+
+
+
+
+
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Ship.Y=ystart<br>
+
+
+
+
+
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Ship.Image=LoadImage(LoadBank(File))<br>
+
+
+
+
+
+      <br>
+
+
+
+
+
+      </span><span style="font-family: Tahoma;">&nbsp; &nbsp; &nbsp; &nbsp;If&nbsp;Ship.Image=Null<br>
+
+
+
+
+
+
+
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Print "Not able to load image file. Program aborting"<br>
+
+
+
+
+
+
+
+      &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; End<br>
+
+
+
+
+
+
+
+      &nbsp; &nbsp; &nbsp; &nbsp;EndIf</span><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+&nbsp;&nbsp;</span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;</span><span style="font-family: Tahoma;">ListAddLast GameObjectList, Ship</span><span style="font-family: Tahoma;">&nbsp; &nbsp;&nbsp;&nbsp; <br>
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Return Ship<br>
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; End Function<br>
+
+
+
+      </span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(153, 153, 153);">&nbsp;&nbsp; </span><br style="color: rgb(153, 153, 153);">
+
+
+      <span style="color: rgb(153, 153, 153);">
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; Method UpdateState()</span><br style="color: rgb(153, 153, 153);">
+
+
+      <span style="color: rgb(153, 153, 153);">
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; </span><br style="color: rgb(153, 153, 153);">
+
+
+      <span style="color: rgb(153, 153, 153);">
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; If KeyDown(KEY_LEFT)</span><br style="color: rgb(153, 153, 153);">
+
+
+      <span style="color: rgb(153, 153, 153);">
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; X :- Speed</span><br style="color: rgb(153, 153, 153);">
+
+
+      <span style="color: rgb(153, 153, 153);">
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; EndIf&nbsp;&nbsp;&nbsp; </span><br style="color: rgb(153, 153, 153);">
+
+
+      <span style="color: rgb(153, 153, 153);">
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; If KeyDown(KEY_RIGHT)</span><br style="color: rgb(153, 153, 153);">
+
+
+      <span style="color: rgb(153, 153, 153);">
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; X :+ Speed</span><br style="color: rgb(153, 153, 153);">
+
+
+      <span style="color: rgb(153, 153, 153);">
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; EndIf</span><br>
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If KeyDown<span style="color: rgb(255, 255, 255);">(KEY_SPACE) </span><br style="color: rgb(255, 255, 255);">
+
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FireMissile()</span><br>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EndIf<br>
+
+
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);">MissileDelay :- 1&nbsp;</span></span></span></span></span></span><br>
+
+
+      <span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><br style="color: rgb(153, 153, 153);">
+
+
+      </span></span></span></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; If X&lt;0 Then X=0<br>
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; If X&gt;620 Then X=620<br>
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; End Method</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><br>
+
+
+&nbsp;&nbsp; <br>
+
+
+&nbsp;&nbsp;&nbsp; Method <span style="color: rgb(255, 255, 255);">FireMissile()<br>
+
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: rgb(255, 255, 102);">If</span> MissileDelay&lt;0<br>
+
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: rgb(255, 255, 102);"> &nbsp; Local <span style="color: rgb(255, 255, 255);">FileName</span>:string</span>=</span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);"></span><span style="color: rgb(51, 255, 51);">"D:\Program Files\BlitzMax\samples\firepaint\bullet.png"</span></span></span></span></span></span><br>
+
+
+      <span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);"></span>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;Local <span style="color: rgb(255, 255, 255);">Missile:TMissile=TMissile.Create(</span>FileName, X+23,Y)<br>
+
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: rgb(255, 255, 255);">MissileDelay=10</span><br>
+
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;End If<br>
+
+
+&nbsp;&nbsp;&nbsp; End Method&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<br>
+
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; </span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+
+
+
+
+
+
+      </span></span></span></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(153, 153, 153);">End Type</span><br>
+
+
+
+
+
+
+      </span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">
+      </span></span></span></span></span></td>
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+
+<span style="font-family: Arial;"></span><br>
+
+
+
+
+
+
+
+
+
+
+
+
+<h1><a class="mozTocH1" name="mozTocId578655"></a><small><small><span style="font-family: Tahoma;">Summary</span></small></small></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+<span style="font-family: Arial;">That was a relatively painless
+exercise of adding missile shooting capability to our game. The next
+obvious addition is collision! That will be in our next tutorial.<br>
+
+
+
+</span>
+<h1><a class="mozTocH1" name="mozTocId873993"></a><small><small><span style="font-family: Tahoma;">Blitzmax commands introduced in this tutorial</span></small></small></h1>
+
+
+
+<span style="font-family: Arial;">No new commands in this tutorial</span><span style="font-family: Arial;"><br>
+
+<br>
+</span><span style="font-family: Arial;">
+
+
+
+
+
+
+Back to the <a href="http://web.archive.org/web/20070520052354/http://www.2dgamecreators.com/tutorials/gameprogramming/index.html">index</a>, <a href="http://web.archive.org/web/20070520052354/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/F4%20-%20Revised%20Framework.html">Previous</a> Tutorial, <a href="http://web.archive.org/web/20070520052354/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/F6%20-%20Adding%20Collision.html">Next</a> Tutorial</span><br>
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"></span></span>
+
+
+
+
+
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">
+</span></span><span style="font-family: Tahoma;"></span>
+
+
+<!--
+     FILE ARCHIVED ON 05:23:54 May 20, 2007 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 12:39:59 Oct 03, 2021.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 123.236
+  exclusion.robots: 0.183
+  exclusion.robots.policy: 0.176
+  RedisCDXSource: 0.48
+  esindex: 0.009
+  LoadShardBlock: 102.469 (3)
+  PetaboxLoader3.datanode: 143.854 (4)
+  CDXLines.iter: 17.492 (3)
+  load_resource: 178.909
+  PetaboxLoader3.resolve: 98.054
+--></body></html>

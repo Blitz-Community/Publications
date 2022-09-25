@@ -1,0 +1,1823 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0137)http://web.archive.org/web/20070525095210/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/F6%20-%20Adding%20Collision.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><script src="./Learning 2D Game Programming: Basic FrameWork Part 6 - Adding Collision_files/analytics.js" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app203.us.archive.org';v.server_ms=542;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="./Learning 2D Game Programming: Basic FrameWork Part 6 - Adding Collision_files/bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="./Learning 2D Game Programming: Basic FrameWork Part 6 - Adding Collision_files/wombat.js" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("http://web.archive.org/web");
+  __wm.wombat("http://www.2dgamecreators.com:80/tutorials/gameprogramming/basics/F6%20-%20Adding%20Collision.html","20070525095210","http://web.archive.org/","web","/_static/",
+	      "1180086730");
+</script>
+<link rel="stylesheet" type="text/css" href="./Learning 2D Game Programming: Basic FrameWork Part 6 - Adding Collision_files/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="./Learning 2D Game Programming: Basic FrameWork Part 6 - Adding Collision_files/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <title>Learning 2D Game Programming: Basic FrameWork Part 6 - Adding Collision</title>
+  <meta content="Assari" name="author">
+</head>
+
+
+<body><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  /*min-width:800px !important;*/
+}
+</style>
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr;">
+</div><div id="wm-ipp-print">The Wayback Machine - http://web.archive.org/web/20070525095210/http://www.2dgamecreators.com:80/tutorials/gameprogramming/basics/F6%20-%20Adding%20Collision.html</div>
+<div id="donato" style="position:relative;width:100%;">
+  <div id="donato-base">
+    <iframe id="donato-if" src="./Learning 2D Game Programming: Basic FrameWork Part 6 - Adding Collision_files/donate.html" scrolling="no" frameborder="0" style="width:100%; height:100%">
+    </iframe>
+  </div>
+</div><script type="text/javascript">
+__wm.bt(650,27,25,2,"web","http://www.2dgamecreators.com/tutorials/gameprogramming/basics/F6 - Adding Collision.html","20070525095210",1996,"/_static/",["/_static/css/banner-styles.css?v=omkqRugM","/_static/css/iconochive.css?v=qtvMKcIJ"], "False");
+  __wm.rw(1);
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;">Learning 2D Game Programming: Basic FrameWork Part 6 - Adding Collision </span></span></span><br>
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</span>(c) Assari 2006<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Table of Contents<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</span></span>
+<ol style="font-family: Tahoma;" id="mozToc">
+
+<!--mozToc h1 1 h2 2 h3 3 h4 4 h5 5 h6 6--><li><a href="http://web.archive.org/web/20070525095210/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/F6%20-%20Adding%20Collision.html#mozTocId578655">Introduction</a></li>
+
+  <li><a href="http://web.archive.org/web/20070525095210/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/F6%20-%20Adding%20Collision.html#mozTocId156559">The New Game Program</a></li>
+
+  <li><a href="http://web.archive.org/web/20070525095210/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/F6%20-%20Adding%20Collision.html#mozTocId838494">The Missile Type</a></li>
+
+  <li><a href="http://web.archive.org/web/20070525095210/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/F6%20-%20Adding%20Collision.html#mozTocId753178">Modifying the TSpaceShip Type</a></li>
+
+  <li><a href="http://web.archive.org/web/20070525095210/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/F6%20-%20Adding%20Collision.html#mozTocId578655">Summary</a></li>
+
+  <li><a href="http://web.archive.org/web/20070525095210/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/F6%20-%20Adding%20Collision.html#mozTocId873993">Blitzmax commands introduced in this tutorial</a></li>
+
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1><a class="mozTocH1" name="mozTocId578655"></a><small><small><span style="font-family: Tahoma;">Introduction</span></small></small></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;"></span>In
+this final part of our introduction series, we will be adding the
+capability to check for collisions between our fired missiles and the
+AlienShip.<br>
+
+<br>
+
+So we know already upfron that only the AlienShip needs to take care of this collision checking. So we need<br>
+
+</span></span>
+<ul>
+
+  <li><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">A Collision Checking behaviour (method) within our TAlienShip</span></span></li>
+
+  <li><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">We
+need a way to indicate that the collision has occured. Since we do not
+wish to destroy anyone (at this stage), the AlienShip will simply
+change color to red when hit by the missile</span></span></li>
+
+  <li><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">We have to modify our parent object TGameObject to set the normal drawing color to white.<br>
+
+    </span></span></li>
+
+</ul>
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">OK, lets us gets started</span></span>
+
+
+
+<h1><a class="mozTocH1" name="mozTocId156559"></a><small><small><small><span style="font-family: Tahoma;">The New Game Program</span></small></small></small></h1>
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">I'm
+presenting you the new additions below. Go ahead and build and run the
+program so you can see what it does. The highlighted text are our new
+changes:-<br>
+
+</span></span><span style="font-family: Arial;"></span>
+<table style="text-align: left; width: 732px; height: 89px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="width: 36px;" align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255); width: 639px;"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(102, 204, 204);"></span></span></span></span></span></span><span style="font-family: Tahoma;"><br>
+
+      <br>
+
+      <span style="color: rgb(153, 153, 153);">' -----------------SETUP GAME CONDITIONS--------------------</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">Global GameObjectList:TList=CreateList()</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">Graphics 640,480,0</span><br style="color: rgb(153, 153, 153);">
+
+      <br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">Local URL:String="http::www.2dgamecreators.com/tutorials/gameprogramming/basic/"</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">Local Player:TSpaceShip = TSpaceShip.Create(URL+"/blobship_1-1.png",320,420)</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">Local Alien:TAlienShip = TAlienShip.Create(URL+"/cartoonufo_1-1.png",320,0)</span><br style="color: rgb(153, 153, 153);">
+
+      <br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;' ---------------------MAIN LOOP-------------------------</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">Repeat</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cls</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For o:TGameObject=EachIn GameObjectList</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; o.DrawSelf()</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; o.UpdateState()</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Flip </span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">Until KeyDown(KEY_ESCAPE) Or AppTerminate()</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">End&nbsp;&nbsp; </span><br style="color: rgb(153, 153, 153);">
+
+      <br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">' ---------------------TYPES, ATTRIBUTES AND BEHAVIOURS-------------------------</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">Type TGameObject</span><br style="color: rgb(153, 153, 153);">
+
+      <br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp; Field X:Int = 320</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp; Field Y:Int = 420</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp; Field Speed:Int=3</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp; Field Image:TImage</span><br style="color: rgb(153, 153, 153);">
+
+      <br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp; Method DrawSelf()<br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(255, 255, 102);">SetColor</span><span style="color: rgb(255, 255, 255);"> 255,255,255</span><br style="color: rgb(153, 153, 153);">
+
+      </span><span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DrawImage Image,X,Y</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp; End Method&nbsp;&nbsp;&nbsp; </span><br style="color: rgb(153, 153, 153);">
+
+      <br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp; Method UpdateState() Abstract</span><br style="color: rgb(153, 153, 153);">
+
+      <br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">End Type</span><br style="color: rgb(153, 153, 153);">
+
+      <br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;Type TSpaceShip Extends TGameObject</span><br style="color: rgb(153, 153, 153);">
+
+      <br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp; Field MissileDelay:Int</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp; </span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp; Function Create:TSpaceShip(File:String,xstart:Int,ystart:Int)</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Local Ship:TSpaceShip=New TSpaceShip</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ship.X=xstart</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ship.Y=ystart</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ship.Image=LoadImage(LoadBank(File))</span><br style="color: rgb(153, 153, 153);">
+
+      <br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If Ship.Image=Null</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Print "Not able to load image file. Program aborting"</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EndIf</span><br style="color: rgb(153, 153, 153);">
+
+      <br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ListAddLast GameObjectList, Ship</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Return Ship</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp; End Function</span><br style="color: rgb(153, 153, 153);">
+
+      <br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp; Method UpdateState()</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp; </span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If KeyDown(KEY_LEFT)</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; X :- Speed</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EndIf&nbsp;&nbsp; </span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If KeyDown(KEY_RIGHT)</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; X :+ Speed</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EndIf</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If KeyDown(KEY_SPACE)</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FireMissile()</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EndIf</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MissileDelay :- 1 </span><br style="color: rgb(153, 153, 153);">
+
+      <br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If X&lt;0 Then X=0</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If X&gt;620 Then X=620</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp; End Method</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp; </span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp; Method FireMissile()</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If MissileDelay&lt;0</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Local FileName:String="D:\Program
+Files\BlitzMax\samples\firepaint\bullet.png"</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Local Missile:TMissile=TMissile.Create(FileName, X+23,Y)</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MissileDelay=10</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp; End
+Method&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">End Type</span><br style="color: rgb(153, 153, 153);">
+
+      <br style="color: rgb(153, 153, 153);">
+
+      <br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">Type TAlienShip Extends TGameObject</span><br style="color: rgb(153, 153, 153);">
+
+      <br>
+
+&nbsp; &nbsp; &nbsp;<span style="color: rgb(255, 255, 102);">Field</span> Explosion:<span style="color: rgb(255, 255, 102);">Int</span><br>
+
+      <br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp; Function Create:TAlienShip(File:String,xstart:Int,ystart:Int)</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Local Ship:TAlienShip=New TAlienShip</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ship.X=xstart</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ship.Y=ystart</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ship.Image=LoadImage(LoadBank(File))</span><br style="color: rgb(153, 153, 153);">
+
+      <br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If Ship.Image=Null</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Print "Not able to load image file. Program aborting"</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EndIf</span><br style="color: rgb(153, 153, 153);">
+
+      <br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ListAddLast GameObjectList, Ship</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Return Ship</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp; End Function</span><br style="color: rgb(153, 153, 153);">
+
+      <br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp; Method UpdateState()</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; X :- Speed</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If X&lt;-ImageWidth(Image) Then X=620</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;<span style="color: rgb(255, 255, 255);">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; CheckCollision()</span><br style="color: rgb(255, 255, 255);">
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(255, 255, 102);">If</span> explosion&gt;0 explosion :- 1</span><br style="color: rgb(255, 255, 255);">
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </span><br style="color: rgb(255, 255, 255);">
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;<span style="color: rgb(153, 153, 153);">&nbsp;&nbsp; End Method </span></span><br style="color: rgb(255, 255, 255);">
+
+      <br style="color: rgb(255, 255, 255);">
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; <span style="color: rgb(255, 255, 102);">Method</span> CheckCollision()</span><br style="color: rgb(255, 255, 255);">
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; </span><br style="color: rgb(255, 255, 255);">
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; &nbsp; <span style="color: rgb(255, 255, 102);">For Local</span> g:TGameObject=<span style="color: rgb(255, 255, 102);">EachIn</span> GameObjectList</span><br style="color: rgb(255, 255, 255);">
+
+      <span style="color: rgb(255, 255, 255);"><span style="color: rgb(255, 255, 102);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; If</span> g&lt;&gt;<span style="color: rgb(255, 255, 102);">Self Then</span></span><br style="color: rgb(255, 255, 255);">
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(255, 255, 102);">If</span> <span style="color: rgb(255, 255, 102);">ImagesCollide</span>(<span style="color: rgb(255, 255, 102);">self</span>.Image,X,Y,0,g.Image,g.X,g.Y,0)</span><br style="color: rgb(255, 255, 255);">
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <span style="color: rgb(255, 255, 102);">ListRemove</span>(GameObjectList,g)</span><br style="color: rgb(255, 255, 255);">
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; Self.Explosion :+ 10</span><br style="color: rgb(255, 255, 255);">
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<span style="color: rgb(255, 255, 102);">&nbsp; EndIf</span></span><br style="color: rgb(255, 255, 102);">
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; EndIf</span><br style="color: rgb(255, 255, 102);">
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;&nbsp;&nbsp; Next</span><br style="color: rgb(255, 255, 102);">
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;&nbsp;&nbsp; </span><br style="color: rgb(255, 255, 102);">
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;&nbsp;&nbsp; End Method</span><br style="color: rgb(255, 255, 102);">
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;&nbsp;&nbsp; </span><br style="color: rgb(255, 255, 102);">
+
+      <span style="color: rgb(255, 255, 255);"><span style="color: rgb(255, 255, 102);">&nbsp;&nbsp;&nbsp; Method</span> DrawSelf()</span><br style="color: rgb(255, 255, 255);">
+
+      <br style="color: rgb(255, 255, 255);">
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(255, 255, 102);">If</span> explosion&gt;0</span><br style="color: rgb(255, 255, 255);">
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(255, 255, 102);">SetColor&nbsp;</span>255-explosion,0,0</span><br style="color: rgb(255, 255, 255);">
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(255, 255, 102);">Else</span></span><br style="color: rgb(255, 255, 102);">
+
+      <span style="color: rgb(255, 255, 255);"><span style="color: rgb(255, 255, 102);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; SetColor</span> 255,255,255</span><br style="color: rgb(255, 255, 255);">
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; EndIf</span><br style="color: rgb(255, 255, 102);">
+
+      <span style="color: rgb(255, 255, 255);"><span style="color: rgb(255, 255, 102);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; DrawImage</span> Image,X,Y</span><br style="color: rgb(255, 255, 255);">
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; <span style="color: rgb(255, 255, 102);">End Method</span></span><br style="color: rgb(255, 255, 255);">
+
+      </span><br style="color: rgb(153, 153, 153);">
+
+      <br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;End Type</span><br style="color: rgb(153, 153, 153);">
+
+      <br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp; Type TMissile Extends TGameObject</span><br style="color: rgb(153, 153, 153);">
+
+      <br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp; Function Create:TMissile(File:String,xstart:Int,ystart:Int)</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Local Ship:TMissile=New TMissile</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ship.X=xstart</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ship.Y=ystart</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ship.Image=LoadImage(LoadBank(File))</span><br style="color: rgb(153, 153, 153);">
+
+      <br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If Ship.Image=Null</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Print "Not able to load image file. Program aborting"</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EndIf</span><br style="color: rgb(153, 153, 153);">
+
+      <br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ListAddLast GameObjectList, Ship&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Return Ship</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp; End Function</span><br style="color: rgb(153, 153, 153);">
+
+      <br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp; Method UpdateState()</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Y :- Speed</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If Y&lt;0&nbsp; Then ListRemove(GameObjectList,Self)</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp; End Method</span><br style="color: rgb(153, 153, 153);">
+
+      <br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">End Type</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"></span></span></span></span></span><br>
+
+      <br>
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+<span style="font-family: Arial;">-.</span><span style="font-family: Arial;"><br>
+
+
+
+Now we can see the AlienShip glowing red whenever its hit by our missiles.<br>
+
+</span>
+<table style="text-align: left; width: 732px; height: 92px; font-family: Tahoma;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="width: 27px;" align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="color: rgb(255, 255, 255); background-color: rgb(255, 255, 255); width: 411px;"><img style="width: 500px; height: 396px;" alt="" src="./Learning 2D Game Programming: Basic FrameWork Part 6 - Adding Collision_files/F6 001.png"><br>
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="width: 266px;" align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+    
+
+    
+
+
+
+
+    
+    
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+    
+
+
+
+
+
+    
+
+
+
+
+
+    
+
+
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+    
+
+
+    
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+<br>
+
+<span style="font-family: Arial;"></span>
+<h1><a class="mozTocH1" name="mozTocId838494"></a><small><small><small><span style="font-family: Tahoma;">The Modified TAlienShip Type</span></small></small></small></h1>
+
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"></span></span><span style="font-family: Arial;">We
+need to make two changes to the UpdateState Method, one to always check
+for collision. The other to reduce our explosion variable so that the
+red glow will be slowly reduced in intensity..&nbsp;<br>
+
+
+
+
+
+<br>
+
+
+
+
+</span>
+<table style="text-align: left; width: 732px; height: 89px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="width: 36px;" align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255); width: 639px;"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(102, 204, 204);"></span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">&nbsp;</span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 0);"><span style="color: rgb(255, 255, 0);">&nbsp;</span></span></span></span></span></span><span style="font-family: Tahoma;"><span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp; Method UpdateState()</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; X :- Speed</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If X&lt;-ImageWidth(Image) Then X=620</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;<span style="color: rgb(255, 255, 255);">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; CheckCollision()</span><br style="color: rgb(255, 255, 255);">
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(255, 255, 102);">If</span> explosion&gt;0 explosion :- 1</span><br style="color: rgb(255, 255, 255);">
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </span><br style="color: rgb(255, 255, 255);">
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;<span style="color: rgb(153, 153, 153);">&nbsp;&nbsp; End Method </span></span><br style="color: rgb(255, 255, 255);">
+
+      <span style="color: rgb(255, 255, 102);"><br>
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(153, 153, 153);"></span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">
+
+
+      </span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">
+      </span></span></span></span></span></td>
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+<span style="font-family: Arial;"><br>
+
+</span><span style="font-family: Arial;">The CheckCollision Method
+iterate through each object in the GameObjectList and checks whether a
+collison has occured or not using the built-in BlitzMax <span style="font-weight: bold;">ImagesCollide</span> function.<br>
+
+<br>
+
+When a collision is detected, we use <span style="font-weight: bold;">ListRemove</span> to remove the bullet from the GameObjectList and increase our explosion variable by 10 points (to keep our AlienShip glowing).<br>
+
+</span>
+<table style="text-align: left; width: 732px; height: 89px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="width: 36px;" align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255); width: 639px;"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(102, 204, 204);"></span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"></span></span></span></span></span><span style="font-family: Tahoma;"><span style="color: rgb(153, 153, 153);"><span style="color: rgb(255, 255, 255);"><span style="color: rgb(153, 153, 153);"></span></span><br style="color: rgb(255, 255, 255);">
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; <span style="color: rgb(255, 255, 102);">Method</span> CheckCollision()</span><br style="color: rgb(255, 255, 255);">
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; </span><br style="color: rgb(255, 255, 255);">
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; &nbsp; <span style="color: rgb(255, 255, 102);">For Local</span> g:TGameObject=<span style="color: rgb(255, 255, 102);">EachIn</span> GameObjectList</span><br style="color: rgb(255, 255, 255);">
+
+      <span style="color: rgb(255, 255, 255);"><span style="color: rgb(255, 255, 102);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; If</span> g&lt;&gt;<span style="color: rgb(255, 255, 102);">Self Then</span></span><br style="color: rgb(255, 255, 255);">
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(255, 255, 102);">If</span> <span style="color: rgb(255, 255, 102);">ImagesCollide</span>(<span style="color: rgb(255, 255, 102);">self</span>.Image,X,Y,0,g.Image,g.X,g.Y,0)</span><br style="color: rgb(255, 255, 255);">
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <span style="color: rgb(255, 255, 102);">ListRemove</span>(GameObjectList,g)</span><br style="color: rgb(255, 255, 255);">
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; Self.Explosion :+ 10</span><br style="color: rgb(255, 255, 255);">
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<span style="color: rgb(255, 255, 102);">&nbsp; EndIf</span></span><br style="color: rgb(255, 255, 102);">
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; EndIf</span><br style="color: rgb(255, 255, 102);">
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;&nbsp;&nbsp; Next</span><br style="color: rgb(255, 255, 102);">
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;&nbsp;&nbsp; </span><br style="color: rgb(255, 255, 102);">
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;&nbsp;&nbsp; End Method</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(153, 153, 153);"></span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">
+
+
+      </span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">
+      </span></span></span></span></span></td>
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+<span style="font-family: Arial;"><br>
+
+Finally we have to create a new DrawSelf Method specific to the
+TAlienShip type as it now behaves differently to the parent Method.
+This techique is called Method Override, ie we are overiding the parent
+method with our own.<br>
+
+<br>
+
+The Method simply checks the number in the Explosion variable if its
+more than zero we'll set the drawing color to red &nbsp;tint. Otherwise
+the drawing color is set to white.<br>
+
+&nbsp;<span style="font-weight: bold;"></span></span>
+<table style="text-align: left; width: 732px; height: 89px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="width: 36px;" align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255); width: 639px;"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(102, 204, 204);"></span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"></span></span></span></span></span><span style="font-family: Tahoma;"><span style="color: rgb(153, 153, 153);"><span style="color: rgb(255, 255, 255);"><span style="color: rgb(255, 255, 102);">&nbsp;&nbsp; Method</span> DrawSelf()</span><br style="color: rgb(255, 255, 255);">
+
+      <br style="color: rgb(255, 255, 255);">
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(255, 255, 102);">If</span> explosion&gt;0</span><br style="color: rgb(255, 255, 255);">
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(255, 255, 102);">SetColor&nbsp;</span>255-explosion,0,0</span><br style="color: rgb(255, 255, 255);">
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(255, 255, 102);">Else</span></span><br style="color: rgb(255, 255, 102);">
+
+      <span style="color: rgb(255, 255, 255);"><span style="color: rgb(255, 255, 102);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; SetColor</span> 255,255,255</span><br style="color: rgb(255, 255, 255);">
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; EndIf</span><br style="color: rgb(255, 255, 102);">
+
+      <span style="color: rgb(255, 255, 255);"><span style="color: rgb(255, 255, 102);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; DrawImage</span> Image,X,Y</span><br style="color: rgb(255, 255, 255);">
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; <span style="color: rgb(255, 255, 102);">End Method</span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(153, 153, 153);"></span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">
+
+
+      </span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">
+      </span></span></span></span></span></td>
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+<span style="font-family: Arial;"><span style="font-weight: bold;"></span></span><span style="font-family: Arial;"></span><br>
+
+
+
+
+
+
+
+
+
+
+
+<h1><a class="mozTocH1" name="mozTocId578655"></a><small><small><span style="font-family: Tahoma;">Summary</span></small></small></h1>
+
+
+
+
+
+
+
+
+
+
+
+<span style="font-family: Arial;">There we have it, a very rudimentary
+"game" built using BlitzMax. It's not very exciting at the moment but
+the whole idea now is to start learning the necessary concepts of 2D
+programming where we can then use the framework we have built over the
+last few tutorials to design better, more complex and fun games.<br>
+
+
+</span>
+<h1><a class="mozTocH1" name="mozTocId873993"></a><small><small><span style="font-family: Tahoma;">Blitzmax commands introduced in this tutorial</span></small></small></h1>
+
+
+<span style="font-family: Arial;">Only one new function introduced in this tutorial:-<br>
+
+
+<br>
+
+
+</span>
+
+<table style="text-align: left; width: 712px; height: 55px; font-family: Tahoma;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+      <td style="background-color: rgb(204, 255, 255);">Function ImagesCollide(image1:TImage,x1,y1,frame1,image2:TImage,x2,y2,frame2)<span style="font-weight: bold;"></span></td>
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+      <td style="background-color: rgb(204, 255, 255);" align="undefined" valign="undefined">Tests if two images collide</td>
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+    </tr>
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+<br>
+
+<span style="font-family: Arial;">
+
+
+
+
+
+
+Back to the <a href="http://web.archive.org/web/20070525095210/http://www.2dgamecreators.com/tutorials/gameprogramming/index.html">index</a>, <a href="http://web.archive.org/web/20070525095210/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/F5%20-%20Adding%20Missiles.html">Previous</a> Tutorial</span><br>
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"></span></span>
+
+
+
+
+
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">
+</span></span><span style="font-family: Tahoma;"></span>
+
+
+<!--
+     FILE ARCHIVED ON 09:52:10 May 25, 2007 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 12:40:00 Oct 03, 2021.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 199.094
+  exclusion.robots: 0.254
+  exclusion.robots.policy: 0.224
+  RedisCDXSource: 5.806
+  esindex: 0.01
+  LoadShardBlock: 174.113 (3)
+  PetaboxLoader3.datanode: 132.957 (4)
+  CDXLines.iter: 16.275 (3)
+  PetaboxLoader3.resolve: 307.385 (2)
+  load_resource: 330.772
+--></body></html>

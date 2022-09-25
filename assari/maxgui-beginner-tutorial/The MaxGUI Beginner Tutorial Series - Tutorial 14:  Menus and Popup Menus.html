@@ -1,0 +1,2009 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0093)http://web.archive.org/web/20061019131040/http://www.2dgamecreators.com/maxgui/T14-Menus.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><script src="./The MaxGUI Beginner Tutorial Series - Tutorial 14:  Menus and Popup Menus_files/analytics.js" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app216.us.archive.org';v.server_ms=240;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="./The MaxGUI Beginner Tutorial Series - Tutorial 14:  Menus and Popup Menus_files/bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="./The MaxGUI Beginner Tutorial Series - Tutorial 14:  Menus and Popup Menus_files/wombat.js" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("http://web.archive.org/web");
+  __wm.wombat("http://www.2dgamecreators.com:80/maxgui/T14-Menus.html","20061019131040","http://web.archive.org/","web","/_static/",
+	      "1161263440");
+</script>
+<link rel="stylesheet" type="text/css" href="./The MaxGUI Beginner Tutorial Series - Tutorial 14:  Menus and Popup Menus_files/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="./The MaxGUI Beginner Tutorial Series - Tutorial 14:  Menus and Popup Menus_files/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+
+
+
+
+
+  
+  
+  
+  
+
+
+
+  
+  
+  
+  <title>Tutorial 14:  Menus and Popup Menus</title>
+</head>
+
+
+<body><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  /*min-width:800px !important;*/
+}
+</style>
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr;">
+</div><div id="wm-ipp-print">The Wayback Machine - http://web.archive.org/web/20061019131040/http://www.2dgamecreators.com:80/maxgui/T14-Menus.html</div>
+<div id="donato" style="position:relative;width:100%;">
+  <div id="donato-base">
+    <iframe id="donato-if" src="./The MaxGUI Beginner Tutorial Series - Tutorial 14:  Menus and Popup Menus_files/donate.html" scrolling="no" frameborder="0" style="width:100%; height:100%">
+    </iframe>
+  </div>
+</div><script type="text/javascript">
+__wm.bt(650,27,25,2,"web","http://www.2dgamecreators.com/maxgui/T14-Menus.html","20061019131040",1996,"/_static/",["/_static/css/banner-styles.css?v=omkqRugM","/_static/css/iconochive.css?v=qtvMKcIJ"], "False");
+  __wm.rw(1);
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;">The MaxGUI Beginner Tutorial
+Series - Tutorial 14:&nbsp;</span></span></span> <span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;">Menus and Popup Menus</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;"></span><br style="font-weight: bold;">
+
+
+
+
+(c) Assari Jan 07 2005<br>
+
+
+
+
+<br>
+
+Menus are another common GUI gadget. In this tutorial we are going to
+cover menus. Lets get started as usual with a very simple exmaple.<br>
+
+</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+</span></span>
+<table style="text-align: left; width: 732px; height: 160px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">SuperStrict</span><br>
+
+
+
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Local</span>
+MyWindow:TGadget=<span style="color: rgb(255, 255, 102);">CreateWindow</span>(<span style="color: rgb(51, 255, 51);">"Menu Example"</span>,
+200,200,320,240)<br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Local <span style="color: rgb(255, 255, 255);">FileMenu:TGadget</span>=CreateMenu(<span style="color: rgb(51, 255, 51);"></span><span style="color: rgb(255, 255, 255);"><span style="color: rgb(51, 255, 51);">"File"</span>,0,<span style="color: rgb(255, 255, 102);">WindowMenu</span>(MyWindow))</span><br>
+
+
+
+
+      UpdateWindowMenu</span> MyWindow<span style="font-weight: bold;"><br>
+
+      <br>
+
+
+
+
+      </span><span style="color: rgb(255, 255, 102); font-weight: bold;"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Repeat</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;
+WaitEvent()<br>
+
+
+
+
+&nbsp; Select EventID()<br style="color: rgb(255, 255, 102);">
+
+
+
+
+      </span> <span style="color: rgb(255, 255, 102);">&nbsp;
+Case <span style="color: rgb(255, 255, 255);">EVENT_WINDOWCLOSE</span><br>
+
+
+
+
+&nbsp; &nbsp; &nbsp;End<br>
+
+
+
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; &nbsp;End
+Select<span style="color: rgb(255, 255, 255);"></span><br>
+
+
+
+
+Forever</span><br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<br>
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">We can see our <span style="font-weight: bold;">File</span> menu appearing on the menubar but we cannot do anything with it yet.<br>
+
+
+
+
+<br>
+
+
+
+
+</span></span>
+<table style="text-align: left; width: 342px; height: 259px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><img style="width: 320px; height: 240px;" alt="" src="./The MaxGUI Beginner Tutorial Series - Tutorial 14:  Menus and Popup Menus_files/t14-01.jpg"><br>
+
+
+
+
+      </span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"><br>
+
+
+
+
+      </td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<br>
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"></span></span><br>
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">The
+requirement to create a menu and use it in our window is a bit more
+onerous that other gadgets we have seen previously. At the very least,
+we need to specify the following:-<br>
+
+</span></span>
+<ul>
+
+  <li><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">A text label which will be displayed on the Menu bar</span></span></li>
+
+  <li><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">A unique tag id number for this menu item</span></span></li>
+
+  <li><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">A parent which uses the <span style="font-weight: bold;">WindowMenu</span> function</span></span></li>
+  <li><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Then we need to create a second level menu item (see example <span style="font-weight: bold;">CreateMenu "Exit"</span> below)<br>
+    </span></span></li>
+
+  <li><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Before the menu can be used, we need to call the <span style="font-weight: bold;">UpdateWindowMenu</span> function, otherwise our menu will not appear<br>
+
+    </span></span></li>
+
+</ul>
+
+<span style="font-family: Lucida Console;"></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">In our example above, clicking the Menu actually does not do anything. Let's do something more exciting.<br>
+
+<br>
+
+</span></span>
+<table style="text-align: left; width: 732px; height: 160px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">SuperStrict</span><br>
+
+
+
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Local</span>
+MyWindow:TGadget=<span style="color: rgb(255, 255, 102);">CreateWindow</span>(<span style="color: rgb(51, 255, 51);">"Menu Example"</span>,
+200,200,320,240)<br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Local <span style="color: rgb(255, 255, 255);">FileMenu:TGadget</span>=CreateMenu(<span style="color: rgb(51, 255, 51);"></span><span style="color: rgb(255, 255, 255);"><span style="color: rgb(51, 255, 51);">"&amp;File"</span>,0,<span style="color: rgb(255, 255, 102);">WindowMenu</span>(MyWindow))</span><br>
+
+
+
+
+      CreateMenu <span style="color: rgb(51, 255, 51);">"Exit"</span><span style="color: rgb(255, 255, 255);">,101,FileMenu</span><br>
+
+      <br>
+
+UpdateWindowMenu</span> MyWindow<span style="font-weight: bold;"><br>
+
+      <br>
+
+
+
+
+      </span><span style="color: rgb(255, 255, 102); font-weight: bold;"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Repeat</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;
+WaitEvent()<br>
+
+
+
+
+&nbsp; Select EventID()<br style="color: rgb(255, 255, 102);">
+
+
+
+
+      </span> <span style="color: rgb(255, 255, 102);">&nbsp;
+Case <span style="color: rgb(255, 255, 255);">EVENT_WINDOWCLOSE</span><br>
+
+
+
+
+&nbsp; &nbsp; &nbsp;End<br>
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp;
+Case <span style="color: rgb(255, 255, 255);">EVENT_MENUACTION</span><br>
+
+&nbsp;&nbsp; Select EventData()<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp; Case <span style="color: rgb(255, 255, 255);">101<br>
+
+&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: rgb(255, 255, 102);">Notify</span> <span style="color: rgb(51, 255, 51);">"You Have Just Clicked Exit"</span><br>
+
+      </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp; End Select<br>
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; &nbsp;End
+Select<span style="color: rgb(255, 255, 255);"></span><br>
+
+
+
+
+Forever</span><br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+<br>
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Running
+the above program will get us a File Menu with an Exit sub-menu,
+clicking it activate the Notify message and then ends the program.<br>
+
+<br>
+
+</span></span>
+<table style="text-align: left; width: 342px; height: 259px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><img style="width: 320px; height: 240px;" alt="" src="./The MaxGUI Beginner Tutorial Series - Tutorial 14:  Menus and Popup Menus_files/t14-01.jpg"><br>
+
+
+
+
+      </span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"><img style="width: 201px; height: 126px;" alt="" src="./The MaxGUI Beginner Tutorial Series - Tutorial 14:  Menus and Popup Menus_files/t14-02.jpg"><br>
+
+
+
+
+      </td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+<br>
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Notice how we create the <span style="font-weight: bold;">Exit</span> menu which has the <span style="font-weight: bold;">FileMenu</span>
+gadget as its parent. A unique identifier 101 was used for this Menu
+Item. Any unique id will work as well. Never forget to call the <span style="font-weight: bold;">UpdateWindowMenu</span> function.<br>
+
+<br>
+
+</span></span>
+<table style="text-align: left; width: 732px; height: 101px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span><span style="color: rgb(255, 255, 102);">Local <span style="color: rgb(255, 255, 255);">FileMenu:TGadget</span>=CreateMenu(<span style="color: rgb(51, 255, 51);"></span><span style="color: rgb(255, 255, 255);"><span style="color: rgb(51, 255, 51);">"&amp;File"</span>,0,<span style="color: rgb(255, 255, 102);">WindowMenu</span>(MyWindow))</span><br>
+
+
+
+
+      CreateMenu <span style="color: rgb(51, 255, 51);">"Exit"</span><span style="color: rgb(255, 255, 255);">,101,FileMenu</span><br>
+
+      <br>
+
+UpdateWindowMenu</span> MyWindow<span style="font-weight: bold;"><br>
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span><span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+<br>
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">When
+the user clicks the menu item, a MenuAction event is generated, we then
+need to check which menu item has been clicked by checking against the
+unique identifier specified earlier in the <span style="font-weight: bold;">CreateMenu</span> function.</span></span><br>
+
+<br>
+
+<table style="text-align: left; width: 732px; height: 143px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp;
+Case <span style="color: rgb(255, 255, 255);">EVENT_MENUACTION</span><br>
+
+&nbsp;&nbsp; Select EventData()<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp; Case <span style="color: rgb(255, 255, 255);">101<br>
+
+&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: rgb(255, 255, 102);">Notify</span> <span style="color: rgb(51, 255, 51);">"You Have Just Clicked Exit"</span><br>
+
+      </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp; End Select<br>
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span><span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+<br>
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Let us see how we can cope with more menu items.<br>
+
+</span></span><br>
+
+<table style="text-align: left; width: 732px; height: 160px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">SuperStrict</span><br>
+
+
+
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Local</span>
+MyWindow:TGadget=<span style="color: rgb(255, 255, 102);">CreateWindow</span>(<span style="color: rgb(51, 255, 51);">"Menu Example"</span>,
+200,200,320,240)<br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Local <span style="color: rgb(255, 255, 255);">FileMenu:TGadget</span>=CreateMenu(<span style="color: rgb(51, 255, 51);"></span><span style="color: rgb(255, 255, 255);"><span style="color: rgb(51, 255, 51);">"File"</span>,0,<span style="color: rgb(255, 255, 102);">WindowMenu</span>(MyWindow))</span><br>
+
+
+
+
+      CreateMenu <span style="color: rgb(51, 255, 51);">"Open"</span><span style="color: rgb(255, 255, 255);">,102,FileMenu</span><br>
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">
+
+
+      CreateMenu <span style="color: rgb(51, 255, 51);">"Exit"</span><span style="color: rgb(255, 255, 255);">,101,FileMenu<br>
+
+      <br>
+
+      </span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Local&nbsp;<span style="color: rgb(255, 255, 255);">HelpMenu:TGadget</span>=CreateMenu(<span style="color: rgb(51, 255, 51);"></span><span style="color: rgb(255, 255, 255);"><span style="color: rgb(51, 255, 51);">"Help"</span>,0,<span style="color: rgb(255, 255, 102);">WindowMenu</span>(MyWindow))</span><br>
+
+
+
+
+      CreateMenu <span style="color: rgb(51, 255, 51);">"About"</span><span style="color: rgb(255, 255, 255);">,123456,HelpMenu<br>
+
+      <br>
+
+      </span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">UpdateWindowMenu</span> MyWindow<span style="font-weight: bold;"><br>
+
+      <br>
+
+
+
+
+      </span><span style="color: rgb(255, 255, 102); font-weight: bold;"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Repeat</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;
+WaitEvent()<br>
+
+
+
+
+&nbsp; Select EventID()<br style="color: rgb(255, 255, 102);">
+
+
+
+
+      </span> <span style="color: rgb(255, 255, 102);">&nbsp;
+Case <span style="color: rgb(255, 255, 255);">EVENT_WINDOWCLOSE</span><br>
+
+
+
+
+&nbsp; &nbsp; &nbsp;End<br>
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp;
+Case <span style="color: rgb(255, 255, 255);">EVENT_MENUACTION</span><br>
+
+&nbsp;&nbsp; Select EventData()<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp; Case <span style="color: rgb(255, 255, 255);">101<br>
+
+&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: rgb(255, 255, 102);">Notify</span> <span style="color: rgb(51, 255, 51);">"You Have Just Clicked Exit"</span><br>
+
+      </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End<br>
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp;&nbsp;&nbsp;&nbsp; Case <span style="color: rgb(255, 255, 255);">102<br>
+
+&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: rgb(255, 255, 102);">Notify</span> <span style="color: rgb(51, 255, 51);">"You Have Just Clicked OPEN"</span><br>
+
+      </span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp;&nbsp;&nbsp;&nbsp; Case&nbsp;</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);">123456</span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"><br>
+
+&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: rgb(255, 255, 102);">Notify</span> <span style="color: rgb(51, 255, 51);">"A very simple Menu Example~n(c) Assari &nbsp;2006"</span><br>
+
+      </span></span></span></span><br>
+
+      <span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp;&nbsp;&nbsp;&nbsp; End Select<br>
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; &nbsp;End
+Select<span style="color: rgb(255, 255, 255);"></span><br>
+
+
+
+
+Forever</span><br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+<br>
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Run the program and click on Help About and you would see the Notify message as we have defined above in our program.</span></span><br>
+<br>
+<table style="text-align: left; width: 342px; height: 259px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><img style="width: 320px; height: 240px;" alt="" src="./The MaxGUI Beginner Tutorial Series - Tutorial 14:  Menus and Popup Menus_files/t14-03.jpg"><br>
+
+
+
+
+      </span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"><img style="width: 212px; height: 126px;" alt="" src="./The MaxGUI Beginner Tutorial Series - Tutorial 14:  Menus and Popup Menus_files/t14-04.jpg"><br>
+
+
+
+
+      </td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+<br>
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">The first line below creates the <span style="font-weight: bold;">File</span> Menu and then we create the 2 sub-menu items <span style="font-weight: bold;">Open</span> and <span style="font-weight: bold;">Exit</span></span></span><br>
+<table style="text-align: left; width: 732px; height: 90px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span><span style="color: rgb(255, 255, 102);">Local <span style="color: rgb(255, 255, 255);">FileMenu:TGadget</span>=CreateMenu(<span style="color: rgb(51, 255, 51);"></span><span style="color: rgb(255, 255, 255);"><span style="color: rgb(51, 255, 51);">"File"</span>,0,<span style="color: rgb(255, 255, 102);">WindowMenu</span>(MyWindow))</span><br>
+
+
+
+
+      CreateMenu <span style="color: rgb(51, 255, 51);">"Open"</span><span style="color: rgb(255, 255, 255);">,102,FileMenu</span><br>
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">
+
+
+      CreateMenu <span style="color: rgb(51, 255, 51);">"Exit"</span><span style="color: rgb(255, 255, 255);">,101,FileMenu<br>
+
+      </span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"></span></span><span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+<br>
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Next we create the <span style="font-weight: bold;">Help</span> Menu and the <span style="font-weight: bold;">About</span> sub-menu item<br>
+</span></span>
+<table style="text-align: left; width: 732px; height: 87px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Local&nbsp;<span style="color: rgb(255, 255, 255);">HelpMenu:TGadget</span>=CreateMenu(<span style="color: rgb(51, 255, 51);"></span><span style="color: rgb(255, 255, 255);"><span style="color: rgb(51, 255, 51);">"Help"</span>,0,<span style="color: rgb(255, 255, 102);">WindowMenu</span>(MyWindow))</span><br>
+
+
+
+
+      CreateMenu <span style="color: rgb(51, 255, 51);">"About"</span><span style="color: rgb(255, 255, 255);">,123456,HelpMenu<br>
+
+      </span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"><span style="color: rgb(51, 255, 51);"></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span><span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+We then use the Select/Case statement on the <span style="font-weight: bold;">EventData</span>() function which actually returns the unique identifer which we have defined in the respective <span style="font-weight: bold;">CreateMenu</span> function above<br>
+<br>
+</span></span>
+<table style="text-align: left; width: 732px; height: 160px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp;
+Case <span style="color: rgb(255, 255, 255);">EVENT_MENUACTION</span><br>
+
+&nbsp;&nbsp; Select EventData()<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp; Case <span style="color: rgb(255, 255, 255);">101<br>
+
+&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: rgb(255, 255, 102);">Notify</span> <span style="color: rgb(51, 255, 51);">"You Have Just Clicked Exit"</span><br>
+
+      </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End<br>
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp;&nbsp;&nbsp;&nbsp; Case <span style="color: rgb(255, 255, 255);">102<br>
+
+&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: rgb(255, 255, 102);">Notify</span> <span style="color: rgb(51, 255, 51);">"You Have Just Clicked OPEN"</span><br>
+
+      </span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp;&nbsp;&nbsp;&nbsp; Case&nbsp;</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);">123456</span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"><br>
+
+&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: rgb(255, 255, 102);">Notify</span> <span style="color: rgb(51, 255, 51);">"A very simple Menu Example~n(c) Assari &nbsp;2006"</span><br>
+
+      </span></span></span></span><br>
+
+      <span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp;&nbsp;&nbsp;&nbsp; End Select<br>
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span><span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+<br>
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">So there you go, building more menu is just an extension of the above method.<br>
+<br>
+</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">The syntax for using the <span style="font-weight: bold;">CreateMenu</span> function is as follows:-</span></span><br>
+
+
+
+
+<br>
+
+
+
+
+<table style="text-align: left; width: 712px; height: 55px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+      <td style="background-color: rgb(204, 255, 255); font-family: Tahoma;">Function CreateMenu:TGadget( text$,tag,parent:TGadget,hotKey=0,modifier=0 )</td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<br>
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Let us now take a look at the <span style="font-weight: bold;">hotkey</span>
+parameter. This parameter allows you to attach a "hotkey" to the menu
+ie pressing the assigned key will cause the menu item to be triggered. <br>
+<br>
+In the example below, we are now attaching the F4 ket to our File Exit menu item. Note the use of the constant <span style="font-weight: bold;">KEY_F4</span> in the <span style="font-weight: bold;">CreateMenu</span> function below<br>
+<br>
+</span></span>
+<table style="text-align: left; width: 732px; height: 160px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">SuperStrict</span><br>
+
+
+
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Local</span>
+MyWindow:TGadget=<span style="color: rgb(255, 255, 102);">CreateWindow</span>(<span style="color: rgb(51, 255, 51);">"Menu Example"</span>,
+200,200,320,240)<br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Local <span style="color: rgb(255, 255, 255);">FileMenu:TGadget</span>=CreateMenu(<span style="color: rgb(51, 255, 51);"></span><span style="color: rgb(255, 255, 255);"><span style="color: rgb(51, 255, 51);">"&amp;File"</span>,0,<span style="color: rgb(255, 255, 102);">WindowMenu</span>(MyWindow))</span><br>
+
+
+
+
+      CreateMenu <span style="color: rgb(51, 255, 51);">"Exit"</span><span style="color: rgb(255, 255, 255);">,101,FileMenu,<span style="font-weight: bold;">KEY_F4</span></span><br>
+
+      <br>
+
+UpdateWindowMenu</span> MyWindow<span style="font-weight: bold;"><br>
+
+      <br>
+
+
+
+
+      </span><span style="color: rgb(255, 255, 102); font-weight: bold;"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Repeat</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;
+WaitEvent()<br>
+
+
+
+
+&nbsp; Select EventID()<br style="color: rgb(255, 255, 102);">
+
+
+
+
+      </span> <span style="color: rgb(255, 255, 102);">&nbsp;
+Case <span style="color: rgb(255, 255, 255);">EVENT_WINDOWCLOSE</span><br>
+
+
+
+
+&nbsp; &nbsp; &nbsp;End<br>
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp;
+Case <span style="color: rgb(255, 255, 255);">EVENT_MENUACTION</span><br>
+
+&nbsp;&nbsp; Select EventData()<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp; Case <span style="color: rgb(255, 255, 255);">101<br>
+
+&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: rgb(255, 255, 102);">Notify</span> <span style="color: rgb(51, 255, 51);">"You Have Just Clicked Exit"</span><br>
+
+      </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp; End Select<br>
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; &nbsp;End
+Select<span style="color: rgb(255, 255, 255);"></span><br>
+
+
+
+
+Forever</span><br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+<br>
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Now
+run the above program and then press the F4 key. You will see the
+Notify message coming out just as if you have clicked on the File Exit
+menu item.<br>
+<br>
+The next parameter we want to look at is the <span style="font-weight: bold;">modifier</span>
+parameter. What the modifier does is allow us to use the CTRL or ALT
+keys in conjuction with our assigned key ie CTRL-F4 to exit instead of
+just using the F4 key.<br>
+<br>
+</span></span>
+<table style="text-align: left; width: 732px; height: 160px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">SuperStrict</span><br>
+
+
+
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Local</span>
+MyWindow:TGadget=<span style="color: rgb(255, 255, 102);">CreateWindow</span>(<span style="color: rgb(51, 255, 51);">"Menu Example"</span>,
+200,200,320,240)<br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Local <span style="color: rgb(255, 255, 255);">FileMenu:TGadget</span>=CreateMenu(<span style="color: rgb(51, 255, 51);"></span><span style="color: rgb(255, 255, 255);"><span style="color: rgb(51, 255, 51);">"&amp;File"</span>,0,<span style="color: rgb(255, 255, 102);">WindowMenu</span>(MyWindow))</span><br>
+
+
+
+
+      CreateMenu <span style="color: rgb(51, 255, 51);">"Exit"</span><span style="color: rgb(255, 255, 255);">,101,FileMenu,KEY_F4, &nbsp;<span style="font-weight: bold;">MODIFIER_COMMAND</span></span><br>
+
+      <br>
+
+UpdateWindowMenu</span> MyWindow<span style="font-weight: bold;"><br>
+
+      <br>
+
+
+
+
+      </span><span style="color: rgb(255, 255, 102); font-weight: bold;"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Repeat</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;
+WaitEvent()<br>
+
+
+
+
+&nbsp; Select EventID()<br style="color: rgb(255, 255, 102);">
+
+
+
+
+      </span> <span style="color: rgb(255, 255, 102);">&nbsp;
+Case <span style="color: rgb(255, 255, 255);">EVENT_WINDOWCLOSE</span><br>
+
+
+
+
+&nbsp; &nbsp; &nbsp;End<br>
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp;
+Case <span style="color: rgb(255, 255, 255);">EVENT_MENUACTION</span><br>
+
+&nbsp;&nbsp; Select EventData()<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp; Case <span style="color: rgb(255, 255, 255);">101<br>
+
+&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: rgb(255, 255, 102);">Notify</span> <span style="color: rgb(51, 255, 51);">"You Have Just Clicked Exit"</span><br>
+
+      </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp; End Select<br>
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; &nbsp;End
+Select<span style="color: rgb(255, 255, 255);"></span><br>
+
+
+
+
+Forever</span><br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+<br>
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Now
+run the above program and then press the CTRL-F4 key. You will see the
+Notify message coming out just as if you have clicked on the File Exit
+menu item.<br>
+<br>
+A list of keys and modifiers can be found in the helpfiles.<br>
+<span style="font-weight: bold;"></span><br>
+<span style="font-weight: bold;">POP UP MENU</span><br>
+<br>
+MaxGUI also allows the creation of a pop menu when the user clicks the right-mouse button. Let us see how to do this<br>
+<br>
+</span></span>
+<table style="text-align: left; width: 732px; height: 160px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">SuperStrict</span><br>
+
+
+
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Local</span>
+MyWindow:TGadget=<span style="color: rgb(255, 255, 102);">CreateWindow</span>(<span style="color: rgb(51, 255, 51);">"Menu Example"</span>,
+200,200,320,240)<br>
+      </span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Local</span>
+      </span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">MyPanel:TGadget</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">=<span style="color: rgb(255, 255, 102);">CreatePanel</span><span style="color: rgb(51, 255, 51);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">(0,0,300,200,MyWindow,PANEL_ACTIVE)<br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Local <span style="color: rgb(255, 255, 255);">FileMenu:TGadget</span>=CreateMenu(<span style="color: rgb(51, 255, 51);"></span><span style="color: rgb(255, 255, 255);"><span style="color: rgb(51, 255, 51);">"File"</span>,0,<span style="color: rgb(255, 255, 102);">WindowMenu</span>(MyWindow))</span><br>
+
+
+
+
+      CreateMenu <span style="color: rgb(51, 255, 51);">"Open"</span><span style="color: rgb(255, 255, 255);">,102,FileMenu</span><br>
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">
+
+
+      CreateMenu <span style="color: rgb(51, 255, 51);">"Exit"</span><span style="color: rgb(255, 255, 255);">,101,FileMenu<br>
+
+      </span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"><br>
+
+      </span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">UpdateWindowMenu</span> MyWindow<span style="font-weight: bold;"><br>
+
+      <br>
+
+
+
+
+      </span><span style="color: rgb(255, 255, 102); font-weight: bold;"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Repeat</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;
+WaitEvent()<br>
+
+
+
+
+&nbsp; Select EventID()<br style="color: rgb(255, 255, 102);">
+
+
+
+
+      </span> <span style="color: rgb(255, 255, 102);">&nbsp;
+Case <span style="color: rgb(255, 255, 255);">EVENT_WINDOWCLOSE</span><br>
+
+
+
+
+&nbsp; &nbsp; &nbsp;End<br>
+      <br>
+&nbsp; Case <span style="color: rgb(255, 255, 255);">EVENT_MOUSEDOWN</span><br>
+&nbsp;&nbsp; If EventSource()<span style="color: rgb(255, 255, 255);">=MyPanel</span> And EventData()<span style="color: rgb(255, 255, 255);">=2</span> Then <br>
+&nbsp; &nbsp; &nbsp; PopupWindowMenu <span style="color: rgb(255, 255, 255);">MyWindow,FileMenu</span><br>
+&nbsp; &nbsp;EndIf<br>
+      <br>
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp;
+Case <span style="color: rgb(255, 255, 255);">EVENT_MENUACTION</span><br>
+
+&nbsp;&nbsp; Select EventData()<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp; Case <span style="color: rgb(255, 255, 255);">101<br>
+
+&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: rgb(255, 255, 102);">Notify</span> <span style="color: rgb(51, 255, 51);">"You Have Just Clicked Exit"</span><br>
+
+      </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End<br>
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp;&nbsp;&nbsp;&nbsp; Case <span style="color: rgb(255, 255, 255);">102<br>
+
+&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: rgb(255, 255, 102);">Notify</span> <span style="color: rgb(51, 255, 51);">"You Have Just Clicked OPEN"</span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"><span style="color: rgb(51, 255, 51);"></span><br>
+
+      </span></span></span></span><br>
+
+      <span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp;&nbsp;&nbsp;&nbsp; End Select<br>
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; &nbsp;End
+Select<span style="color: rgb(255, 255, 255);"></span><br>
+
+
+
+
+Forever</span><br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+<br>
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Right-clicking on the panel now causes the File menu to pop up at our mouse location.<br>
+<br>
+</span></span>
+<table style="text-align: left; width: 342px; height: 259px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><img style="width: 320px; height: 240px;" alt="" src="./The MaxGUI Beginner Tutorial Series - Tutorial 14:  Menus and Popup Menus_files/t14-05.jpg"><br>
+
+
+
+
+      </span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"><br>
+
+
+
+
+      </td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+<br>
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">First
+we need to have gadgets which can handle mouse events. In this example
+we are going to use the panel gadget. We just need to remember to
+create the panel gadget with the PANEL_ACTIVE style so that mouse
+events can be captured.</span></span><br>
+<br>
+<table style="text-align: left; width: 732px; height: 63px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Local</span>
+      </span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">MyPanel:TGadget</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">=<span style="color: rgb(255, 255, 102);">CreatePanel</span><span style="color: rgb(51, 255, 51);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">(0,0,300,200,MyWindow,PANEL_ACTIVE)<br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span><span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+<br>
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Then we need to catch the mouse event usent the <span style="font-weight: bold;">WaitEvent</span>() and <span style="font-weight: bold;">Select</span>/<span style="font-weight: bold;">Case</span> statements. We then need to check that the mouse event came from our panel (<span style="font-weight: bold;">EventSource</span>()=MyPanel) and also that the right mouse button has been clicked (<span style="font-weight: bold;">EventData</span>()=2). Once both of these have been satisfied, we can then call the <span style="font-weight: bold;">PopupWindowMenu</span> function.</span></span><br>
+<br>
+<table style="text-align: left; width: 732px; height: 124px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; Case <span style="color: rgb(255, 255, 255);">EVENT_MOUSEDOWN</span><br>
+&nbsp;&nbsp; If EventSource()<span style="color: rgb(255, 255, 255);">=MyPanel</span> And EventData()<span style="color: rgb(255, 255, 255);">=2</span> Then <br>
+&nbsp; &nbsp; &nbsp; PopupWindowMenu <span style="color: rgb(255, 255, 255);">MyWindow,FileMenu</span><br>
+&nbsp; &nbsp;EndIf<br>
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span><span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+<br>
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;">DisableMenu</span><br>
+<br>
+There
+are several functions that can be used to manipulate menu items. We
+will not cover all of them here. One function we will cover is
+DisableMenu which as the name suggests disables a menu item. Let us see
+how that works<br>
+</span></span><br>
+<table style="text-align: left; width: 732px; height: 160px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">SuperStrict</span><br>
+
+
+
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Local</span>
+MyWindow:TGadget=<span style="color: rgb(255, 255, 102);">CreateWindow</span>(<span style="color: rgb(51, 255, 51);">"Menu Example"</span>,
+200,200,320,240)<br>
+      </span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Local</span>
+      </span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">MyPanel:TGadget</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">=<span style="color: rgb(255, 255, 102);">CreatePanel</span><span style="color: rgb(51, 255, 51);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">(0,0,300,200,MyWindow,PANEL_ACTIVE)<br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Local <span style="color: rgb(255, 255, 255);">FileMenu:TGadget</span>=CreateMenu(<span style="color: rgb(51, 255, 51);"></span><span style="color: rgb(255, 255, 255);"><span style="color: rgb(51, 255, 51);">"File"</span>,0,<span style="color: rgb(255, 255, 102);">WindowMenu</span>(MyWindow))</span><br>
+      <span style="font-weight: bold;"><br>
+Local </span><span style="color: rgb(255, 255, 255); font-weight: bold;">ExitMenu:TGadget</span><span style="font-weight: bold;">=CreateMenu(</span><span style="color: rgb(51, 255, 51); font-weight: bold;">"Exit"</span><span style="color: rgb(255, 255, 255);"><span style="font-weight: bold;">,101,FileMenu)</span><br>
+      </span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console; font-weight: bold;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">CreateMenu <span style="color: rgb(51, 255, 51);">"Toggle Exit Menu"</span><span style="color: rgb(255, 255, 255);">,103,FileMenu</span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"><br>
+      </span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">CreateMenu <span style="color: rgb(51, 255, 51);">"Open"</span><span style="color: rgb(255, 255, 255);">,102,FileMenu<br>
+      </span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><br>
+      <span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">UpdateWindowMenu</span> MyWindow<span style="font-weight: bold;"><br>
+
+      <br>
+
+
+
+
+      </span><span style="color: rgb(255, 255, 102); font-weight: bold;"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Repeat</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;
+WaitEvent()<br>
+
+
+
+
+&nbsp; Select EventID()<br style="color: rgb(255, 255, 102);">
+
+
+
+
+      </span> <span style="color: rgb(255, 255, 102);">&nbsp;
+Case <span style="color: rgb(255, 255, 255);">EVENT_WINDOWCLOSE</span><br>
+
+
+
+
+&nbsp; &nbsp; &nbsp;End<br>
+      <br>
+&nbsp; Case <span style="color: rgb(255, 255, 255);">EVENT_MOUSEDOWN</span><br>
+&nbsp;&nbsp; If EventSource()<span style="color: rgb(255, 255, 255);">=MyPanel</span> And EventData()<span style="color: rgb(255, 255, 255);">=2</span> Then <br>
+&nbsp; &nbsp; &nbsp; PopupWindowMenu <span style="color: rgb(255, 255, 255);">MyWindow,FileMenu</span><br>
+&nbsp; &nbsp;EndIf<br>
+      <br>
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp;
+Case <span style="color: rgb(255, 255, 255);">EVENT_MENUACTION</span><br>
+
+&nbsp;&nbsp; Select EventData()<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp; Case <span style="color: rgb(255, 255, 255);">101<br>
+
+&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: rgb(255, 255, 102);">Notify</span> <span style="color: rgb(51, 255, 51);">"You Have Just Clicked Exit"</span><br>
+
+      </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End<br>
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp;&nbsp;&nbsp;&nbsp; Case <span style="color: rgb(255, 255, 255);">102<br>
+
+&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: rgb(255, 255, 102);">Notify</span> <span style="color: rgb(51, 255, 51);">"You Have Just Clicked OPEN"<br>
+      </span></span></span></span></span><span style="font-family: Lucida Console; font-weight: bold;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp;&nbsp;&nbsp;&nbsp; Case <span style="color: rgb(255, 255, 255);">103<br>
+      </span></span></span></span><span style="font-family: Lucida Console; color: rgb(255, 255, 255); font-weight: bold;"><span style="font-family: Tahoma;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(255, 255, 102);">If MenuEnabled</span>(ExitMenu)=1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(255, 255, 102);">DisableMenu</span> ExitMenu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(255, 255, 102);">Else</span><br style="color: rgb(255, 255, 102);">
+      <span style="color: rgb(255, 255, 102);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EnableMenu</span> ExitMenu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(255, 255, 102);">EndIf</span><br style="color: rgb(255, 255, 102);">
+      <span style="color: rgb(255, 255, 102);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UpdateWindowMenu</span> MyWindow</span></span><span style="font-family: Lucida Console; font-weight: bold;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"><span style="color: rgb(51, 255, 51);"></span><br>
+
+      </span></span></span></span><br>
+
+      <span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp;&nbsp;&nbsp;&nbsp; End Select<br>
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; &nbsp;End
+Select<span style="color: rgb(255, 255, 255);"></span><br>
+
+
+
+
+Forever</span><br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+<br>
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">From
+the screenshots below we can see our menu being disabled after we have
+clicked on the toggle menu item. &nbsp;The disabled menu item has been
+greyed out.<br>
+<br>
+</span></span>
+<table style="text-align: left; width: 342px; height: 259px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><img style="width: 320px; height: 240px;" alt="" src="./The MaxGUI Beginner Tutorial Series - Tutorial 14:  Menus and Popup Menus_files/t14-06.jpg"><br>
+
+
+
+
+      </span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"><img style="width: 320px; height: 240px;" alt="" src="./The MaxGUI Beginner Tutorial Series - Tutorial 14:  Menus and Popup Menus_files/t14-07.jpg"><br>
+
+
+
+
+      </td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+<br>
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">The
+first thing we need to do is to have a name for the menu-item that we
+want to disable. For the other menu-items we have seen that this was
+not necessary<br>
+</span></span><br>
+<table style="text-align: left; width: 732px; height: 72px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Local <span style="color: rgb(255, 255, 255);">ExitMenu:TGadget</span>=CreateMenu(<span style="color: rgb(51, 255, 51);">"Exit"</span><span style="color: rgb(255, 255, 255);">,101,FileMenu)<br>
+      </span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console; font-weight: bold;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"><span style="color: rgb(51, 255, 51);"></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span><span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+<br>
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">When the <span style="font-weight: bold;">Toggle Exit Menu</span> &nbsp;was clicked, the menu action event will return the 103 identifier. We then check for the state of the menu item via the <span style="font-weight: bold;">MenuEnabled</span> function. Based on this we either enable or disable our menu item via the <span style="font-weight: bold;">DisableMenu</span> and <span style="font-weight: bold;">EnableMenu</span> function.</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+</span></span><br>
+<table style="text-align: left; width: 732px; height: 160px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"><span style="color: rgb(51, 255, 51);"></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"><span style="color: rgb(51, 255, 51);"></span></span></span></span></span><span style="font-family: Lucida Console; font-weight: bold;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Case <span style="color: rgb(255, 255, 255);">103<br>
+      </span></span></span></span><span style="font-family: Lucida Console; color: rgb(255, 255, 255);"><span style="font-family: Tahoma;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(255, 255, 102);">If MenuEnabled</span>(ExitMenu)=1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(255, 255, 102);">DisableMenu</span> ExitMenu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(255, 255, 102);">Else</span><br style="color: rgb(255, 255, 102);">
+      <span style="color: rgb(255, 255, 102);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EnableMenu</span> ExitMenu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(255, 255, 102);">EndIf</span><br style="color: rgb(255, 255, 102);">
+      <span style="color: rgb(255, 255, 102);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UpdateWindowMenu</span> MyWindow</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"><span style="color: rgb(51, 255, 51);"></span><br>
+
+      </span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span><br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+<br>
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Note that the UpdateWindowMenu function must always be called after we make changes to our menu<br>
+<br>
+</span></span>
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;">Summary</span><br style="font-weight: bold;">
+
+
+
+
+<br style="font-weight: bold;">
+Menus are fairly simple gadgets and as we can see from above are fairly simple to use as well.<br>
+
+
+
+
+<br>
+
+
+
+
+To recap what we have learnt so far<br>
+
+
+
+
+</span></span>
+<ul>
+
+
+
+
+  <li><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">We create menu using the <span style="font-weight: bold;">CreateMenu</span> function.</span></span></li>
+  <li><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Menus need to be activated using the UpdateWindowMenu function before they can be used.</span></span></li>
+  <li><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Menus can either be triggered by clicking on them or by hotkeys which we assign via the hotkey and modifier parameter of the <span style="font-weight: bold;">CreateMenu</span> function.</span></span></li>
+  <li><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Popup menus can be used via the <span style="font-weight: bold;">PopupWindowMenu</span> function</span></span></li>
+  <li><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">The menu events are captured via the menu action events and the relevant&nbsp;menu item identifier captured via&nbsp;the <span style="font-weight: bold;">eventdata</span>() function.</span></span></li>
+  <li><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Menus can be enabled or disabled via the the <span style="font-weight: bold;">EnableMenu</span> and <span style="font-weight: bold;">DisableMenu</span> functions respectively<br>
+    </span></span></li>
+</ul>
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">So thats ends our tutorial for
+now. Back to Tutorial <a href="http://web.archive.org/web/20061019131040/http://www.2dgamecreators.com/maxgui/index.html">Index</a>.</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+</span></span><span style="font-family: Tahoma;">
+</span><span style="font-family: Tahoma;"></span>
+
+
+<!--
+     FILE ARCHIVED ON 13:10:40 Oct 19, 2006 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 12:42:06 Oct 03, 2021.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 109.309
+  exclusion.robots: 0.27
+  exclusion.robots.policy: 0.261
+  RedisCDXSource: 1.039
+  esindex: 0.009
+  LoadShardBlock: 86.246 (3)
+  PetaboxLoader3.datanode: 148.085 (4)
+  CDXLines.iter: 19.195 (3)
+  load_resource: 109.782
+  PetaboxLoader3.resolve: 37.558
+--></body></html>

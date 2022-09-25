@@ -1,0 +1,1643 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0096)http://web.archive.org/web/20070618085300/http://www.2dgamecreators.com/maxgui/T8-Listboxes.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><script src="./The MaxGUI Beginner Tutorial Series - Tutorial 8: More Listboxes, GadgetItems_files/analytics.js" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app58.us.archive.org';v.server_ms=330;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="./The MaxGUI Beginner Tutorial Series - Tutorial 8: More Listboxes, GadgetItems_files/bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="./The MaxGUI Beginner Tutorial Series - Tutorial 8: More Listboxes, GadgetItems_files/wombat.js" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("http://web.archive.org/web");
+  __wm.wombat("http://www.2dgamecreators.com:80/maxgui/T8-Listboxes.html","20070618085300","http://web.archive.org/","web","/_static/",
+	      "1182156780");
+</script>
+<link rel="stylesheet" type="text/css" href="./The MaxGUI Beginner Tutorial Series - Tutorial 8: More Listboxes, GadgetItems_files/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="./The MaxGUI Beginner Tutorial Series - Tutorial 8: More Listboxes, GadgetItems_files/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+
+
+
+
+
+  
+  
+  
+  
+
+
+
+  
+  
+  
+  <title>Tutorial 8: Listboxes, GadgetItems and Iconstrips</title>
+</head>
+
+
+<body><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  /*min-width:800px !important;*/
+}
+</style>
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr;">
+</div><div id="wm-ipp-print">The Wayback Machine - http://web.archive.org/web/20070618085300/http://www.2dgamecreators.com:80/maxgui/T8-Listboxes.html</div>
+<div id="donato" style="position:relative;width:100%;">
+  <div id="donato-base">
+    <iframe id="donato-if" src="./The MaxGUI Beginner Tutorial Series - Tutorial 8: More Listboxes, GadgetItems_files/donate.html" scrolling="no" frameborder="0" style="width:100%; height:100%">
+    </iframe>
+  </div>
+</div><script type="text/javascript">
+__wm.bt(650,27,25,2,"web","http://www.2dgamecreators.com/maxgui/T8-Listboxes.html","20070618085300",1996,"/_static/",["/_static/css/banner-styles.css?v=omkqRugM","/_static/css/iconochive.css?v=qtvMKcIJ"], "False");
+  __wm.rw(1);
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;">The MaxGUI Beginner Tutorial
+Series - Tutorial 8:</span></span></span>&nbsp;<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;">More Listboxes, GadgetItems </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;"></span><br style="font-weight: bold;">
+
+
+
+
+(c) Assari Dec 26 2005<br>
+
+
+
+
+<br>
+
+In this tutorial we are going to look at the additional GadgetItem
+functions that MaxGUI has to help us manipulate Listboxes. One of the
+use of listboxes is to present list of choices to users so that they
+can act on them.<br>
+
+<br>
+
+The helpfile lists the following relevant functions:- AddGadgetItems,
+ClearGadgetItems, ModifyGadgetItems, SelectGadgetItems,
+SelectedGadgetItems and RemoveGadgetItems<br>
+
+<br>
+
+Before we start, lets take a look at how to quickly populate our ListBox<br>
+
+</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+</span></span>
+<table style="text-align: left; width: 732px; height: 160px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">SuperStrict</span><br>
+
+
+
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Local</span>
+MyWindow:TGadget=<span style="color: rgb(255, 255, 102);">CreateWindow</span>(<span style="color: rgb(51, 255, 51);">"ListBox Example"</span>,
+200,200,320,240)<br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Local <span style="color: rgb(255, 255, 255);">ListBox:TGadget</span>=CreateListBox(<span style="color: rgb(51, 255, 51);"></span><span style="color: rgb(255, 255, 255);">10,10,200,100,MyWindow)</span><br>
+
+      </span><br>
+
+      <span style="color: rgb(255, 255, 102); font-weight: bold;">For Local</span><span style="font-weight: bold;"> i:</span><span style="color: rgb(255, 255, 102); font-weight: bold;">Int</span><span style="font-weight: bold;">=1000 </span><span style="color: rgb(255, 255, 102); font-weight: bold;">To</span><span style="font-weight: bold;"> 1050</span><br style="font-weight: bold;">
+
+      <span style="font-weight: bold;">&nbsp; </span><span style="color: rgb(255, 255, 102); font-weight: bold;">AddGadgetItem</span><span style="font-weight: bold;"> ListBox,</span><span style="color: rgb(255, 255, 102); font-weight: bold;">i</span><span style="font-weight: bold;"></span><br style="font-weight: bold;">
+
+      <span style="color: rgb(255, 255, 102); font-weight: bold;">Next</span><span style="font-weight: bold;"> </span><br>
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Repeat</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;
+WaitEvent()<br>
+
+
+
+
+&nbsp; Select EventID()<br style="color: rgb(255, 255, 102);">
+
+
+
+
+      </span> <span style="color: rgb(255, 255, 102);">&nbsp;
+Case <span style="color: rgb(255, 255, 255);">EVENT_WINDOWCLOSE</span><br>
+
+
+
+
+&nbsp; &nbsp; &nbsp;End<span style="color: rgb(255, 255, 255);"></span><br>
+
+
+
+
+&nbsp; &nbsp;End Select<span style="color: rgb(255, 255, 255);"></span><br>
+
+
+
+
+Forever</span><br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<br>
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Notice
+how I have added a For/Next loop to quickly add numbers into our
+ListBox. Notice also our ListBox now has a scroll bar as the number of
+items in the list exceeds the height of our listbox.</span></span><br>
+
+
+
+
+<br>
+
+
+
+
+<table style="text-align: left; width: 342px; height: 259px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><img style="width: 320px; height: 240px;" alt="" src="./The MaxGUI Beginner Tutorial Series - Tutorial 8: More Listboxes, GadgetItems_files/t8-01.jpg"><br>
+
+
+
+
+      </span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"><br>
+
+      </td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<br>
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Now that we have a longer list, lets start manipulating them<br>
+
+<br>
+
+Lets start with <span style="font-weight: bold;">SelectedGadgetItem</span><br>
+
+<br>
+
+</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;">SelectedGadgetItem </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">has the following syntax<br>
+
+</span></span>
+<table style="text-align: left; width: 712px; height: 55px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+      <td style="background-color: rgb(204, 255, 255); font-family: Tahoma;">Function SelectedGadgetItem(gadget:TGadget)</td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+<br>
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">
+
+
+We would use this function as follows:-<br>
+
+<br>
+
+</span></span>
+<table style="text-align: left; width: 779px; height: 392px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">SuperStrict</span><br>
+
+
+
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Local</span>
+MyWindow:TGadget=<span style="color: rgb(255, 255, 102);">CreateWindow</span>(<span style="color: rgb(51, 255, 51);">"ListBox Example"</span>,
+200,200,320,240)<br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Local <span style="color: rgb(255, 255, 255);">ListBox:TGadget</span>=CreateListBox(<span style="color: rgb(51, 255, 51);"></span><span style="color: rgb(255, 255, 255);">10,10,200,100,MyWindow)</span><br>
+
+      </span><br>
+
+      <span style="color: rgb(255, 255, 102);">For Local</span> i:<span style="color: rgb(255, 255, 102);">Int</span>=1000 <span style="color: rgb(255, 255, 102);">To</span> 1050<br>
+
+&nbsp; <span style="color: rgb(255, 255, 102);">AddGadgetItem</span> ListBox,<span style="color: rgb(255, 255, 102);">i</span><br>
+
+      <span style="color: rgb(255, 255, 102);">Next</span> <span style="color: rgb(255, 255, 102); font-weight: bold;"></span><span style="color: rgb(255, 255, 102); font-weight: bold;"></span><br>
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Repeat</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;
+WaitEvent()<br>
+
+
+
+
+&nbsp; Select EventID()<br style="color: rgb(255, 255, 102);">
+
+
+
+
+      </span> <span style="color: rgb(255, 255, 102);">&nbsp;
+Case <span style="color: rgb(255, 255, 255);">EVENT_WINDOWCLOSE</span><br>
+
+
+
+
+&nbsp; &nbsp; &nbsp;End<br>
+
+&nbsp; Case <span style="color: rgb(255, 255, 255);">EVENT_GADGETACTION</span><span style="color: rgb(255, 255, 255);"></span><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp; SetStatusText <span style="color: rgb(255, 255, 255);">MyWindow,</span> <span style="color: rgb(51, 255, 51);">"Item Selected="</span>+SelectedGadgetItem<span style="color: rgb(255, 255, 255);">(ListBox)&nbsp;</span><span style="color: rgb(255, 255, 255);"></span><br>
+
+
+
+
+&nbsp; &nbsp;End Select<span style="color: rgb(255, 255, 255);"></span><br>
+
+
+
+
+Forever</span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+<br>
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Notice how when we click on an item in the listbox, the index of the item appears in the statusbar not the item that we selected</span></span><br>
+
+<br>
+
+<table style="text-align: left; width: 342px; height: 259px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><img style="width: 320px; height: 240px;" alt="" src="./The MaxGUI Beginner Tutorial Series - Tutorial 8: More Listboxes, GadgetItems_files/t8-02.jpg"><br>
+
+
+
+
+      </span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"><br>
+
+      </td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+<br>
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">To get the item itself, we need another MaxGUI function, <span style="font-weight: bold;">GadgetItemText </span>which has the following syntax<br>
+
+</span></span>
+<table style="text-align: left; width: 712px; height: 55px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+      <td style="background-color: rgb(204, 255, 255); font-family: Tahoma;">Function GadgetItemText$( gadget:TGadget,index )</td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+<br>
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">We would then use this function as follows:-</span></span><br>
+
+<br>
+
+
+<table style="text-align: left; width: 779px; height: 392px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">SuperStrict</span><br>
+
+
+
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Local</span>
+MyWindow:TGadget=<span style="color: rgb(255, 255, 102);">CreateWindow</span>(<span style="color: rgb(51, 255, 51);">"ListBox Example"</span>,
+200,200,320,240)<br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Local <span style="color: rgb(255, 255, 255);">ListBox:TGadget</span>=CreateListBox(<span style="color: rgb(51, 255, 51);"></span><span style="color: rgb(255, 255, 255);">10,10,200,100,MyWindow)</span><br>
+
+      </span><br>
+
+      <span style="color: rgb(255, 255, 102);">For Local</span> i:<span style="color: rgb(255, 255, 102);">Int</span>=1000 <span style="color: rgb(255, 255, 102);">To</span> 1050<br>
+
+&nbsp; <span style="color: rgb(255, 255, 102);">AddGadgetItem</span> ListBox,<span style="color: rgb(255, 255, 102);">i</span><br>
+
+      <span style="color: rgb(255, 255, 102);">Next</span> <br>
+
+      <span style="color: rgb(255, 255, 102); font-weight: bold;">Local</span><span style="font-weight: bold;"> s:</span><span style="color: rgb(255, 255, 102); font-weight: bold;">String</span><br>
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Repeat</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;
+WaitEvent()<br>
+
+
+
+
+&nbsp; Select EventID()<br style="color: rgb(255, 255, 102);">
+
+
+
+
+      </span> <span style="color: rgb(255, 255, 102);">&nbsp;
+Case <span style="color: rgb(255, 255, 255);">EVENT_WINDOWCLOSE</span><br>
+
+
+
+
+&nbsp; &nbsp; &nbsp;End<br>
+
+&nbsp; Case <span style="color: rgb(255, 255, 255);">EVENT_GADGETACTION</span><br>
+
+&nbsp; &nbsp; &nbsp;<span style="color: rgb(255, 255, 255); font-weight: bold;">s=</span><span style="font-weight: bold;">GadgetItemText</span><span style="color: rgb(255, 255, 255); font-weight: bold;">(ListBox,<span style="color: rgb(255, 255, 102);">SelectedGadgetItem</span>(ListBox))</span><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp; SetStatusText <span style="color: rgb(255, 255, 255);">MyWindow,</span> SelectedGadgetItem<span style="color: rgb(255, 255, 255);">(ListBox) </span><span style="font-weight: bold;">+ </span><span style="color: rgb(51, 255, 51); font-weight: bold;">":" </span><span style="font-weight: bold;">+</span><span style="color: rgb(255, 255, 255); font-weight: bold;"> s</span><br>
+
+
+
+
+&nbsp; &nbsp;End Select<span style="color: rgb(255, 255, 255);"></span><br>
+
+
+
+
+Forever</span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<span style="font-family: Tahoma;"><br>
+
+Notice we now can see the item itself. So remember that
+SelectedGadgetItem just gives you the index (ie its location in the
+list) and you will need to use the GadgetItemText function to get the
+actual item.</span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"></span></span><br>
+
+<br>
+
+
+
+
+<table style="text-align: left; width: 342px; height: 259px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><img style="width: 320px; height: 240px;" alt="" src="./The MaxGUI Beginner Tutorial Series - Tutorial 8: More Listboxes, GadgetItems_files/t8-03.jpg"><br>
+
+
+
+
+      </span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"><br>
+
+      </td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+<br>
+
+<span style="font-family: Tahoma;">The next function we want to look at is RemoveGadgetItem, which has the following syntax:-</span><br>
+
+<table style="text-align: left; width: 712px; height: 55px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+      <td style="background-color: rgb(204, 255, 255); font-family: Tahoma;">Function RemoveGadgetItem( gadget:TGadget,index )</td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+<br>
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">We can either specify the item to be removed programatically or get the user to select. Let's look at both method.</span></span><br>
+
+<br>
+
+<table style="text-align: left; width: 732px; height: 83px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">SuperStrict</span><br>
+
+
+
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Local</span>
+MyWindow:TGadget=<span style="color: rgb(255, 255, 102);">CreateWindow</span>(<span style="color: rgb(51, 255, 51);">"ListBox Example"</span>,
+200,200,320,240)<br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Local <span style="color: rgb(255, 255, 255);">ListBox:TGadget</span>=CreateListBox(<span style="color: rgb(51, 255, 51);"></span><span style="color: rgb(255, 255, 255);">10,10,200,100,MyWindow)</span><br>
+
+      </span><br>
+
+      <span style="color: rgb(255, 255, 102);">For Local</span> i:<span style="color: rgb(255, 255, 102);">Int</span>=1000 <span style="color: rgb(255, 255, 102);">To</span> 1050<br>
+
+&nbsp; <span style="color: rgb(255, 255, 102);">AddGadgetItem</span> ListBox,i<span style="color: rgb(255, 255, 102);"></span><br>
+
+      <span style="color: rgb(255, 255, 102);">Next</span> <br>
+
+      <br>
+
+      <span style="color: rgb(255, 255, 102); font-weight: bold;">RemoveGadgetItem</span><span style="font-weight: bold;"> Listbox,3</span><br>
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Repeat</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;
+WaitEvent()<br>
+
+
+
+
+&nbsp; Select EventID()<br style="color: rgb(255, 255, 102);">
+
+
+
+
+      </span> <span style="color: rgb(255, 255, 102);">&nbsp;
+Case <span style="color: rgb(255, 255, 255);">EVENT_WINDOWCLOSE</span><br>
+
+
+
+
+&nbsp; &nbsp; &nbsp;End<span style="color: rgb(255, 255, 255);"></span><br>
+
+
+
+
+&nbsp; &nbsp;End Select<span style="color: rgb(255, 255, 255);"></span><br>
+
+
+
+
+Forever</span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+<br>
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Notice that item 1003 is now missing from the list below.<br>
+
+
+
+
+<br>
+
+</span></span>
+<table style="text-align: left; width: 342px; height: 259px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><img style="width: 320px; height: 240px;" alt="" src="./The MaxGUI Beginner Tutorial Series - Tutorial 8: More Listboxes, GadgetItems_files/t8-04.jpg"><br>
+
+
+
+
+      </span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"><br>
+
+      </td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+<br>
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">To remove an item by user action, we can do the following<br>
+
+<br>
+
+</span></span>
+<table style="text-align: left; width: 732px; height: 83px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">SuperStrict</span><br>
+
+
+
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Local</span>
+MyWindow:TGadget=<span style="color: rgb(255, 255, 102);">CreateWindow</span>(<span style="color: rgb(51, 255, 51);">"ListBox Example"</span>,
+200,200,320,240)<br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Local <span style="color: rgb(255, 255, 255);">ListBox:TGadget</span>=CreateListBox(<span style="color: rgb(51, 255, 51);"></span><span style="color: rgb(255, 255, 255);">10,10,200,100,MyWindow)</span><br>
+
+      </span><br>
+
+      <span style="color: rgb(255, 255, 102);">For Local</span> i:<span style="color: rgb(255, 255, 102);">Int</span>=1000 <span style="color: rgb(255, 255, 102);">To</span> 1050<br>
+
+&nbsp; <span style="color: rgb(255, 255, 102);">AddGadgetItem</span> ListBox,i<span style="color: rgb(255, 255, 102);"></span><br>
+
+      <span style="color: rgb(255, 255, 102);">Next</span> <span style="color: rgb(255, 255, 102); font-weight: bold;"></span><span style="font-weight: bold;"></span><span style="color: rgb(255, 255, 102); font-weight: bold;"></span><span style="font-weight: bold;"></span><span style="color: rgb(255, 255, 102); font-weight: bold;"></span><span style="font-weight: bold;"></span><br>
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Repeat</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;
+WaitEvent()<br>
+
+
+
+
+&nbsp; Select EventID()<br style="color: rgb(255, 255, 102);">
+
+
+
+
+      </span> <span style="color: rgb(255, 255, 102);">&nbsp;
+Case <span style="color: rgb(255, 255, 255);">EVENT_WINDOWCLOSE</span><br>
+
+
+
+
+&nbsp; &nbsp; &nbsp;End<br>
+
+&nbsp; <span style="font-weight: bold;">Case </span><span style="color: rgb(255, 255, 255); font-weight: bold;">EVENT_GADGETACTION</span><span style="color: rgb(255, 255, 255); font-weight: bold;"></span><br style="font-weight: bold;">
+
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RemoveGadgetItem</span><span style="color: rgb(255, 255, 255); font-weight: bold;">(Listbox,<span style="color: rgb(255, 255, 102);">SelectedGadgetItem</span>(ListBox))</span><span style="font-weight: bold;"></span><span style="color: rgb(255, 255, 255); font-weight: bold;"></span><br style="font-weight: bold;">
+
+      <span style="font-weight: bold;">&nbsp;&nbsp; </span>End Select<br style="font-weight: bold;">
+
+      <span style="font-weight: bold;">&nbsp;&nbsp; SetStatusText </span><span style="color: rgb(255, 255, 255); font-weight: bold;">MyWindow</span><span style="font-weight: bold;">, </span><span style="color: rgb(51, 255, 51); font-weight: bold;">"Total items in list="</span><span style="font-weight: bold;">+CountGadgetItems</span><span style="color: rgb(255, 255, 255); font-weight: bold;">(ListBox)</span><br>
+
+
+
+
+Forever</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+<br>
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">From
+the screenshot below we can see that I have removed 3 items, leaving
+only 48 items in the list. (Note that we had 51 items to start with,
+0-50).<br>
+
+<br>
+
+</span></span>
+<table style="text-align: left; width: 342px; height: 259px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><img style="width: 320px; height: 240px;" alt="" src="./The MaxGUI Beginner Tutorial Series - Tutorial 8: More Listboxes, GadgetItems_files/t8-05.jpg"><br>
+
+
+
+
+      </span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"><br>
+
+      </td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+<br>
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">The line which deleted our item is the following, as we saw from the example before this, the <span style="font-weight: bold;">RemoveGadgetItem</span> function needs to know which item to delete. In this example, we use the <span style="font-weight: bold;">SelectedGadgetItem</span> function to supply the item to be deleted.<br>
+<br>
+</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"></span></span>
+<table style="text-align: left; width: 732px; height: 83px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255); font-weight: bold;"></span><span style="color: rgb(255, 255, 255); font-weight: bold;"></span><span style="font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>RemoveGadgetItem<span style="color: rgb(255, 255, 255);">(Listbox,<span style="color: rgb(255, 255, 102);">SelectedGadgetItem</span>(ListBox))</span><span style="font-weight: bold;"></span><span style="color: rgb(255, 255, 255); font-weight: bold;"></span><br style="font-weight: bold;">
+
+      <span style="font-weight: bold;"></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+<br>
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">&nbsp;I have also introduced another useful Gadget function called <span style="font-weight: bold;">CountGadgetItems</span> which as the name implies, gives us the number of items in the current list.</span></span><br>
+
+<table style="text-align: left; width: 732px; height: 83px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span><span style="color: rgb(255, 255, 102);">&nbsp;&nbsp; SetStatusText <span style="color: rgb(255, 255, 255);">MyWindow</span>, <span style="color: rgb(51, 255, 51);">"Total items in list="</span>+CountGadgetItems<span style="color: rgb(255, 255, 255);">(ListBox)</span><br>
+
+
+
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;"><br>
+
+SelectGadgetItem</span> (which is different from <span style="font-weight: bold;">SelectedGadgetItem</span>,
+note the smal difference in tense there) simply allows you to
+programmatically select an item in the index, nothing spectacular
+there. You would use it as follows:-</span></span>&nbsp;<br>
+
+<br>
+
+<table style="text-align: left; width: 732px; height: 83px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">SuperStrict</span><br>
+
+
+
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Local</span>
+MyWindow:TGadget=<span style="color: rgb(255, 255, 102);">CreateWindow</span>(<span style="color: rgb(51, 255, 51);">"ListBox Example"</span>,
+200,200,320,240)<br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Local <span style="color: rgb(255, 255, 255);">ListBox:TGadget</span>=CreateListBox(<span style="color: rgb(51, 255, 51);"></span><span style="color: rgb(255, 255, 255);">10,10,200,100,MyWindow)</span><br>
+
+      </span><br>
+
+      <span style="color: rgb(255, 255, 102);">For Local</span> i:<span style="color: rgb(255, 255, 102);">Int</span>=1000 <span style="color: rgb(255, 255, 102);">To</span> 1050<br>
+
+&nbsp; <span style="color: rgb(255, 255, 102);">AddGadgetItem</span> ListBox,<span style="color: rgb(255, 255, 102);">i</span><br>
+
+      <span style="color: rgb(255, 255, 102);">Next</span> <br>
+
+      <br>
+
+      <span style="color: rgb(255, 255, 102); font-weight: bold;">SelectGadgetItem</span><span style="font-weight: bold;"> ListBox,3</span><br>
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Repeat</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;
+WaitEvent()<br>
+
+
+
+
+&nbsp; Select EventID()<br style="color: rgb(255, 255, 102);">
+
+
+
+
+      </span> <span style="color: rgb(255, 255, 102);">&nbsp;
+Case <span style="color: rgb(255, 255, 255);">EVENT_WINDOWCLOSE</span><br>
+
+
+
+
+&nbsp; &nbsp; &nbsp;End<span style="color: rgb(255, 255, 255);"></span><br>
+
+
+
+
+&nbsp; &nbsp;End Select<span style="color: rgb(255, 255, 255);"></span><br>
+
+
+
+
+Forever</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+<br>
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Notice now our 3rd item is selected (see highlight 1003)</span></span><br>
+
+<br>
+
+<table style="text-align: left; width: 342px; height: 31px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><img style="width: 320px; height: 240px;" alt="" src="./The MaxGUI Beginner Tutorial Series - Tutorial 8: More Listboxes, GadgetItems_files/t8-06.jpg"><br>
+
+
+
+
+      </span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"><br>
+
+      </td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+<br>
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">The next function ClearGadgetItems is simplicity in itself, but can be dangerous if not handled carefully.<br>
+
+<br>
+
+</span></span>
+<table style="text-align: left; width: 732px; height: 83px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">SuperStrict</span><br>
+
+
+
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Local</span>
+MyWindow:TGadget=<span style="color: rgb(255, 255, 102);">CreateWindow</span>(<span style="color: rgb(51, 255, 51);">"ListBox Example"</span>,
+200,200,320,240)<br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Local <span style="color: rgb(255, 255, 255);">ListBox:TGadget</span>=CreateListBox(<span style="color: rgb(51, 255, 51);"></span><span style="color: rgb(255, 255, 255);">10,10,200,100,MyWindow)</span><br>
+
+      </span><br>
+
+      <span style="color: rgb(255, 255, 102);">For Local</span> i:<span style="color: rgb(255, 255, 102);">Int</span>=1000 <span style="color: rgb(255, 255, 102);">To</span> 1050<br>
+
+&nbsp; <span style="color: rgb(255, 255, 102);">AddGadgetItem</span> ListBox,i<span style="color: rgb(255, 255, 102);"></span><br>
+
+      <span style="color: rgb(255, 255, 102);">Next</span> <span style="color: rgb(255, 255, 102); font-weight: bold;"></span><span style="font-weight: bold;"></span><br>
+
+      <span style="color: rgb(255, 255, 102); font-weight: bold;"></span><span style="font-weight: bold;"></span><br>
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Repeat</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;
+WaitEvent()<br>
+
+
+
+
+&nbsp; Select EventID()<br style="color: rgb(255, 255, 102);">
+
+
+
+
+      </span> <span style="color: rgb(255, 255, 102);">&nbsp;
+Case <span style="color: rgb(255, 255, 255);">EVENT_WINDOWCLOSE</span><br>
+
+
+
+
+&nbsp; &nbsp; &nbsp;End<br>
+
+&nbsp; <span style="font-weight: bold;">Case </span><span style="color: rgb(255, 255, 255); font-weight: bold;">EVENT_GADGETACTION</span><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(255, 255, 255); font-weight: bold;"> </span><span style="font-weight: bold;">ClearGadgetItems</span><span style="color: rgb(255, 255, 255); font-weight: bold;">(Listbox)</span><br>
+
+
+
+
+&nbsp; &nbsp;End Select<br>
+
+      <span style="color: rgb(255, 255, 255); font-weight: bold;"></span><br>
+
+
+
+
+Forever</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+<br>
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">With one click, the whole list is gone.&nbsp;</span></span><br>
+
+<br>
+
+<table style="text-align: left; width: 342px; height: 259px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><img style="width: 320px; height: 240px;" alt="" src="./The MaxGUI Beginner Tutorial Series - Tutorial 8: More Listboxes, GadgetItems_files/t8-01.jpg"><br>
+
+
+
+
+      </span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><img style="width: 320px; height: 240px;" alt="" src="./The MaxGUI Beginner Tutorial Series - Tutorial 8: More Listboxes, GadgetItems_files/listbox0.jpg"></span></span></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+<br>
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+<span style="font-weight: bold;">Summary</span><br style="font-weight: bold;">
+
+<br style="font-weight: bold;">
+This ListBox gagdet has a lot to offer and thus needs three tutorials
+to cover the subject. We will look at two more relevant functions in
+the next tutorial. The topics we are covering though will be relevant
+to other gadgets as well.<br>
+
+<br>
+
+To recap what we have learnt so far<br>
+
+</span></span>
+<ul>
+
+  <li><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">We can add items onto list using for/next loops rather than individual <span style="font-weight: bold;">AddGadgetItem</span> statements.&nbsp;</span></span></li>
+
+  
+  
+  <li><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">We've learnt how to use </span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;">AddGadgetItem</span>,
+    <span style="font-weight: bold;">ClearGadgetItems</span>,&nbsp;<span style="font-weight: bold;">SelectGadgetItem</span>,
+    <span style="font-weight: bold;">SelectedGadgetItem</span> and <span style="font-weight: bold;">RemoveGadgetItem</span> to manage items in our listbox<br>
+
+    </span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+    </span></span></li>
+
+</ul>
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">So thats ends our tutorial for now. Back to Tutorial <a href="http://web.archive.org/web/20070618085300/http://www.2dgamecreators.com/maxgui/index.html">Index</a>.</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+</span></span><span style="font-family: Tahoma;">
+</span><span style="font-family: Tahoma;"></span>
+
+
+<!--
+     FILE ARCHIVED ON 08:53:00 Jun 18, 2007 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 12:42:02 Oct 03, 2021.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 165.953
+  LoadShardBlock: 136.112 (3)
+  RedisCDXSource: 1.967
+  exclusion.robots: 0.36
+  PetaboxLoader3.datanode: 179.358 (4)
+  exclusion.robots.policy: 0.344
+  CDXLines.iter: 23.184 (3)
+  load_resource: 129.485
+  PetaboxLoader3.resolve: 34.811
+  esindex: 0.052
+--></body></html>

@@ -1,0 +1,1332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0094)http://web.archive.org/web/20070125215223/http://www.2dgamecreators.com/maxgui/T12-Canvas.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><script src="./The MaxGUI Beginner Tutorial Series - Tutorial 12:  Canvas, Events and 2D Graphics_files/analytics.js" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app210.us.archive.org';v.server_ms=247;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="./The MaxGUI Beginner Tutorial Series - Tutorial 12:  Canvas, Events and 2D Graphics_files/bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="./The MaxGUI Beginner Tutorial Series - Tutorial 12:  Canvas, Events and 2D Graphics_files/wombat.js" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("http://web.archive.org/web");
+  __wm.wombat("http://www.2dgamecreators.com:80/maxgui/T12-Canvas.html","20070125215223","http://web.archive.org/","web","/_static/",
+	      "1169761943");
+</script>
+<link rel="stylesheet" type="text/css" href="./The MaxGUI Beginner Tutorial Series - Tutorial 12:  Canvas, Events and 2D Graphics_files/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="./The MaxGUI Beginner Tutorial Series - Tutorial 12:  Canvas, Events and 2D Graphics_files/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+
+
+
+  
+  
+
+  
+  <title>Tutorial 12: Canvas and 2D Graphics</title>
+</head>
+
+
+<body><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  /*min-width:800px !important;*/
+}
+</style>
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr;">
+</div><div id="wm-ipp-print">The Wayback Machine - http://web.archive.org/web/20070125215223/http://www.2dgamecreators.com:80/maxgui/T12-Canvas.html</div>
+<div id="donato" style="position:relative;width:100%;">
+  <div id="donato-base">
+    <iframe id="donato-if" src="./The MaxGUI Beginner Tutorial Series - Tutorial 12:  Canvas, Events and 2D Graphics_files/donate.html" scrolling="no" frameborder="0" style="width:100%; height:100%">
+    </iframe>
+  </div>
+</div><script type="text/javascript">
+__wm.bt(650,27,25,2,"web","http://www.2dgamecreators.com/maxgui/T12-Canvas.html","20070125215223",1996,"/_static/",["/_static/css/banner-styles.css?v=omkqRugM","/_static/css/iconochive.css?v=qtvMKcIJ"], "False");
+  __wm.rw(1);
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;">The MaxGUI Beginner Tutorial
+Series - Tutorial 12:&nbsp;</span></span></span>&nbsp;<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;">Canvas, Events and 2D Graphics </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;"></span><br style="font-weight: bold;">
+
+
+(c) Assari Dec 31 2005<br>
+
+
+<br>
+
+
+One of the strength of BlitzMax is its OOPs features. What most people
+does not realise is that the power of BlitzMax and MaxGUI are also
+available without the OOPs. In these tutorials I have shyed away from
+using OOP so as &nbsp;not to complicate the tutorials and my
+examples.<br>
+
+
+<br>
+
+
+The Canvas gadget, the subject of this tutorial, is also one gadget
+that can be used easily without OOP as well. This gadget actually
+deserves a whole series of tutorial by itself as it actually brings the
+whole power of Max2D with it. However we are not going to cover the
+complete functionality of Max2D but to give you a glimpse of what is
+possible.<br>
+
+
+<br>
+
+
+Lets take a look at a very simple Canvas Gadget in action-<br>
+
+
+</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+</span></span>
+<table style="text-align: left; width: 732px; height: 160px;" border="0" cellpadding="2" cellspacing="2">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">SuperStrict</span><br>
+
+
+      <br>
+
+
+      <span style="color: rgb(255, 255, 102);">Local</span>
+MyWindow:TGadget=<span style="color: rgb(255, 255, 102);">CreateWindow</span>(<span style="color: rgb(51, 255, 51);">"Canvas Example"</span>,
+200,200,320,240)<br>
+
+
+      <span style="color: rgb(255, 255, 102);">Local&nbsp;<span style="color: rgb(255, 255, 255);">MyCanvas:TGadget</span>=CreateCanvas(<span style="color: rgb(51, 255, 51);"></span><span style="color: rgb(255, 255, 255);">10,10,290,140,MyWindow)</span><br>
+
+
+      </span><span style="font-weight: bold;"><br>
+
+
+      </span><span style="color: rgb(255, 255, 102); font-weight: bold;"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Repeat</span><br style="color: rgb(255, 255, 102);">
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;
+WaitEvent()<br>
+
+
+&nbsp; Select EventID()<br style="color: rgb(255, 255, 102);">
+
+
+      </span> <span style="color: rgb(255, 255, 102);">&nbsp;
+Case <span style="color: rgb(255, 255, 255);">EVENT_WINDOWCLOSE</span><br>
+
+
+&nbsp; &nbsp; &nbsp;End<br>
+
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; Case <span style="color: rgb(255, 255, 255);">EVENT_GADGETPAINT</span><br>
+
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; SetGraphics
+CanvasGraphics</span></span></span> <span style="font-family: Tahoma;">(MyCanvas)</span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"><span style="color: rgb(51, 255, 51);"><br>
+
+
+      </span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; &nbsp;
+DrawRect</span></span></span> &nbsp;<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);">20,20,50,80<span style="color: rgb(51, 255, 51);"><br>
+
+
+      </span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; &nbsp; Flip</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"></span><br>
+
+
+&nbsp; &nbsp;End Select<span style="color: rgb(255, 255, 255);"></span><br>
+
+
+Forever</span><br>
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+    </tr>
+
+
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">As we can see below, a
+rectangle has been drawn inside our window, on top of the canvas that we
+have created with the <span style="font-weight: bold;">CreateCanvas</span>
+function.<br>
+
+
+<br>
+
+
+</span></span>
+<table style="text-align: left; width: 342px; height: 259px;" border="0" cellpadding="2" cellspacing="2">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><img style="width: 320px; height: 240px;" alt="" src="./The MaxGUI Beginner Tutorial Series - Tutorial 12:  Canvas, Events and 2D Graphics_files/t12-05.jpg"><br>
+
+
+      </span></span></td>
+
+
+      <td align="undefined" valign="undefined"><br>
+
+
+      </td>
+
+
+    </tr>
+
+
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">The program lines of interest
+to us are:-<br>
+
+
+<br>
+
+
+</span></span>
+<table style="text-align: left; width: 773px; height: 103px;" border="0" cellpadding="2" cellspacing="2">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"> Case <span style="color: rgb(255, 255, 255);">EVENT_GADGETPAINT</span><br>
+
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; SetGraphics
+CanvasGraphics</span></span></span> <span style="font-family: Tahoma;">(MyCanvas)</span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"><span style="color: rgb(51, 255, 51);"><br>
+
+
+      </span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; &nbsp;
+DrawRect</span></span></span> &nbsp;<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);">20,20,50,80<span style="color: rgb(51, 255, 51);"><br>
+
+
+      </span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; &nbsp; Flip</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span><br>
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+    </tr>
+
+
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">The EVENT_GADGETPAINT event is
+the trigger we use to draw stuff on our canvas. The <span style="font-weight: bold;">SetGraphics</span> function
+directs the drawing to the MyCanvas gadget. <br>
+
+
+<span style="font-weight: bold;">DrawRect</span>
+draws a rectangle at position&nbsp;20,20 and of size 50x80.<br>
+
+
+<span style="font-weight: bold;">Flip</span> is a
+max2D function which effectively displays the drawn items to the screen.<br>
+
+
+<br>
+
+
+</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">I
+have picked the <span style="font-weight: bold;">DrawRect</span> function for this example, but any max2D
+graphics command can be used on Canvas gadgets making this an uber
+powerful gadget.<br>
+
+
+<br>
+
+
+Let's take a look at more examples<br>
+
+
+<br>
+
+
+We can draw a colored rectange as follows:-<br>
+
+
+</span></span>
+<table style="text-align: left; width: 732px; height: 160px;" border="0" cellpadding="2" cellspacing="2">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">SuperStrict</span><br>
+
+
+      <br>
+
+
+      <span style="color: rgb(255, 255, 102);">Local</span>
+MyWindow:TGadget=<span style="color: rgb(255, 255, 102);">CreateWindow</span>(<span style="color: rgb(51, 255, 51);">"Canvas Example"</span>,
+200,200,320,240)<br>
+
+
+      <span style="color: rgb(255, 255, 102);">Local&nbsp;<span style="color: rgb(255, 255, 255);">MyCanvas:TGadget</span>=CreateCanvas(<span style="color: rgb(51, 255, 51);"></span><span style="color: rgb(255, 255, 255);">10,10,290,140,MyWindow)</span><br>
+
+
+      </span><span style="font-weight: bold;"><br>
+
+
+      </span><span style="color: rgb(255, 255, 102); font-weight: bold;"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Repeat</span><br style="color: rgb(255, 255, 102);">
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;
+WaitEvent()<br>
+
+
+&nbsp; Select EventID()<br style="color: rgb(255, 255, 102);">
+
+
+      </span> <span style="color: rgb(255, 255, 102);">&nbsp;
+Case <span style="color: rgb(255, 255, 255);">EVENT_WINDOWCLOSE</span><br>
+
+
+&nbsp; &nbsp; &nbsp;End<br>
+
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; Case <span style="color: rgb(255, 255, 255);">EVENT_GADGETPAINT</span><br>
+
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; SetGraphics
+CanvasGraphics</span></span></span> <span style="font-family: Tahoma;">(MyCanvas)<br>
+
+
+&nbsp; &nbsp; </span><span style="font-family: Lucida Console; font-weight: bold;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">SetColor</span></span></span><span style="font-weight: bold;"> </span>&nbsp;<span style="font-family: Lucida Console; font-weight: bold;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);">255,0,0</span></span></span></span><br>
+
+
+      <span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"><span style="color: rgb(51, 255, 51);"> </span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; &nbsp;
+DrawRect</span></span></span> &nbsp;<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);">20,20,50,80<span style="color: rgb(51, 255, 51);"><br>
+
+
+      </span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; &nbsp; Flip</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"></span><br>
+
+
+&nbsp; &nbsp;End Select<span style="color: rgb(255, 255, 255);"></span><br>
+
+
+Forever</span><br>
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+    </tr>
+
+
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">a voila, we have a red
+rectangle (from our <span style="font-weight: bold;">SetColor</span>
+function)<br>
+
+
+<br>
+
+
+</span></span>
+<table style="text-align: left; width: 342px; height: 259px;" border="0" cellpadding="2" cellspacing="2">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><img style="width: 320px; height: 240px;" alt="" src="./The MaxGUI Beginner Tutorial Series - Tutorial 12:  Canvas, Events and 2D Graphics_files/t12-06.jpg"><br>
+
+
+      </span></span></td>
+
+
+      <td align="undefined" valign="undefined"><br>
+
+
+      </td>
+
+
+    </tr>
+
+
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">We can also do animations. In
+order to this we need to use the timer gadget as follows:-<br>
+
+
+<br>
+
+
+</span></span>
+<table style="text-align: left; width: 732px; height: 160px;" border="0" cellpadding="2" cellspacing="2">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">SuperStrict</span><br>
+
+
+      <br>
+
+
+      <span style="color: rgb(255, 255, 102);">Local</span>
+MyWindow:TGadget=<span style="color: rgb(255, 255, 102);">CreateWindow</span>(<span style="color: rgb(51, 255, 51);">"Canvas Example"</span>,
+200,200,320,240)<br>
+
+
+      <span style="color: rgb(255, 255, 102);">Local&nbsp;<span style="color: rgb(255, 255, 255);">MyCanvas:TGadget</span>=CreateCanvas(<span style="color: rgb(51, 255, 51);"></span><span style="color: rgb(255, 255, 255);">10,10,290,140,MyWindow)</span><br>
+
+
+      </span><span style="font-weight: bold;"></span></span></span><span style="font-family: Lucida Console; font-weight: bold;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Local</span></span><span style="font-family: Tahoma;"> timer:TTimer=</span><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">CreateTimer</span></span><span style="font-family: Tahoma;">(60)<br>
+
+
+      </span><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Local</span></span><span style="font-family: Tahoma;"> x:</span><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Int</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;"><span style="font-weight: bold;">=0</span><br>
+
+
+      <br>
+
+
+      </span><span style="color: rgb(255, 255, 102); font-weight: bold;"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Repeat</span><br style="color: rgb(255, 255, 102);">
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;
+WaitEvent()<br>
+
+
+&nbsp; Select EventID()<br style="color: rgb(255, 255, 102);">
+
+
+      </span> <span style="color: rgb(255, 255, 102);">&nbsp;
+Case <span style="color: rgb(255, 255, 255);">EVENT_WINDOWCLOSE</span><br>
+
+
+&nbsp; &nbsp; &nbsp;End<br>
+
+
+&nbsp;<span style="font-weight: bold;"> Case </span><span style="color: rgb(255, 255, 255); font-weight: bold;">EVENT_TIMERTICK</span><br style="color: rgb(255, 255, 255); font-weight: bold;">
+
+
+      <span style="color: rgb(255, 255, 255); font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;
+x=x+1</span><br style="color: rgb(255, 255, 255); font-weight: bold;">
+
+
+      <span style="color: rgb(255, 255, 255); font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;
+If x&gt;240 x=0</span><br style="font-weight: bold;">
+
+
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;
+RedrawGadget(</span><span style="color: rgb(255, 255, 255); font-weight: bold;">MyCanvas</span><span style="font-weight: bold;">)</span><br>
+
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; Case <span style="color: rgb(255, 255, 255);">EVENT_GADGETPAINT</span><br>
+
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; SetGraphics
+CanvasGraphics</span></span></span> <span style="font-family: Tahoma;">(MyCanvas)<br>
+
+      </span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; &nbsp; Cls</span></span></span><span style="font-family: Lucida Console; font-weight: bold;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"></span></span></span></span><br>
+
+
+      <span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"><span style="color: rgb(51, 255, 51);"> </span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; &nbsp;
+DrawRect</span></span></span> &nbsp;<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"><span style="font-weight: bold;">x</span>,20,50,80<span style="color: rgb(51, 255, 51);"><br>
+
+
+      </span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; &nbsp; Flip</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"></span><br>
+
+
+&nbsp; &nbsp;End Select<span style="color: rgb(255, 255, 255);"></span><br>
+
+
+Forever</span><br>
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+    </tr>
+
+
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">You should now see a white
+rectangle moving across the screen.<br>
+
+
+<br>
+
+
+</span></span>
+<table style="text-align: left; width: 342px; height: 259px;" border="0" cellpadding="2" cellspacing="2">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><img style="width: 320px; height: 240px;" alt="" src="./The MaxGUI Beginner Tutorial Series - Tutorial 12:  Canvas, Events and 2D Graphics_files/t12-05.jpg"><br>
+
+
+      </span></span></td>
+
+
+      <td align="undefined" valign="undefined"><br>
+
+
+      </td>
+
+
+    </tr>
+
+
+  
+  </tbody>
+</table>
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+The <span style="font-weight: bold;">CreateTimer</span>
+function creates a special timer which will trigger an event 60 times
+per second. This event will be captured as an EVENT_TIMERTICK event. The integer
+variable x is used as the horizontal position of our rectangle.<br>
+
+
+</span></span><br>
+
+
+<table style="text-align: left; width: 732px; height: 58px;" border="0" cellpadding="2" cellspacing="2">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"></span></span><span style="font-weight: bold;"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Local</span></span><span style="font-family: Tahoma;"> timer:TTimer=</span><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">CreateTimer</span></span><span style="font-family: Tahoma;">(60)<br>
+
+
+      </span><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Local</span></span><span style="font-family: Tahoma;"> x:</span><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Int</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">=0<span style="font-weight: bold;"><br>
+
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span><span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+    </tr>
+
+
+  
+  </tbody>
+</table>
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+When the EVENT_TIMERTICK event is detected (which will be once every
+1/60 th of a second), we will move the rectangle coordinate by one
+pixel. We then need to check that if it has gone over the screen, we
+reset the location back to zero.<br>
+
+
+<br>
+
+
+The <span style="font-weight: bold;">RedrawGadget</span>
+function will cause the EVENT_GADGETPAINT event to be generated thus
+causing our rectangle to be drawn on the canvas.<br>
+
+
+</span></span><br>
+
+
+<table style="text-align: left; width: 732px; height: 81px;" border="0" cellpadding="2" cellspacing="2">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp;<span style="font-weight: bold;"> </span>Case <span style="color: rgb(255, 255, 255);">EVENT_TIMERTICK</span><br style="color: rgb(255, 255, 255);">
+
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp;&nbsp;
+x=x+1</span><br style="color: rgb(255, 255, 255);">
+
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp;&nbsp;
+If x&gt;290 x=0</span><br>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp; RedrawGadget(<span style="color: rgb(255, 255, 255);">MyCanvas</span>)<br>
+
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+    </tr>
+
+
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Note
+that in the <span style="font-weight: bold;">DrawRect</span>
+function, we now use the integer variable x
+instead of a constant so that we can programatically increase the
+rectangle's location.<br>
+
+
+<br>
+
+
+</span></span>
+<table style="text-align: left; width: 732px; height: 104px;" border="0" cellpadding="2" cellspacing="2">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; Case <span style="color: rgb(255, 255, 255);">EVENT_GADGETPAINT</span><br>
+
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; SetGraphics
+CanvasGraphics</span></span></span> <span style="font-family: Tahoma;">(MyCanvas)</span><span style="font-family: Lucida Console; font-weight: bold;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"></span></span></span></span><br>
+
+
+      <span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"><span style="color: rgb(51, 255, 51);"> </span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; &nbsp;
+DrawRect</span></span></span> &nbsp;<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"><span style="font-weight: bold;">x</span>,20,50,80<span style="color: rgb(51, 255, 51);"><br>
+
+
+      </span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; &nbsp; Flip</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"></span></span><br>
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+    </tr>
+
+
+  
+  </tbody>
+</table>
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">
+<span style="font-weight: bold;"><br>
+
+
+</span>The other powerful thing with Canvases is that we can
+capture mouse events as well. Lets take a look at an example where we
+use the mouse to move our rectangle around the canvas<br>
+
+
+<br>
+
+
+</span></span>
+<table style="text-align: left; width: 732px; height: 160px;" border="0" cellpadding="2" cellspacing="2">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">SuperStrict</span><br>
+
+
+      <br>
+
+
+      <span style="color: rgb(255, 255, 102);">Local</span>
+MyWindow:TGadget=<span style="color: rgb(255, 255, 102);">CreateWindow</span>(<span style="color: rgb(51, 255, 51);">"Canvas Example"</span>,
+200,200,320,240)<br>
+
+
+      <span style="color: rgb(255, 255, 102);">Local&nbsp;<span style="color: rgb(255, 255, 255);">MyCanvas:TGadget</span>=CreateCanvas(<span style="color: rgb(51, 255, 51);"></span><span style="color: rgb(255, 255, 255);">10,10,290,140,MyWindow)</span><br>
+
+
+      </span><span style="font-weight: bold;"></span></span></span><span style="font-family: Lucida Console; font-weight: bold;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span><span style="font-family: Tahoma;"><br>
+
+
+      </span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Local</span></span><span style="font-family: Tahoma;"> x:</span><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Int</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">=0<span style="font-weight: bold;"><span style="font-weight: bold;"><br>
+
+
+      </span></span></span></span><span style="font-family: Lucida Console; font-weight: bold;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Local</span></span><span style="font-family: Tahoma;"> y:</span><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Int</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;"><span style="font-weight: bold;">=0</span></span></span></span><br>
+
+
+      <span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">ActivateGadget </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);">MyCanvas<br>
+
+
+      <br>
+
+
+      </span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Repeat</span><br style="color: rgb(255, 255, 102);">
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;
+WaitEvent()<br>
+
+
+&nbsp; Select EventID()<br style="color: rgb(255, 255, 102);">
+
+
+      </span> <span style="color: rgb(255, 255, 102);">&nbsp;
+Case <span style="color: rgb(255, 255, 255);">EVENT_WINDOWCLOSE</span><br>
+
+
+&nbsp; &nbsp; &nbsp;End<br>
+
+
+&nbsp;<span style="font-weight: bold;"> Case </span><span style="color: rgb(255, 255, 255); font-weight: bold;">EVENT_MOUSEMOVE</span><br style="color: rgb(255, 255, 255); font-weight: bold;">
+
+
+      <span style="color: rgb(255, 255, 255); font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;
+x=<span style="color: rgb(255, 255, 102);">EventX</span>()<br>
+
+
+&nbsp; &nbsp; &nbsp;y=<span style="color: rgb(255, 255, 102);">EventY</span>()</span><span style="color: rgb(255, 255, 255); font-weight: bold;"></span><br style="font-weight: bold;">
+
+
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;
+      </span>RedrawGadget(<span style="color: rgb(255, 255, 255);">MyCanvas</span>)<br>
+
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; Case <span style="color: rgb(255, 255, 255);">EVENT_GADGETPAINT</span><br>
+
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; SetGraphics
+CanvasGraphics</span></span></span> <span style="font-family: Tahoma;">(MyCanvas)<br>
+
+      </span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; &nbsp; Cls</span></span></span><span style="font-family: Lucida Console; font-weight: bold;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"></span></span></span></span><br>
+
+
+      <span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"><span style="color: rgb(51, 255, 51);"> </span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; &nbsp;
+DrawRect</span></span></span> &nbsp;<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"><span style="font-weight: bold;">x</span>,<span style="font-weight: bold;">y</span>,40,40<span style="color: rgb(51, 255, 51);"><br>
+
+
+      </span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; &nbsp; Flip</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"></span><br>
+
+
+&nbsp; &nbsp;End Select<span style="color: rgb(255, 255, 255);"></span><br>
+
+
+Forever</span><br>
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+    </tr>
+
+
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">You can now move the white
+40x40 square around the canvas.<br>
+
+
+<br>
+
+
+</span></span>
+<table style="text-align: left; width: 342px; height: 259px;" border="0" cellpadding="2" cellspacing="2">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><img style="width: 320px; height: 240px;" alt="" src="./The MaxGUI Beginner Tutorial Series - Tutorial 12:  Canvas, Events and 2D Graphics_files/t12-07.jpg"><br>
+
+
+      </span></span></td>
+
+
+      <td align="undefined" valign="undefined"><br>
+
+
+      </td>
+
+
+    </tr>
+
+
+  
+  </tbody>
+</table>
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;"><br>
+
+
+</span>Let us look into more detail at our program. We first need
+to declare the integer variables for our rectangle's coordinates. Then
+we must activate our canvas gadget, otherwise our mouse events will not
+be generated for the canvas.<br>
+
+
+<br>
+
+
+</span></span>
+<table style="text-align: left; width: 732px; height: 96px;" border="0" cellpadding="2" cellspacing="2">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console; font-weight: bold;"></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Local</span></span><span style="font-family: Tahoma;"> x:</span><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Int</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">=0<span style="font-weight: bold;"><span style="font-weight: bold;"><br>
+
+
+      </span></span></span></span><span style="font-family: Lucida Console; font-weight: bold;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Local</span></span><span style="font-family: Tahoma;"> y:</span><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Int</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;"><span style="font-weight: bold;">=0</span></span></span></span><br>
+
+
+      <span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">ActivateGadget </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);">MyCanvas<br>
+
+
+      </span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span><span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+    </tr>
+
+
+  
+  </tbody>
+</table>
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+Once we have done the activation, whenever the mouse move over the
+canvas, an EVENT_MOUSEMOVE event will be generated and the coordinates
+of the mouse will be available via the <span style="font-weight: bold;">EventX</span> and <span style="font-weight: bold;">EventY</span> functions.
+Once we have updated the x,y variables, we call the <span style="font-weight: bold;">RedrawGadget</span>
+function to generate the EVENT_GADGETPAINT event which will redraw our
+canvas.<br>
+
+
+</span></span>
+<table style="text-align: left; width: 732px; height: 101px;" border="0" cellpadding="2" cellspacing="2">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp;<span style="font-weight: bold;">&nbsp;Case </span><span style="color: rgb(255, 255, 255); font-weight: bold;">EVENT_MOUSEMOVE</span><br style="color: rgb(255, 255, 255); font-weight: bold;">
+
+
+      <span style="color: rgb(255, 255, 255); font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;
+x=<span style="color: rgb(255, 255, 102);">EventX</span>()<br>
+
+
+&nbsp; &nbsp; &nbsp;y=<span style="color: rgb(255, 255, 102);">EventY</span>()</span><span style="color: rgb(255, 255, 255); font-weight: bold;"></span><br style="font-weight: bold;">
+
+
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;
+      </span>RedrawGadget(<span style="color: rgb(255, 255, 255);">MyCanvas</span>)<br>
+
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+    </tr>
+
+
+  
+  </tbody>
+</table>
+
+
+<br>
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">We can improve the above program by making our cursor dissappear as follows:-</span></span><br>
+
+<br>
+
+<table style="text-align: left; width: 732px; height: 160px;" border="0" cellpadding="2" cellspacing="2">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">SuperStrict</span><br>
+
+
+      <br>
+
+
+      <span style="color: rgb(255, 255, 102);">Local</span>
+MyWindow:TGadget=<span style="color: rgb(255, 255, 102);">CreateWindow</span>(<span style="color: rgb(51, 255, 51);">"Canvas Example"</span>,
+200,200,320,240)<br>
+
+
+      <span style="color: rgb(255, 255, 102);">Local&nbsp;<span style="color: rgb(255, 255, 255);">MyCanvas:TGadget</span>=CreateCanvas(<span style="color: rgb(51, 255, 51);"></span><span style="color: rgb(255, 255, 255);">10,10,290,140,MyWindow)</span><br>
+
+
+      </span><span style="font-weight: bold;"></span></span></span><span style="font-family: Lucida Console; font-weight: bold;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span><span style="font-family: Tahoma;"><br>
+
+
+      </span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Local</span></span><span style="font-family: Tahoma;"> x:</span><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Int</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">=0<span style="font-weight: bold;"><span style="font-weight: bold;"><br>
+
+
+      </span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Local</span></span><span style="font-family: Tahoma;"> y:</span><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Int</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">=0</span></span><br>
+
+
+      <span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">ActivateGadget </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);">MyCanvas<br>
+
+
+      <br>
+
+
+      </span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Repeat</span><br style="color: rgb(255, 255, 102);">
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;
+WaitEvent()<br>
+
+
+&nbsp; Select EventID()<br style="color: rgb(255, 255, 102);">
+
+
+      </span> <span style="color: rgb(255, 255, 102);">&nbsp;
+Case <span style="color: rgb(255, 255, 255);">EVENT_WINDOWCLOSE</span><br>
+
+
+&nbsp; &nbsp; &nbsp;End<br>
+
+      <span style="font-weight: bold;">&nbsp; </span></span></span></span><span style="font-family: Lucida Console; font-weight: bold;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">
+Case <span style="color: rgb(255, 255, 255);">EVENT_MOUSEENTER</span><br style="color: rgb(255, 255, 255);">
+
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(255, 255, 102);">HideMouse</span></span></span></span></span><br style="font-weight: bold;">
+
+      <span style="font-family: Lucida Console; font-weight: bold;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp;Case <span style="color: rgb(255, 255, 255);">EVENT_MOUSELEAVE</span><br style="color: rgb(255, 255, 255);">
+
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(255, 255, 102);">ShowMouse</span></span></span></span></span><br>
+
+      <span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; Case <span style="color: rgb(255, 255, 255);">EVENT_MOUSEMOVE</span><br style="color: rgb(255, 255, 255);">
+
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp;&nbsp;
+x=<span style="color: rgb(255, 255, 102);">EventX</span>()<br>
+
+
+&nbsp; &nbsp; &nbsp;y=<span style="color: rgb(255, 255, 102);">EventY</span>()</span><br style="font-weight: bold;">
+
+
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;
+      </span>RedrawGadget(<span style="color: rgb(255, 255, 255);">MyCanvas</span>)<br>
+
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; Case <span style="color: rgb(255, 255, 255);">EVENT_GADGETPAINT</span><br>
+
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; SetGraphics
+CanvasGraphics</span></span></span> <span style="font-family: Tahoma;">(MyCanvas)<br>
+
+      </span><span style="font-family: Lucida Console; font-weight: bold;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"> &nbsp; &nbsp; Cls</span></span></span><br>
+
+
+      <span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"><span style="color: rgb(51, 255, 51);"> </span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; &nbsp;
+DrawRect</span></span></span> &nbsp;<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"><span style="font-weight: bold;">x</span>,<span style="font-weight: bold;">y</span>,40,40<span style="color: rgb(51, 255, 51);"><br>
+
+
+      </span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; &nbsp; Flip</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"></span><br>
+
+
+&nbsp; &nbsp;End Select<span style="color: rgb(255, 255, 255);"></span><br>
+
+
+Forever</span><br>
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+    </tr>
+
+
+  
+  </tbody>
+</table>
+
+<br>
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">The canvas gadget supports the
+following events:-<br>
+
+<br>
+
+
+<table>
+
+
+  <tbody>
+
+    <tr>
+
+      <td>EVENT_MOUSEDOWN</td>
+
+      <td>Mouse button pressed. Event data contains mouse button code</td>
+
+    </tr>
+
+
+    <tr>
+
+      <td>EVENT_MOUSEUP</td>
+
+      <td>Mouse button released. Event data contains mouse button code</td>
+
+    </tr>
+
+
+    <tr>
+
+      <td>EVENT_MOUSEMOVE</td>
+
+      <td>Mouse moved. Event x and y contain mouse coordinates</td>
+
+    </tr>
+
+
+    <tr>
+
+      <td>EVENT_MOUSEWHEEL</td>
+
+      <td>Mouse wheel spun. Event data contains delta clicks</td>
+
+    </tr>
+
+
+    <tr>
+
+      <td>EVENT_MOUSEENTER</td>
+
+      <td>Mouse entered gadget area</td>
+
+    </tr>
+
+
+    <tr>
+
+      <td>EVENT_MOUSELEAVE</td>
+
+      <td>Mouse left gadget area</td>
+
+    </tr>
+
+
+    <tr>
+
+    </tr>
+
+
+    <tr>
+
+      <td>EVENT_KEYDOWN</td>
+
+      <td>Key pressed. Event data contains keycode</td>
+
+    </tr>
+
+
+    <tr>
+
+      <td>EVENT_KEYUP</td>
+
+      <td>Key released. Event data contains keycode</td>
+
+    </tr>
+
+
+    <tr>
+
+      <td>EVENT_KEYCHAR</td>
+
+      <td>Key character. Event data contains unicode value</td>
+
+    </tr>
+
+
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">I will leave it as an exercise to use these other events that I have not covered:)<br>
+
+<br>
+
+</span></span>
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;">Summary</span><br style="font-weight: bold;">
+
+
+<br style="font-weight: bold;">
+
+The Canvas Gadget is a very powerful gadget which allows us to utilise
+the full power of the Max2D functionality on its canvas. On top of the
+Max2D commands, you have the MaxGUI events also available &nbsp;for use
+as well allowing for some very interesting programs.<br>
+
+
+<br>
+
+
+To recap what we have learnt so far<br>
+
+
+</span></span>
+<ul>
+
+
+  <li><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Canveses can be created
+using the <span style="font-weight: bold;">CreateCanvas</span>
+function</span></span></li>
+
+
+  <li><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">We need to capture the EVENT_GADGETPAINT event to draw our canvas</span></span></li>
+
+  <li><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">The <span style="font-weight: bold;">RedrawGadget</span> function must be used whenever we wish to update the drawings on our canvas.</span></span></li>
+
+  <li><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Timers can be used to animate our canvas via the <span style="font-weight: bold;">CreateTimer</span> function and then capturing the EVENT_TIMERTICK event.<br>
+
+    </span></span></li>
+
+
+  <li><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Mouse
+and Key events can be captured on our canvas but requires the
+ActivateGadget function to be called before the events can be trapped.<br>
+
+
+    </span></span></li>
+
+
+</ul>
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">So thats ends our tutorial for
+now. Back to Tutorial <a href="http://web.archive.org/web/20070125215223/http://www.2dgamecreators.com/maxgui/index.html">Index</a>.</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+</span></span><span style="font-family: Tahoma;">
+</span><span style="font-family: Tahoma;"></span>
+
+
+<!--
+     FILE ARCHIVED ON 21:52:23 Jan 25, 2007 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 12:42:04 Oct 03, 2021.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 108.131
+  exclusion.robots: 0.307
+  exclusion.robots.policy: 0.293
+  RedisCDXSource: 0.753
+  esindex: 0.013
+  LoadShardBlock: 75.846 (3)
+  PetaboxLoader3.datanode: 115.43 (4)
+  CDXLines.iter: 26.629 (3)
+  load_resource: 109.754
+  PetaboxLoader3.resolve: 62.331
+--></body></html>

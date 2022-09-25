@@ -1,0 +1,2148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0096)http://web.archive.org/web/20070125214652/http://www.2dgamecreators.com/maxgui/CreateWindow.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><script src="./The MaxGUI Beginner Tutorial Series - Tutorial 1: Using CreateWindow_files/analytics.js" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app58.us.archive.org';v.server_ms=333;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="./The MaxGUI Beginner Tutorial Series - Tutorial 1: Using CreateWindow_files/bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="./The MaxGUI Beginner Tutorial Series - Tutorial 1: Using CreateWindow_files/wombat.js" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("http://web.archive.org/web");
+  __wm.wombat("http://www.2dgamecreators.com:80/maxgui/CreateWindow.html","20070125214652","http://web.archive.org/","web","/_static/",
+	      "1169761612");
+</script>
+<link rel="stylesheet" type="text/css" href="./The MaxGUI Beginner Tutorial Series - Tutorial 1: Using CreateWindow_files/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="./The MaxGUI Beginner Tutorial Series - Tutorial 1: Using CreateWindow_files/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+
+
+
+
+
+  
+  
+  
+  
+
+
+
+  
+  
+  
+  <title>Tutorial 1:Using CreateWindow</title>
+</head>
+
+
+<body><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  /*min-width:800px !important;*/
+}
+</style>
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr;">
+</div><div id="wm-ipp-print">The Wayback Machine - http://web.archive.org/web/20070125214652/http://www.2dgamecreators.com:80/maxgui/CreateWindow.html</div>
+<div id="donato" style="position:relative;width:100%;">
+  <div id="donato-base">
+    <iframe id="donato-if" src="./The MaxGUI Beginner Tutorial Series - Tutorial 1: Using CreateWindow_files/donate.html" scrolling="no" frameborder="0" style="width:100%; height:100%">
+    </iframe>
+  </div>
+</div><script type="text/javascript">
+__wm.bt(650,27,25,2,"web","http://www.2dgamecreators.com/maxgui/CreateWindow.html","20070125214652",1996,"/_static/",["/_static/css/banner-styles.css?v=omkqRugM","/_static/css/iconochive.css?v=qtvMKcIJ"], "False");
+  __wm.rw(1);
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;">The MaxGUI Beginner Tutorial Series - Tutorial 1: Using CreateWindow</span><br style="font-weight: bold;">
+
+
+
+
+(c) Assari Dec 22 2005<br>
+
+
+
+<br>
+
+<span style="font-weight: bold;">Introduction</span><br>
+
+<br>
+
+This is the first of what I hope will be an extensive series of
+beginner level tutorials for MaxGUI, a BlitzMax extension which adds
+GUI capability to this excellent language.<br>
+
+<br>
+
+These tutorials are pitched at beginners although I do expect some
+familiarity with using Blitzmax, the Editor MaxIDE, cutting&amp;pasting
+code&nbsp;into the IDE , compiling and running BlitzMax programs. I'm
+also assuming some basic programming knowledge such as variables, loops
+and conditionals.<br>
+
+<br>
+
+Note that these tutorials have been (will be) created on a Windows
+version of MaxGUI so I have no idea how they will look and behave on
+other systems. I'm assuming that the MaxGUI cross-platform works as
+claimed.<br>
+
+<br>
+
+</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;">Using CreateWindow</span></span></span><br>
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Lets try out a simple MaxGUI blitzmax program which will create a window with
+a title called "My Window Title is Hello World"<br>
+
+
+
+
+<br>
+
+
+
+
+</span></span>
+<table style="text-align: left; width: 732px; height: 160px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">MyFirstWindow:TGadget=<span style="color: rgb(255, 255, 102);">CreateWindow</span>(<span style="color: rgb(51, 204, 0);">"My Window Title is Hello
+World"</span>, 200,200,320,240)<br>
+
+
+
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Repeat</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;WaitEvent()</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Until
+EventID()</span>=EVENT_WINDOWCLOSE<br>
+
+
+
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">End</span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+Cut and paste the above code into the MaxIDE and run the program. You should see the following (for Windows XP users):-<br>
+
+
+
+
+<br>
+
+
+
+
+</span></span>
+<table style="text-align: left; width: 342px; height: 259px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><img style="width: 320px; height: 240px;" alt="Img:CreateWindow" src="./The MaxGUI Beginner Tutorial Series - Tutorial 1: Using CreateWindow_files/createwindow.jpg"><br>
+
+
+
+
+      </span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<br>
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Go ahead and play with the window. It behaves as a normal window. You can move it, resize it, minimize it and finally close it.<br>
+
+
+
+<br>
+
+
+
+Now lets try and see what all
+those lines of Blitzmax code means</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"></span></span><br>
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"></span></span><br>
+
+
+
+
+<table style="text-align: left; width: 732px; height: 46px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">MyFirstWindow:TGadget=<span style="color: rgb(255, 255, 102);">CreateWindow</span>(<span style="color: rgb(51, 204, 0);">"My Window Title is Hello
+World"</span>, 200,200,320,240)<br>
+
+
+
+
+      </span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<br>
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">The above code creates a window and
+displays it on the computer screen. The central piece here is the
+MaxGUI function <span style="font-weight: bold; color: rgb(0, 0, 0);">CreateWindow.</span><br>
+
+
+
+
+<br>
+
+
+
+
+In BlitzMax, just like other programming languages, its functions needs parameters. In the case of <span style="font-weight: bold;">CreateWindow</span> it minimally needs the
+following:-<br>
+
+
+
+
+</span></span>
+<ul>
+
+
+
+
+  <li><span style="font-family: Tahoma;">The text
+that should appear on the created window title bar</span></li>
+
+
+
+
+  <li><span style="font-family: Tahoma;">Where to
+place the created window on the computer screen ie its coordinates</span></li>
+
+
+
+
+  <li><span style="font-family: Tahoma;">How big the
+window should be ie its size</span></li>
+
+
+
+
+</ul>
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">In
+the example above, the given parameters are:-<br>
+
+
+
+
+</span></span>
+<ul>
+
+
+
+
+  <li><span style="font-family: Tahoma;">Title text
+is&nbsp;</span><span style="font-family: Lucida Console; font-weight: bold; color: rgb(0, 0, 0);"><span style="font-family: Tahoma;">My Window Title is Hello
+World</span></span></li>
+
+
+
+
+  <li><span style="font-family: Tahoma;">Display
+location at coordinates <span style="font-weight: bold;">200,200</span></span></li>
+
+
+
+
+  <li><span style="font-family: Tahoma;">Window size
+of <span style="font-weight: bold;">320</span> by <span style="font-weight: bold;">240&nbsp;</span>pixels</span></li>
+
+
+
+
+</ul>
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Functions by their nature also
+returns a result. <span style="font-weight: bold;">CreateWindow</span> returns an object of type <span style="font-weight: bold;">TGadget</span> which we
+have chosen to call <span style="font-weight: bold;">MyFirstWindow</span>.<br>
+
+
+
+
+<br>
+
+
+
+
+Objects are a big part of Blitzmax but we will not get into that for
+this tutorial, suffice to know that we must always supply a name of the
+Object that CreateWindow needs to return stuff to.<br>
+
+
+
+
+<br>
+
+For now I will not explain in detail the rest of the code except to say that
+the code allows the program to wait until we close the created window by clicking on the&nbsp;close window icon. <br>
+
+
+
+
+<br>
+
+
+
+
+</span></span>
+<table style="text-align: left; width: 732px; height: 100px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Repeat</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;WaitEvent()</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Until
+EventID()</span>=EVENT_WINDOWCLOSE<br>
+
+
+
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">End</span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<br>
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">If we were to look at the
+Blitzmax Helpfile we will see the following syntax requirements</span></span><br>
+
+
+
+
+<table style="text-align: left; width: 712px; height: 55px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+      <td style="background-color: rgb(204, 255, 255); font-family: Tahoma;">Function
+CreateWindow:TGadget(name$,x,y,w,h,group:TGadget=Null,<a name="style15"></a>style=15)</td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Lets go into more
+detail of the syntax:-<br>
+
+
+
+
+</span></span>
+<ul>
+
+
+
+
+  <li><span style="font-family: Tahoma;">The word <span style="font-weight: bold;">Function</span> is just to
+tell us that CreateWindow is a function. Nothing special here</span></li>
+
+
+
+
+  <li><span style="font-family: Tahoma;"><span style="font-weight: bold;">CreateWindow:TGadget</span>
+tells us that the CreateWindow function will return an Object of type
+TGadget</span></li>
+
+
+
+
+  <li><span style="font-family: Tahoma;">The items
+between brackets are parameters, lets go through them one by one:-</span></li>
+
+
+
+
+  
+  
+  
+  <ul>
+
+
+
+
+    <li><span style="font-family: Tahoma;"><span style="font-weight: bold;">name$</span> is the text
+that will appear in the title bar</span></li>
+
+
+
+
+    <li><span style="font-family: Tahoma;">&nbsp;<span style="font-weight: bold;">x,y </span>is the x and y
+coordinates of the location where the window will appear</span></li>
+
+
+
+
+    <li><span style="font-family: Tahoma;"><span style="font-weight: bold;">w,h</span> is the <span style="font-weight: bold;">w</span>idth and<span style="font-weight: bold;">
+h</span>eight of the window (ie its size)</span></li>
+
+
+
+
+    <li><span style="font-family: Tahoma;"><span style="font-weight: bold;">group:TGadget</span> is the
+group to whom this created window belongs to. Will get into this later
+in the tutorial</span></li>
+
+
+
+
+    <li><span style="font-family: Tahoma;"><span style="font-weight: bold;">style</span> is the style
+of the window. How it would appear etc. More later</span></li>
+
+
+
+
+  
+  
+  
+  </ul>
+
+
+
+
+</ul>
+
+
+
+
+<span style="font-family: Tahoma;">Two of the parameters <span style="font-weight: bold;">group:TGadget</span> and <span style="font-weight: bold;">style</span> are written
+slightly differently then the rest of the parameters viz </span><span style="font-family: Tahoma;"><span style="font-weight: bold;">group:TGadget=null</span>
+and <span style="font-weight: bold;">style=15</span> i.e. they have assignments.<br>
+
+
+
+
+<br>
+
+
+
+
+Whenever you see an assignment in function parameters, this means
+that the parameter is optional and has default value as assigned.
+In this case <span style="font-weight: bold;">group</span>
+will be <span style="font-weight: bold;">null</span>
+(ie it does not belong to any other Gadget) and <span style="font-weight: bold;">style</span> will be <span style="font-weight: bold;">15</span> which gives you a
+window as displayed in our first example.<br>
+
+
+
+
+</span><br>
+
+
+
+
+<span style="font-family: Tahoma;"><span style="font-weight: bold;">The CreateWindow Style</span><br>
+
+
+<br>
+
+
+Lets play a little bit
+with this style parameter. MaxGUI has a set of predefine constants to
+help with setting the window style. From the Blitzmax Helpdocuments:-<br>
+
+
+<br>
+
+
+
+
+<table border="1">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+      <th>Constant</th>
+
+
+
+
+      <th>Meaning</th>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+      <td>WINDOW_TITLEBAR</td>
+
+
+
+
+      <td>The Window has a titlebar that displays it's name</td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+      <td>WINDOW_RESIZABLE</td>
+
+
+
+
+      <td>The Window can be resized by the user</td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+      <td>WINDOW_MENU</td>
+
+
+
+
+      <td>The Window has a menubar</td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp; </td>
+
+
+
+      <td>WINDOW_STATUS</td>
+
+
+
+
+      <td>The Window has a statusbar</td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+      <td>WINDOW_TOOL</td>
+
+
+
+
+      <td>The Window is rendered on some platforms with a reduced
+titlebar</td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+      <td>WINDOW_CLIENTCOORDS</td>
+
+
+
+
+      <td>The dimensions specified relate to the client area not
+the window frame</td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+      <td>WINDOW_HIDDEN</td>
+
+
+
+
+      <td>The Window is created in a hidden state</td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+      <td>WINDOW_ACCEPTFILES</td>
+
+
+
+
+      <td>Enable drag and drop operations</td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<br>
+
+
+
+</span><span style="font-family: Tahoma;">Lets see what happens to our window when we start setting the style with a different constant value<br>
+
+
+
+<br>
+
+
+
+</span>
+<table style="text-align: left; width: 666px; height: 179px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">MyFirstWindow:TGadget=<span style="color: rgb(255, 255, 102);">CreateWindow</span>(<span style="color: rgb(51, 204, 0);">"My Window with WINDOW_TITLEBAR"</span>, 200,200,320,240,</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Null</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">,WINDOW_TITLEBAR)<br>
+
+
+
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Repeat</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;WaitEvent()</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Until
+EventID()</span>=EVENT_WINDOWCLOSE<br>
+
+
+
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">End</span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+<br>
+
+
+
+<span style="font-family: Tahoma;">Note that I have also changed the
+title to reflect what we are doing. Cut and paste the above code and run the resulting program.<br>
+
+
+<br>
+
+
+Now compare the two windows. A
+couple of obvious differences are the lack of min/max buttons and status line. The
+behaviour of the window is also now different. You cannot resize or
+minimize it anymore.<br>
+
+
+
+<br>
+
+
+
+</span><span style="font-family: Tahoma;">
+</span>
+<table style="text-align: left; width: 342px; height: 259px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><img style="width: 320px; height: 240px;" alt="Img:CreateWindow" src="./The MaxGUI Beginner Tutorial Series - Tutorial 1: Using CreateWindow_files/createwindow.jpg"><br>
+
+
+
+
+      </span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"><img style="width: 320px; height: 240px;" alt="" src="./The MaxGUI Beginner Tutorial Series - Tutorial 1: Using CreateWindow_files/createwindow_title.jpg"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+<span style="font-family: Tahoma;">
+<p>MaxGUI allows you to create windows with different combination of styles. In does this by using a special function called <span style="font-weight: bold;">| </span>which is pronounced OR.</p>
+
+
+<p>For example to have a window with a title and make it resizable we do the following</p>
+
+
+</span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">
+</span></span>
+<table style="text-align: left; width: 732px; height: 160px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">MyFirstWindow:TGadget=<span style="color: rgb(255, 255, 102);">CreateWindow</span>(<span style="color: rgb(51, 204, 0);">"My Window with WINDOW_TITLEBAR"</span>, 200,200,320,240,<span style="color: rgb(255, 255, 102);">Null</span>,WINDOW_TITLEBAR|WINDOW_RESIZABLE)<br>
+
+
+
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Repeat</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;WaitEvent()</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Until
+EventID()</span>=EVENT_WINDOWCLOSE<br>
+
+
+
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">End</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">
+
+<br>
+
+
+</span></span><span style="font-family: Tahoma;">
+<p>We can now see that the newly created window can be resized, minimized and maximized.</p>
+
+
+</span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">
+
+
+</span></span>
+<table style="text-align: left; width: 342px; height: 259px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><img style="width: 320px; height: 240px;" alt="" src="./The MaxGUI Beginner Tutorial Series - Tutorial 1: Using CreateWindow_files/createwindow_title.jpg"><br>
+
+
+
+
+      </span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"><img style="width: 320px; height: 240px;" alt="" src="./The MaxGUI Beginner Tutorial Series - Tutorial 1: Using CreateWindow_files/createwindow_resizable.jpg"><br>
+
+
+      </td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+<span style="font-family: Tahoma;">As a &nbsp;matter of taste I &nbsp;prefer to &nbsp;use a local variable to define the style so that my <span style="font-weight: bold;">CreateWindow</span> function does not look so messed up viz:-</span><br>
+
+
+<table style="text-align: left; width: 732px; height: 160px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Local</span> style = </span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">WINDOW_TITLEBAR|WINDOW_RESIZABLE|</span></span><span style="font-family: Tahoma;">WINDOW_MENU|</span><span style="font-family: Tahoma;">WINDOW_STATUS<br>
+
+
+      <br>
+
+
+      </span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">MyFirstWindow:TGadget=<span style="color: rgb(255, 255, 102);">CreateWindow</span>(<span style="color: rgb(51, 204, 0);">"My Window with WINDOW_TITLEBAR"</span>, 200,200,320,240,</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Null</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">,style)<br>
+
+
+
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Repeat</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;WaitEvent()</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Until
+EventID()</span>=EVENT_WINDOWCLOSE<br>
+
+
+
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">End</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+<span style="font-family: Tahoma;">The variable style contains the style number to use. Coincidently if we were to see what the value of this variable is like so:-<br>
+
+
+<br>
+
+
+</span>
+<table style="text-align: left; width: 732px; height: 160px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Local</span> style = </span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">WINDOW_TITLEBAR|WINDOW_RESIZABLE|</span></span><span style="font-family: Tahoma;">WINDOW_MENU|</span><span style="font-family: Tahoma;">WINDOW_STATUS<br>
+
+
+      <span style="color: rgb(255, 255, 102);">Print</span> <span style="color: rgb(51, 204, 0);">"The Value of Style is "</span>+style<br>
+
+
+      <br>
+
+
+      </span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">MyFirstWindow:TGadget=<span style="color: rgb(255, 255, 102);">CreateWindow</span>(<span style="color: rgb(51, 204, 0);">"My Window with WINDOW_TITLEBAR"</span>, 200,200,320,240,</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Null</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">,style)<br>
+
+
+
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Repeat</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;WaitEvent()</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Until
+EventID()</span>=EVENT_WINDOWCLOSE<br>
+
+
+
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">End</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+<span style="font-family: Tahoma;">You can see from the MaxIDE <span style="font-weight: bold;">Output</span> window that the value of the variable <span style="font-weight: bold;">style</span> is 15<br>
+
+
+<br>
+
+
+</span>
+<table style="text-align: left; width: 342px; height: 259px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><img style="width: 467px; height: 325px;" alt="" src="./The MaxGUI Beginner Tutorial Series - Tutorial 1: Using CreateWindow_files/style_is_15.jpg"><br>
+
+
+
+
+      </span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"><br>
+
+
+      </td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+<span style="font-family: Tahoma;">Its no wonder than that this created
+window is the same as the one we saw for our first program. As stated
+in the help file "...the default window style is WINDOW_TITLEBAR |
+WINDOW_RESIZABLE | WINDOW_MENU | WINDOW_STATUS. " which happens to be
+15 (see Function Defintion above,<a href="http://web.archive.org/web/20070125214652/http://www.2dgamecreators.com/maxgui/CreateWindow.html#style15"> style=15</a>)</span><br>
+
+
+<span style="font-family: Tahoma;"><br>
+
+
+</span>
+<table style="text-align: left; width: 342px; height: 259px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><img style="width: 320px; height: 240px;" alt="" src="./The MaxGUI Beginner Tutorial Series - Tutorial 1: Using CreateWindow_files/createwindow.jpg"><br>
+
+
+
+
+      </span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"><br>
+
+
+      </td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+<span style="font-family: Tahoma;"><span style="font-weight: bold;">WINDOW_CLIENTCOORDS</span></span><br>
+
+
+<span style="font-family: Tahoma;">One other style which is interesting to look at is&nbsp;</span><span style="font-family: Tahoma;"><span style="font-weight: bold;">WINDOW_CLIENTCOORDS</span>. Let's see what this does<br>
+
+
+<br>
+
+
+</span>
+<table style="text-align: left; width: 732px; height: 160px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Local</span> style = </span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">WINDOW_TITLEBAR | WINDOW_RESIZABLE | </span></span><span style="font-family: Tahoma;">WINDOW_MENU | </span><span style="font-family: Tahoma;">WINDOW_STATUS </span><span style="font-family: Tahoma;">| </span><span style="font-family: Tahoma;">WINDOW_CLIENTCOORDS</span><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span><br>
+
+
+      <br>
+
+
+      </span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">MyFirstWindow:TGadget=<span style="color: rgb(255, 255, 102);">CreateWindow</span>(<span style="color: rgb(51, 204, 0);">"My Window with WINDOW_TITLEBAR"</span>, 200,200,320,240,</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Null</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">,style)<br>
+
+
+
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Repeat</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;WaitEvent()</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Until
+EventID()</span>=EVENT_WINDOWCLOSE<br>
+
+
+
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">End</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+<span style="font-family: Tahoma;">Cut and paste the above program into the MaxIDE and run it. Compare this window with the ones we had before<br>
+
+
+<br>
+
+
+</span>
+<table style="text-align: left; width: 342px; height: 259px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><img style="width: 320px; height: 240px;" alt="" src="./The MaxGUI Beginner Tutorial Series - Tutorial 1: Using CreateWindow_files/createwindow.jpg"><br>
+
+
+
+
+      </span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"><img style="width: 328px; height: 314px;" alt="" src="./The MaxGUI Beginner Tutorial Series - Tutorial 1: Using CreateWindow_files/createwindow_clientcoord.jpg"><br>
+
+
+      </td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+<span style="font-family: Tahoma;">&nbsp;</span><span style="font-family: Tahoma;">What we now see is that the size of 320 x 240 that we have specified in the <span style="font-weight: bold;">CreateWindow</span>
+parameter is actually now specifying the size of the central panel (the
+client) of this window. The other items like the status bar, the menu
+bar, the borders as well as the titlebar now is added on top of the
+central panel thus resulting in a bigger window being created.<br>
+
+
+<br>
+
+
+</span><span style="font-family: Tahoma;"><span style="font-weight: bold;">WINDOW_STATUS<br>
+
+
+<span style="font-weight: bold;"><span style="font-weight: bold;"></span></span></span></span><span style="font-family: Tahoma;"></span><span style="font-family: Tahoma;">The WINDOW_STATUS constant as we have seen earlier allows for the creation of the status bar at the bottom of the window. <br>
+
+
+<br>
+
+
+An example of the use of the status bar is as follows:-<br>
+
+
+<br>
+
+
+</span>
+<table style="text-align: left; width: 804px; height: 259px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Local</span> style = </span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">WINDOW_TITLEBAR | WINDOW_RESIZABLE&nbsp;</span></span><span style="font-family: Tahoma;">| </span><span style="font-family: Tahoma;">WINDOW_STATUS | WINDOW_CLIENTCOORDS </span><span style="font-family: Tahoma;"></span><span style="font-family: Tahoma;"></span><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span><br>
+
+
+      <br>
+
+
+      </span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">MyFirstWindow:TGadget=<span style="color: rgb(255, 255, 102);">CreateWindow</span>(<span style="color: rgb(51, 204, 0);">"My Window with WINDOW_TITLEBAR"</span>, 200,200,320,240,</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Null</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">,style)<br>
+
+
+
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Repeat</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;WaitEvent()<br>
+
+
+&nbsp; SetStatusText <span style="color: rgb(255, 255, 255);">MyFirstWindow</span>, <span style="color: rgb(51, 255, 51);">"My current size (w,h) is "</span> + ClientWidth<span style="color: rgb(255, 255, 255);">(MyFirstWindow)</span>+ <span style="color: rgb(51, 255, 51);">","</span> + ClientHeight<span style="color: rgb(255, 255, 255);">(MyFirstWindow)</span><br>
+
+
+      <br style="color: rgb(255, 255, 102);">
+
+
+      </span>
+
+      <span style="color: rgb(255, 255, 102);">Until
+EventID()</span>=EVENT_WINDOWCLOSE<br>
+
+
+
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">End</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+<span style="font-family: Tahoma;">Cut and Paste the above code and run it. You should see the following screen<br>
+
+
+<br>
+
+
+</span>
+<table style="text-align: left; width: 342px; height: 259px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><img style="width: 328px; height: 294px;" alt="" src="./The MaxGUI Beginner Tutorial Series - Tutorial 1: Using CreateWindow_files/createwindow_statusbar.jpg"><br>
+
+
+
+
+      </span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"><br>
+
+
+      </td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+<span style="font-family: Tahoma;">Notice the text appearing in the
+status bar. Now resize the window and you should see the size changing
+once the window has been resized.<br>
+
+
+<br>
+
+
+We have achieved this via this line of code.<br>
+
+
+<br>
+
+
+</span>
+<table style="text-align: left; width: 804px; height: 68px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">SetStatusText <span style="color: rgb(255, 255, 255);">MyFirstWindow</span>, <span style="color: rgb(51, 255, 51);">"My current size (w,h) is "</span> + ClientWidth<span style="color: rgb(255, 255, 255);">(MyFirstWindow)</span>+ <span style="color: rgb(51, 255, 51);">","</span> + ClientHeight<span style="color: rgb(255, 255, 255);">(MyFirstWindow)</span><br>
+
+
+      </span><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+<span style="font-family: Tahoma;"><span style="font-weight: bold;">SetStatusText</span> has the following syntax:-<br>
+
+
+<br>
+
+
+</span>
+<table style="text-align: left; width: 712px; height: 55px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+      <td style="background-color: rgb(204, 255, 255); font-family: Tahoma;">Function SetStatusText( window:TGadget,text$ )</td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+<span style="font-family: Tahoma;">It sends the text as defined in text$ to the Window Gadget as defined in window. So in our example above it sends the text <span style="font-weight: bold;">"My current size (w,h) is " </span>to the window called <span style="font-weight: bold;">MyFirstWindow</span>.<br>
+
+
+<br>
+
+
+Now I also ask MaxGUI to calculate the most current size of the window client-area by using another MaxGUI function called <span style="font-weight: bold;">ClientHeight</span> and <span style="font-weight: bold;">ClientWidth</span> whose functionality I hope is self explanatory. A clearer way to do this would be as follows:-<br>
+
+
+<br>
+
+
+</span>
+<table style="text-align: left; width: 819px; height: 297px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Local</span> style = </span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">WINDOW_TITLEBAR | WINDOW_RESIZABLE&nbsp;</span></span><span style="font-family: Tahoma;">| </span><span style="font-family: Tahoma;">WINDOW_STATUS | WINDOW_CLIENTCOORDS </span><span style="font-family: Tahoma;"></span><span style="font-family: Tahoma;"></span><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span><br>
+
+
+      <br>
+
+
+      </span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">MyFirstWindow:TGadget=<span style="color: rgb(255, 255, 102);">CreateWindow</span>(<span style="color: rgb(51, 204, 0);">"My Window with WINDOW_TITLEBAR"</span>, 200,200,320,240,</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Null</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">,style)<br>
+
+
+
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Repeat</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;WaitEvent()<br>
+
+
+&nbsp; Local <span style="color: rgb(255, 255, 255);">text$=</span> </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"> <span style="color: rgb(51, 255, 51);">"My current size (w,h) is "</span> + ClientWidth<span style="color: rgb(255, 255, 255);">(MyFirstWindow)</span>+ <span style="color: rgb(51, 255, 51);">","</span> + ClientHeight<span style="color: rgb(255, 255, 255);">(MyFirstWindow)</span></span></span></span><br>
+
+
+      <span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; SetStatusText <span style="color: rgb(255, 255, 255);">MyFirstWindow, text$</span><br>
+
+
+      <br style="color: rgb(255, 255, 102);">
+
+
+      </span>
+
+      <span style="color: rgb(255, 255, 102);">Until
+EventID()</span>=EVENT_WINDOWCLOSE<br>
+
+
+
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">End</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+<span style="font-family: Tahoma;">That is all for our very first
+tutorial. I'm hoping that this is giving you an easy introduction into
+the world of MaxGUI. The other styles such as WINDOW_HIDDEN and
+WINDOW_ACCEPTFILES are a bit more advance styles so we will not cover
+them here. Feel free to experiment with the other styles and the
+various combinations possible.<br>
+
+<br>
+
+Before we go, lets recap what we have learnt:-<br>
+
+</span>
+<ul>
+
+  <li><span style="font-family: Tahoma;">We learnt about the <span style="font-weight: bold;">CreateWindow</span> function and its required parameters</span></li>
+
+  <li><span style="font-family: Tahoma;">We covered a few styles and showed their different impacts on the created window</span></li>
+
+  <li><span style="font-family: Tahoma;">We also used some other MaxGUI functions such as <span style="font-weight: bold;">SetStatusText</span>, <span style="font-weight: bold;">ClientWidth</span> and <span style="font-weight: bold;">ClientHeight</span></span></li>
+
+</ul>
+
+<span style="font-family: Tahoma;">In the next tutorial we will be covering buttons and introducing ourselves to the concept of events. Until then, take care :)<br>
+
+&nbsp;</span> <span style="font-family: Tahoma;">
+</span>
+
+
+<!--
+     FILE ARCHIVED ON 21:46:52 Jan 25, 2007 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 05:36:22 Oct 04, 2021.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  esindex: 0.013
+  exclusion.robots: 0.434
+  exclusion.robots.policy: 0.416
+  captures_list: 181.981
+  load_resource: 131.892
+  LoadShardBlock: 153.589 (3)
+  CDXLines.iter: 17.038 (3)
+  PetaboxLoader3.resolve: 51.793
+  PetaboxLoader3.datanode: 161.338 (4)
+  RedisCDXSource: 7.711
+--></body></html>

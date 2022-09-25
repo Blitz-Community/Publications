@@ -1,0 +1,9561 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0134)http://web.archive.org/web/20070612142634/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/S1%20-%20First%20Program.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><script src="./Learning 2D Game Programming: Getting Start Part 1 - Writing your first BlitzMax Program_files/analytics.js" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app29.us.archive.org';v.server_ms=364;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="./Learning 2D Game Programming: Getting Start Part 1 - Writing your first BlitzMax Program_files/bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="./Learning 2D Game Programming: Getting Start Part 1 - Writing your first BlitzMax Program_files/wombat.js" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("http://web.archive.org/web");
+  __wm.wombat("http://www.2dgamecreators.com:80/tutorials/gameprogramming/basics/S1%20-%20First%20Program.html","20070612142634","http://web.archive.org/","web","/_static/",
+	      "1181658394");
+</script>
+<link rel="stylesheet" type="text/css" href="./Learning 2D Game Programming: Getting Start Part 1 - Writing your first BlitzMax Program_files/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="./Learning 2D Game Programming: Getting Start Part 1 - Writing your first BlitzMax Program_files/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <title>Learning 2D Game Programming: Getting Start 1 - Writing your first BlitzMax Program</title>
+  <meta content="Assari" name="author">
+</head>
+
+
+<body><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  /*min-width:800px !important;*/
+}
+</style>
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr;">
+</div><div id="wm-ipp-print">The Wayback Machine - http://web.archive.org/web/20070612142634/http://www.2dgamecreators.com:80/tutorials/gameprogramming/basics/S1%20-%20First%20Program.html</div>
+<div id="donato" style="position:relative;width:100%;">
+  <div id="donato-base">
+    <iframe id="donato-if" src="./Learning 2D Game Programming: Getting Start Part 1 - Writing your first BlitzMax Program_files/donate.html" scrolling="no" frameborder="0" style="width:100%; height:100%">
+    </iframe>
+  </div>
+</div><script type="text/javascript">
+__wm.bt(650,27,25,2,"web","http://www.2dgamecreators.com/tutorials/gameprogramming/basics/S1 - First Program.html","20070612142634",1996,"/_static/",["/_static/css/banner-styles.css?v=omkqRugM","/_static/css/iconochive.css?v=qtvMKcIJ"], "False");
+  __wm.rw(1);
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+
+
+
+
+
+
+
+
+
+
+<span style="font-family: Tahoma;"><span style="font-weight: bold;">Learning</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;"> 2D Game Programming: Getting Start Part 1 - Writing your first BlitzMax Program <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</span>(c) Assari 2006<br>
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Table of Contents<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</span></span>
+<ol style="font-family: Tahoma;" id="mozToc">
+
+<!--mozToc h1 1 h2 2 h3 3 h4 4 h5 5 h6 6--><li><a href="http://web.archive.org/web/20070612142634/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/S1%20-%20First%20Program.html#mozTocId578655">Introduction</a></li>
+
+  <li><a href="http://web.archive.org/web/20070612142634/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/S1%20-%20First%20Program.html#mozTocId907838">Our First BlitzMax Program
+
+
+
+    </a></li>
+
+  <li><a href="http://web.archive.org/web/20070612142634/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/S1%20-%20First%20Program.html#mozTocId907838">Working With Colors</a></li>
+
+  <li><a href="http://web.archive.org/web/20070612142634/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/S1%20-%20First%20Program.html#mozTocId578655">Introduction to Variables</a></li>
+
+  <li><a href="http://web.archive.org/web/20070612142634/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/S1%20-%20First%20Program.html#mozTocId578655">Introduction to Loops</a></li>
+
+  <li><a href="http://web.archive.org/web/20070612142634/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/S1%20-%20First%20Program.html#mozTocId935409">Moving an object on the Graphic Screen</a></li>
+
+  <li><a href="http://web.archive.org/web/20070612142634/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/S1%20-%20First%20Program.html#mozTocId578655">The IF statement</a></li>
+
+  <li><a href="http://web.archive.org/web/20070612142634/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/S1%20-%20First%20Program.html#mozTocId453626">Reacting to User Input</a></li>
+
+  <li><a href="http://web.archive.org/web/20070612142634/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/S1%20-%20First%20Program.html#mozTocId453626">What we have learnt so far</a></li>
+
+  <li><a href="http://web.archive.org/web/20070612142634/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/S1%20-%20First%20Program.html#mozTocId24810">Blitzmax commands we have learnt so far</a></li>
+
+</ol>
+
+
+
+
+
+
+<h1><a class="mozTocH1" name="mozTocId578655"></a><small><small><span style="font-family: Tahoma;">Introduction</span></small></small></h1>
+
+
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;"></span>So you have just downloaded BlitzMax and has successfully installed the program and fired up the MaxIDE. So what do you do next?<br>
+
+
+
+
+
+<br>
+
+
+
+
+
+If you are staring at a screen that looks like this then we can start doing something with BlitzMax.<br>
+
+
+
+
+
+<br>
+
+
+
+
+
+</span></span>
+<table style="text-align: left; width: 342px; height: 259px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><img style="width: 728px; height: 501px;" alt="" src="./Learning 2D Game Programming: Getting Start Part 1 - Writing your first BlitzMax Program_files/ANT 1.jpg"><br>
+
+
+
+
+
+
+
+
+
+
+
+      </span></span></td>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"><br>
+
+
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+
+<br>
+
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Before
+we go any further, let us familiarise ourselves with the BlitzMax
+Integrated Development Environment (MaxIDE). Click the button as
+pointed by the arrow below. This will create a new blank file to work
+on.<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+</span></span>
+<table style="text-align: left; width: 342px; height: 259px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><img style="width: 728px; height: 501px;" alt="" src="./Learning 2D Game Programming: Getting Start Part 1 - Writing your first BlitzMax Program_files/ANT 2.jpg"><br>
+
+
+
+
+
+
+
+
+
+
+
+      </span></span></td>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+      </span></span>
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">You
+should then get a blank space to work on as per the screen below (the colors and font may be
+different on your system). Note that there is now a new tab called <span style="font-weight: bold;">untitiled1.bmx</span><br>
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+</span></span>
+<table style="text-align: left; width: 353px; height: 110px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">
+
+
+
+
+      </span></span><img style="width: 348px; height: 231px;" alt="" src="./Learning 2D Game Programming: Getting Start Part 1 - Writing your first BlitzMax Program_files/ANT 3.png"><br>
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"><br>
+
+
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+
+<br>
+
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Let
+us create the traditional "Hello World" program. Key in the text into
+the workarea and then clicked on the run button as shown by the arrow:-<br>
+
+
+
+
+
+<br>
+
+
+
+
+
+</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">
+</span></span>
+<table style="text-align: left; width: 389px; height: 224px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">
+
+
+
+
+      </span></span><img style="width: 402px; height: 221px;" alt="" src="./Learning 2D Game Programming: Getting Start Part 1 - Writing your first BlitzMax Program_files/ANT 5.png"><br>
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"><br>
+
+
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">
+
+
+
+
+<br>
+
+
+
+
+
+
+
+
+</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">The action now shifts to a new tab called <span style="font-weight: bold;">Output</span>. The short program you have just written (congratulations, by the way) is now being processed into an executable file called <span style="font-weight: bold;">untitled1.debug.exe</span>. The text "Hello World" is then printed onto the <span style="font-weight: bold;">Output</span> tab area.<br>
+
+
+
+
+<br>
+
+
+
+
+
+</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"></span></span>
+<table style="text-align: left; width: 389px; height: 224px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">
+
+
+
+
+      </span></span><img style="width: 408px; height: 257px;" alt="" src="./Learning 2D Game Programming: Getting Start Part 1 - Writing your first BlitzMax Program_files/ANT 6.png"><br>
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"><br>
+
+
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">All
+I wanted to do here was just to be sure you know how to create and run
+a BlitzMax program.&nbsp;We are now ready to proceed with the tutorial.<br>
+
+
+
+
+
+<br>
+
+
+
+
+
+</span></span>
+<h1><a class="mozTocH1" name="mozTocId907838"></a><small><small><span style="font-family: Tahoma;">Our First BlitzMax Program</span></small></small><br>
+
+
+
+
+
+</h1>
+
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Our first BlitzMax program consists of the following 5 lines. Click on the New button and type these 5 lines into the MaxIDE</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+</span></span>
+<table style="text-align: left; width: 732px; height: 119px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">Graphics&nbsp;<span style="color: rgb(255, 255, 255);">640,480,0</span></span><br style="color: rgb(255, 255, 51);">
+
+
+
+
+
+      <span style="color: rgb(255, 255, 51);">DrawRect <span style="color: rgb(255, 255, 255);">50,50,200,100</span></span><br style="color: rgb(255, 255, 51);">
+
+
+
+
+
+      <span style="color: rgb(255, 255, 51);">Flip</span><br style="color: rgb(255, 255, 51);">
+
+
+
+
+
+      <span style="color: rgb(255, 255, 51);">WaitMouse</span><br style="color: rgb(255, 255, 51);">
+
+
+
+
+
+      <span style="color: rgb(255, 255, 51);">End</span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+
+
+<br>
+
+
+
+
+<span style="font-family: Arial;">Before you compile and run 
+the above program, note that to exit from the program and return to the Blitzmax 
+editor, you will need to click the&nbsp;mouse button on the graphic screen. This is true for all the 
+programs in this set of tutorials.<o:p></o:p></span>
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p>&nbsp;</o:p>Now compile and run the 
+program by clicking the "Build and Run" button as you did above. This is what we get:-<o:p></o:p></span></p>
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"></span></span>
+<table style="text-align: left; width: 389px; height: 224px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">
+
+
+
+
+      </span></span><img style="width: 400px; height: 317px;" alt="" src="./Learning 2D Game Programming: Getting Start Part 1 - Writing your first BlitzMax Program_files/first program 1.jpg"><br>
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"><br>
+
+
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+</span></span>
+<p class="MsoNormal"><span style="font-family: Arial;">Let us try to understand 
+what we have done.&nbsp;We actually have issued 5 
+instructions to BlitzMax.<o:p>&nbsp;</o:p></span></p>
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;">The first instruction,</span></p>
+
+
+
+
+<table style="text-align: left; width: 732px; height: 119px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">Graphics&nbsp;<span style="color: rgb(255, 255, 255);">640,480,0</span></span><br style="color: rgb(255, 255, 51);">
+
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">DrawRect 50,50,200,100</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">Flip</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">WaitMouse</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">End</span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"> 
+</span><b style=""><span style="font-family: &#39;Courier New&#39;;"></span></b><span style="font-family: Arial;"><span style="">&nbsp;</span>tells BlitzMax to create a graphic screen sized at 
+640 pixels wide and<span style="">&nbsp; </span>480 pixels 
+high.</span></p>
+
+
+
+
+<table style="text-align: left; width: 389px; height: 224px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">
+
+
+
+
+      </span></span><img style="width: 400px; height: 317px;" alt="" src="./Learning 2D Game Programming: Getting Start Part 1 - Writing your first BlitzMax Program_files/first program 1b.jpg"><br>
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"><br>
+
+
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p>&nbsp;</o:p>The second instruction,</span></p>
+
+
+
+
+<table style="text-align: left; width: 732px; height: 119px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(153, 153, 153);">Graphics&nbsp;640,480,0</span><br style="color: rgb(255, 255, 51);">
+
+
+
+
+
+      <span style="color: rgb(255, 255, 51);">DrawRect <span style="color: rgb(255, 255, 255);">50,50,200,100</span></span><br style="color: rgb(255, 255, 51);">
+
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">Flip</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">WaitMouse</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">End</span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"> 
+</span><b style=""><span style="font-family: &#39;Courier New&#39;;"></span></b><span style="font-family: Arial;">&nbsp;tells 
+BlitzMax to draw at the screen coordinates 50,50 a rectangular box whose sides are 200 
+pixels wide and 100 pixels high. See diagram below.</span></p>
+
+
+
+
+<table style="text-align: left; width: 389px; height: 224px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">
+
+
+
+
+      </span></span><img style="width: 400px; height: 317px;" alt="" src="./Learning 2D Game Programming: Getting Start Part 1 - Writing your first BlitzMax Program_files/first program 2.jpg"><br>
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"><br>
+
+
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+</span></span><span style="font-family: Arial;">The <span style="font-weight: bold;">DrawRect</span> instruction draws to a temporary 
+location which was hidden from our view. The third instruction,&nbsp;</span><b style=""><span style="font-family: &#39;Courier New&#39;;"></span></b>
+<table style="text-align: left; width: 732px; height: 119px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">Graphics&nbsp;640,480,0<br>
+
+
+
+
+
+      DrawRect 50,50,200,100<br>
+
+
+
+
+
+      <span style="color: rgb(255, 255, 0);">Flip</span><br>
+
+
+
+
+
+      WaitMouse<br>
+
+
+
+
+
+      End</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"> 
+</span><b style=""><span style="font-family: &#39;Courier New&#39;;"></span></b><span style="font-family: Arial;">&nbsp;tells 
+BlitzMax to display the hidden screen by <span style="font-weight: bold;">flip</span>ping it into view.</span></p>
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"></span><span style="font-family: Arial;">The fourth instruction, </span><span style="font-family: Arial;"><span style="font-weight: bold;"></span></span><b style=""><span style="font-family: &#39;Courier New&#39;;"></span></b></p>
+
+
+
+
+<table style="text-align: left; width: 732px; height: 119px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">Graphics&nbsp;640,480,0<br>
+
+
+
+
+
+      DrawRect 50,50,200,100<br>
+
+
+
+
+
+      Flip<br>
+
+
+
+
+      <span style="color: rgb(255, 255, 0);">
+      WaitMouse</span><br>
+
+
+
+
+
+      End</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"> 
+</span><b style=""><span style="font-family: &#39;Courier New&#39;;"></span></b><span style="font-family: Tahoma;">simply tells BX to wait for us to&nbsp;click the 
+mouse button before moving to the next instruction.</span></p>
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;">And finally the last instruction simply end&nbsp;the program. </span><span style="font-family: Arial;"><span style="font-weight: bold;"></span></span><b style=""><span style="font-family: &#39;Courier New&#39;;"></span></b></p>
+
+
+
+
+<table style="text-align: left; width: 732px; height: 119px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"><span style="color: rgb(153, 153, 153);">Graphics&nbsp;640,480,0</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">
+      DrawRect 50,50,200,100</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">
+      Flip</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">
+      WaitMouse</span><br>
+
+
+
+
+      <span style="color: rgb(255, 255, 0);">
+      End</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"> 
+</span><b style=""><span style="font-family: &#39;Courier New&#39;;"></span></b><span style="font-family: Tahoma;">So there we have it our first BlitzMax program. That was not too hard was it?</span></p>
+
+
+
+
+<h1><a class="mozTocH1" name="mozTocId907838"></a><small><small><span style="font-family: Tahoma;">Working With Colors</span></small></small><span style="font-family: Tahoma;"></span></h1>
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;">In the previous section we drew a 
+WHITE rectangle on to a 640x480 graphic screen. Let us now draw a different 
+color rectangle. This is done via the <span style="font-weight: bold;">SetColor</span> instruction. This instruction 
+allows us to select the ink color to draw with. Our&nbsp;new program now looks like 
+this<o:p></o:p></span></p>
+
+
+
+
+
+<table style="text-align: left; width: 732px; height: 119px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">Graphics&nbsp;640,480,0<br>
+
+
+
+
+      <span style="color: rgb(255, 255, 0);">SetColor</span> <span style="color: rgb(255, 255, 255);">255,0,0</span><br>
+
+
+
+
+
+      DrawRect 50,50,200,100<br>
+
+
+
+
+
+      Flip<br>
+
+
+
+
+
+      WaitMouse<br>
+
+
+
+
+
+      End</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<span style="font-family: Tahoma;"><br>
+
+
+
+
+</span><span style="font-family: Arial;">Now build and run&nbsp;the 
+above program. You will notice that instead of a white rectangle, we now have a 
+red rectangle.<br>
+
+
+
+
+<o:p></o:p></span><span style="font-family: Tahoma;"></span>
+<table style="text-align: left; width: 389px; height: 224px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">
+
+
+
+
+      </span></span><img style="width: 400px; height: 317px;" alt="" src="./Learning 2D Game Programming: Getting Start Part 1 - Writing your first BlitzMax Program_files/first program 3.jpg"><br>
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"><br>
+
+
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<br>
+
+
+
+
+<span style="font-family: Arial;">The <span style="font-weight: bold;">SetColor</span> </span><span style="font-family: Arial;">instruction uses the RGB concept. RGB stands for 
+Red, Green and Blue which are the 3 primary colors in the digital world. The 
+actual color used for drawing will be the combination of the RGB primary colors. 
+<br>
+
+
+
+
+<br>
+
+
+
+
+Let us do a little diversion here and learn a little trick. If you hover
+your cursor on top of the SetColor command in the MaxIDE (see red
+circle) and then press the F1 key, you should see the required syntax
+of that command in the status bar (see red arrow)<br>
+
+
+
+
+<br>
+
+
+
+
+</span>
+<table style="text-align: left; width: 389px; height: 224px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">
+
+
+
+
+      </span></span><img style="width: 688px; height: 412px;" alt="" src="./Learning 2D Game Programming: Getting Start Part 1 - Writing your first BlitzMax Program_files/first program 1a.png"><br>
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"><br>
+
+
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<br>
+
+
+
+
+<span style="font-family: Arial;">Pressing F1 again (i.e. twice in
+total) will take you to the BlitzMax Help screen where there will be a
+brief explanation on how to use the function. You can also use the
+Navigation Bar on the right to scroll through the various functions
+available.<br>
+
+
+
+
+<br>
+
+
+
+
+</span>
+<table style="text-align: left; width: 389px; height: 224px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">
+
+
+
+
+      </span></span><img style="width: 688px; height: 412px;" alt="" src="./Learning 2D Game Programming: Getting Start Part 1 - Writing your first BlitzMax Program_files/first program 1b.png"><br>
+
+
+
+
+      </td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<br>
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;">Notice how the <span style="font-weight: bold;">SetColor</span>
+instruction requires three parameters, the intensity of the red, green
+and blue colors as numbers between 0 to 255; 255 being the most
+intense. To obtain a RED color, we issue the instruction <span style="font-weight: bold;">SetColor 255,0,0</span></span><b style=""><span style="font-family: &#39;Courier New&#39;;"><span class="GramE"></span>.</span></b><span style="font-family: Arial;"> What we are 
+saying here is that we want maximum intensity RED and zero intensity GREEN and 
+zero intensity BLUE. Note that the intensity for each color can be set from zero 
+to 255 (minimum to maximum intensity).<o:p></o:p></span></p>
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p></o:p></span><span style="font-family: Arial;">Let us experiment and see 
+what color we get by combining a maximum intensity RED with a maximum intensity 
+GREEN and zero intensity blue like this:-</span></p>
+
+
+
+
+<table style="text-align: left; width: 732px; height: 119px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">Graphics&nbsp;640,480,0<br>
+
+
+
+
+      <span style="color: rgb(255, 255, 0);">SetColor</span> <span style="color: rgb(255, 255, 255);">255,255,0</span><br>
+
+
+
+
+
+      DrawRect 50,50,200,100<br>
+
+
+
+
+
+      Flip<br>
+
+
+
+
+
+      WaitMouse<br>
+
+
+
+
+
+      End</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<span style="font-family: Tahoma;"><br>
+
+
+
+
+</span><span style="font-family: Arial;">Now build and run&nbsp;the 
+above program. </span><span style="font-family: Arial;">We now get a YELLOW rectangle which is the 
+color we get when we mix RED with GREEN</span><span style="font-family: Arial;"><br>
+
+
+
+
+<br>
+
+
+
+
+<o:p></o:p></span><span style="font-family: Tahoma;"></span>
+<table style="text-align: left; width: 389px; height: 224px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">
+
+
+
+
+      </span></span><img style="width: 400px; height: 317px;" alt="" src="./Learning 2D Game Programming: Getting Start Part 1 - Writing your first BlitzMax Program_files/first program 4.jpg"><br>
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"><br>
+
+
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<br>
+
+
+
+
+<span style="font-family: Arial;"></span><span style="font-family: Arial;">Lets now play around with the intensity by 
+reducing the RED <span class="GramE">component<span style="">&nbsp; 
+</span>from</span> 255 to 128. Note that we have also reduced the intensity of 
+the GREEN color back to zero</span><span style="font-family: Arial;">:-<br>
+
+
+
+
+</span>
+<table style="text-align: left; width: 732px; height: 119px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">Graphics&nbsp;640,480,0<br>
+
+
+
+
+      <span style="color: rgb(255, 255, 0);">SetColor</span> <span style="color: rgb(255, 255, 255);">128,0,0</span><br>
+
+
+
+
+
+      DrawRect 50,50,200,100<br>
+
+
+
+
+
+      Flip<br>
+
+
+
+
+
+      WaitMouse<br>
+
+
+
+
+
+      End</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<span style="font-family: Tahoma;"><br>
+
+
+
+
+</span><span style="font-family: Arial;">Now build and run&nbsp;the 
+above program.&nbsp;</span><span style="font-family: Arial;">What we now get is a much subdued RED rectangle 
+due to the reduced intensity</span><span style="font-family: Arial;"><br>
+
+
+
+
+<br>
+
+
+
+
+<o:p></o:p></span><span style="font-family: Tahoma;"></span>
+<table style="text-align: left; width: 389px; height: 224px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">
+
+
+
+
+      </span></span><img style="width: 400px; height: 317px;" alt="" src="./Learning 2D Game Programming: Getting Start Part 1 - Writing your first BlitzMax Program_files/first program 5.jpg"><br>
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"><br>
+
+
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<br>
+
+
+
+
+<span style="font-family: Arial;">I hope that was clear that when we issue the <span style="font-weight: bold;">DrawRect</span> (or any other drawing command in BlitzMax), the color that will be used can be set by the <span style="font-weight: bold;">SetColor</span> command which takes three parameters; red intensity, green intensity and blue intensity. If the <span style="font-weight: bold;">SetColor</span> command is not issued, the color white will be used.</span>
+<h1><a class="mozTocH1" name="mozTocId578655"></a><small><small><span style="font-family: Tahoma;">Introduction to Variables</span></small></small></h1>
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;">Most BlitzMax instructions allow 
+us to vary their behaviours. In the previous tutorial we learnt about the SetColor&nbsp; 
+instruction. The ink color that it uses to draw the rectangle in our example 
+above was based on the intensities of the defined RGB primary 
+colors.<o:p></o:p></span></p>
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p></o:p></span><span style="font-family: Arial;">Instead of issuing the 
+instructions SetColor 255<span class="GramE">,0,0</span> we can also issue the 
+instructions like so:- <o:p></o:p></span></p>
+
+
+
+
+
+<table style="text-align: left; width: 732px; height: 119px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">Graphics&nbsp;640,480,0<br>
+
+
+
+
+      <span style="color: rgb(255, 255, 255);">R=255</span><br style="color: rgb(255, 255, 255);">
+
+
+
+
+      <span style="color: rgb(255, 255, 255);">G=0</span><br style="color: rgb(255, 255, 255);">
+
+
+
+
+      <span style="color: rgb(255, 255, 255);">B=0</span><br>
+
+
+
+
+      <span style="color: rgb(255, 255, 0);">SetColor</span>&nbsp;<span style="color: rgb(255, 255, 255);">R,G,B</span><br>
+
+
+
+
+
+      DrawRect 50,50,200,100<br>
+
+
+
+
+
+      Flip<br>
+
+
+
+
+
+      WaitMouse<br>
+
+
+
+
+
+      End</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<span style="font-family: Tahoma;"><br>
+
+
+
+
+</span><span style="font-family: Arial;">If we were to run the above program, we will 
+see that the same red rectangle which we have seen before will be drawn on the 
+graphic screen</span><span style="font-family: Arial;"></span><span style="font-family: Arial;"></span><span style="font-family: Arial;"><br>
+
+
+
+
+<br>
+
+
+
+
+<o:p></o:p></span><span style="font-family: Tahoma;"></span>
+<table style="text-align: left; width: 389px; height: 224px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">
+
+
+
+
+      </span></span><img style="width: 400px; height: 317px;" alt="" src="./Learning 2D Game Programming: Getting Start Part 1 - Writing your first BlitzMax Program_files/first program 3.jpg"><br>
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"><br>
+
+
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<br>
+
+
+
+
+<span style="font-family: Arial;"></span><span style="font-family: Arial;">Note the 3 new lines R=255, 
+G=0 and B=0.<span style="">&nbsp; </span>The instruction R=255 
+assigns or stores the number 255 into the variable R. <o:p></o:p></span>
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p></o:p>What are variables? We can 
+think of variables as containers where numbers are stored in. In this example we 
+have placed the numbers <span style="font-weight: bold;">255</span>, <span style="font-weight: bold;">zero</span> and <span style="font-weight: bold;">zero</span> into the 3 variables <span style="font-weight: bold;">R,G</span> and <span style="font-weight: bold;">B 
+</span>respectively <span style="">&nbsp;</span>So when BlitzMax receives the 
+instruction&nbsp;</span><span style="font-family: &#39;Courier New&#39;; font-weight: bold;"></span><span style="font-family: Arial;"><span style="font-weight: bold;">SetColor R,G,B</span> it first 
+retrieves the number from each variable and then carries out its color 
+mixing.<o:p></o:p></span></p>
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p>&nbsp;</o:p>Variables which stores 
+numbers are called <span style="font-weight: bold;">integer</span> <span class="GramE">variables.</span> Later we will 
+learn about other different types of containers (or variables) that BlitzMax 
+has.<o:p></o:p></span></p>
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p></o:p></span><span class="GramE"><span style="font-family: Arial;">Lets</span></span><span style="font-family: Arial;"> 
+re-run the program by changing the assignment of the G variable<o:p></o:p></span></p>
+
+
+
+
+
+<table style="text-align: left; width: 732px; height: 119px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">Graphics&nbsp;640,480,0<br>
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">R=255</span><br style="color: rgb(255, 255, 255);">
+
+
+
+
+      <span style="color: rgb(255, 255, 255);">G=255</span><br style="color: rgb(255, 255, 255);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">B=0</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">SetColor&nbsp;R,G,B</span><br>
+
+
+
+
+
+      DrawRect 50,50,200,100<br>
+
+
+
+
+
+      Flip<br>
+
+
+
+
+
+      WaitMouse<br>
+
+
+
+
+
+      End</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<span style="font-family: Tahoma;"><br>
+
+
+
+
+</span><span style="font-family: Arial;">Voila, what we now get is a bright yellow 
+rectangle. Notice this is similar to saying <span style="font-weight: bold;">SetColor 255,255,0</span><o:p></o:p></span><span style="font-family: Arial;"></span><span style="font-family: Arial;"><br>
+
+
+
+
+<br>
+
+
+
+
+<o:p></o:p></span><span style="font-family: Tahoma;"></span>
+<table style="text-align: left; width: 389px; height: 224px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">
+
+
+
+
+      </span></span><img style="width: 400px; height: 317px;" alt="" src="./Learning 2D Game Programming: Getting Start Part 1 - Writing your first BlitzMax Program_files/first program 4.jpg"><br>
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"><br>
+
+
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<span style="font-family: Arial;"><br>
+
+
+
+
+Assignment to variables can 
+also be made differently. Let us look at this example<br>
+
+
+
+
+<br>
+
+
+
+
+<o:p></o:p></span>
+<table style="text-align: left; width: 732px; height: 119px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">Graphics&nbsp;640,480,0<br>
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">R=255</span><br style="color: rgb(255, 255, 255);">
+
+
+
+
+      <span style="color: rgb(255, 255, 255);">G=R</span><br style="color: rgb(255, 255, 255);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">B=0</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">SetColor&nbsp;R,G,B</span><br>
+
+
+
+
+
+      DrawRect 50,50,200,100<br>
+
+
+
+
+
+      Flip<br>
+
+
+
+
+
+      WaitMouse<br>
+
+
+
+
+
+      End</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<span style="font-family: Tahoma;"><br>
+
+
+
+
+</span>
+<p class="MsoNormal"><span style="font-family: Arial;">If we were to run this we 
+also get a yellow rectangle. The reason is when we issue the instruction R = 
+255, we placed the number 255 into the variable R.<o:p></o:p></span></p>
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p></o:p>When we issue the 
+instruction G = R, we are telling BlitzMax to pick the number which is stored in the 
+variable R and assign that same number to the variable G.<o:p></o:p></span></p>
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p></o:p></span><span class="GramE"><span style="font-family: Arial;">Lets</span></span><span style="font-family: Arial;"> 
+now have a bit of fun and see what happens when we assign random numbers to the 
+RGB variables.</span><span style="font-family: Arial;"><o:p></o:p></span></p>
+
+
+
+
+<span class="GramE"><span style="font-family: Arial;"></span></span><span style="font-family: Arial;"><o:p></o:p></span>
+<table style="text-align: left; width: 732px; height: 119px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">Graphics&nbsp;640,480,0<br>
+
+
+
+
+      <span style="color: rgb(153, 153, 153);"><span style="color: rgb(255, 255, 102);">SeedRnd MilliSecs()</span><br>
+
+
+
+
+      <span style="color: rgb(255, 255, 255);">R = <span style="color: rgb(255, 255, 102);">Rnd</span>(255)</span><br style="color: rgb(255, 255, 255);">
+
+
+
+
+      <span style="color: rgb(255, 255, 255);">G = <span style="color: rgb(255, 255, 102);">Rnd</span>(255)</span><br style="color: rgb(255, 255, 255);">
+
+
+
+
+      <span style="color: rgb(255, 255, 255);">B = <span style="color: rgb(255, 255, 102);">Rnd</span>(255)</span><br style="color: rgb(255, 255, 255);">
+
+
+
+
+      <span style="color: rgb(255, 255, 255);"><span style="color: rgb(255, 255, 102);">SetColor</span> R,G,B</span></span><span style="color: rgb(153, 153, 153);"></span><br>
+
+
+
+
+
+      DrawRect 50,50,200,100<br>
+
+
+
+
+
+      Flip<br>
+
+
+
+
+
+      WaitMouse<br>
+
+
+
+
+
+      End</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<span style="font-family: Tahoma;"><br>
+
+
+
+
+</span>
+<p class="MsoNormal"><span style="font-family: Arial;">We’ve introduced two new 
+instructions here, <span style="font-weight: bold;">SeedRnd </span><span style="font-weight: bold;" class="GramE">Millisecs(</span><span style="font-weight: bold;">)</span> and 
+<span style="font-weight: bold;">Rnd(255)</span>.<o:p></o:p></span></p>
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;">The instruction <span style="font-weight: bold;" class="GramE">Rnd(</span><span style="font-weight: bold;">255)</span> simply creates a random number between 0 and 255. 
+This random number is then assigned to each of our RGB 
+variables.<o:p></o:p></span></p>
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p>&nbsp;</o:p>In order for our <span style="font-weight: bold;" class="GramE">Rnd(</span><span style="font-weight: bold;">255)</span> instruction to work properly, we have first to issue 
+the instruction&nbsp;</span><span style="font-family: Arial;"><span style="font-weight: bold;">SeedRnd </span><span style="font-weight: bold;" class="GramE">Millisecs(</span><span style="font-weight: bold;">)</span></span><span style="font-family: Arial;">. At this stage let us not worry about why 
+this is the case yet. The important thing to remember is that some instructions 
+depends on other instructions to work properly.<o:p></o:p></span></p>
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p></o:p></span><span style="font-family: Arial;">Go on and run this program a 
+few times. Each time we run it we get a different colored rectangle on the 
+graphic screen.<o:p></o:p></span></p>
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p></o:p>The different colors are 
+caused by different numbers randomly generated by the <span class="GramE">RND(</span>255) instructions each time we run our 
+program</span><span style="font-family: Arial;"><span style="font-weight: bold;"></span></span></p>
+
+
+
+
+<span style="font-family: Arial;"><o:p></o:p></span><span style="font-family: Tahoma;"></span>
+<table style="text-align: left; width: 389px; height: 224px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">
+
+
+
+
+      </span></span><img style="width: 400px; height: 317px;" alt="" src="./Learning 2D Game Programming: Getting Start Part 1 - Writing your first BlitzMax Program_files/first program 6.jpg"><br>
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"><br>
+
+
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<br>
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;">Let us now familiarize 
+ourselves with another type of BlitzMax variable, the string variable. Earlier we saw 
+that variables which stores numbers are called integer variable. <span class="GramE">String variables stores text characters (also known as strings) 
+instead of numbers.</span><o:p></o:p></span></p>
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p></o:p>To help differentiates 
+between integer variables and string variables, we have to post-fix our variable 
+name by the $ sign.<o:p></o:p></span></p>
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p></o:p>Let us see an example of 
+this</span></p>
+
+
+
+
+
+<table style="text-align: left; width: 732px; height: 119px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="width: 26px;" align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255); width: 655px;"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(153, 153, 153);">Graphics&nbsp;</span><span style="color: rgb(255, 255, 255);"><span style="color: rgb(153, 153, 153);">640,480,0</span><br>
+
+
+
+
+a$=<span style="color: rgb(51, 255, 51);">"Hello World"</span><br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">DrawText</span> a$,10,20<br style="color: rgb(255, 255, 51);">
+
+
+
+
+      </span></span>
+      <span style="color: rgb(153, 153, 153);">DrawRect 50,50,200,100</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">Flip</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">WaitMouse</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">End</span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<span style="font-family: Arial;"><br>
+
+
+
+
+</span><span style="font-family: Arial;">If we compile and run the above program we get 
+the following:-<br>
+
+
+
+
+<br>
+
+
+
+
+<o:p></o:p></span>
+<table style="text-align: left; width: 389px; height: 224px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">
+
+
+
+
+      </span></span><img style="width: 424px; height: 311px;" alt="" src="./Learning 2D Game Programming: Getting Start Part 1 - Writing your first BlitzMax Program_files/first program 7.jpg"><br>
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"><br>
+
+
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;">The instruction <span style="font-weight: bold;">a$="Hello World"</span></span><span style="font-family: Arial;"> assigns the phrase “Hello World” to the string 
+variable a$. Strings within BlitzMax must be enclosed within the quote 
+marks.<o:p></o:p></span></p>
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p></o:p>The next instruction <span style="font-weight: bold;">DrawText a$,10,20</span></span><b style=""><span style="font-family: &#39;Courier New&#39;;"><span class="GramE"></span></span></b><span style="font-family: Arial;"> writes the 
+text within the string variable a$ to the graphic screen at the screen 
+coordinates 10,20<o:p></o:p></span></p>
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p></o:p>Now <span class="GramE">lets</span> do something useful with this new knowledge and modify 
+our random color program like this</span></p>
+
+
+
+
+<table style="text-align: left; width: 732px; height: 119px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="width: 26px;" align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255); width: 655px;"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(153, 153, 153);">Graphics&nbsp;</span><span style="color: rgb(255, 255, 255);"><span style="color: rgb(153, 153, 153);">640,480,0</span><br>
+
+
+
+
+      </span></span></span></span></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"><span style="color: rgb(153, 153, 153);"><span style="color: rgb(255, 255, 102);">SeedRnd MilliSecs()</span><br>
+
+
+
+
+      <span style="color: rgb(255, 255, 255);">R = <span style="color: rgb(255, 255, 102);">Rnd</span>(255)</span><br style="color: rgb(255, 255, 255);">
+
+
+
+
+      <span style="color: rgb(255, 255, 255);">G = <span style="color: rgb(255, 255, 102);">Rnd</span>(255)</span><br style="color: rgb(255, 255, 255);">
+
+
+
+
+      <span style="color: rgb(255, 255, 255);">B = <span style="color: rgb(255, 255, 102);">Rnd</span>(255)</span><br style="color: rgb(255, 255, 255);">
+
+
+
+
+      <span style="color: rgb(255, 255, 255);"><span style="color: rgb(255, 255, 102);"></span><br>
+
+
+
+
+      </span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);">A$ = <span style="color: rgb(51, 255, 51);">"RGB COLOR "</span>+R+<span style="color: rgb(51, 255, 51);">","</span>+G+<span style="color: rgb(51, 255, 51);">","</span>+B<span style="color: rgb(51, 255, 51);"></span><br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">DrawText</span> a$,10,20<br>
+
+
+
+
+      <br>
+
+
+
+
+      </span></span></span></span></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"><span style="color: rgb(153, 153, 153);"><span style="color: rgb(255, 255, 255);"><span style="color: rgb(255, 255, 102);">SetColor</span> R,G,B</span></span></span></span><br style="color: rgb(255, 255, 51);">
+
+
+
+
+      <span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);"></span></span>
+      <span style="color: rgb(153, 153, 153);">DrawRect 50,50,200,100</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">Flip</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">WaitMouse</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">End</span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<span style="font-family: Arial;"><br>
+
+
+
+
+</span><span style="font-family: Arial;">If we compile and run the above program we get 
+the following:-<br>
+
+
+
+
+<br>
+
+
+
+
+<o:p></o:p></span>
+<table style="text-align: left; width: 389px; height: 224px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">
+
+
+
+
+      </span></span><img style="width: 423px; height: 305px;" alt="" src="./Learning 2D Game Programming: Getting Start Part 1 - Writing your first BlitzMax Program_files/first program 8.jpg"><br>
+
+
+
+
+      </td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;">The above picture tells us 
+that the combination of the primary colors R<span class="GramE">,G,B</span>
+of intensities 93, 86, 119 produces a rectangle with a greyish,
+purplish color. You will probably get a different color on your screen.<o:p></o:p></span></p>
+
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p></o:p>Note that the assignment to 
+the string variable A$ in this example is now more complicated then before. Let 
+us try and dissect the line.<o:p>&nbsp;</o:p></span></p>
+
+
+
+
+<table style="text-align: left; width: 732px; height: 119px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="width: 26px;" align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255); width: 655px;"><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">Graphics&nbsp;640,480,0<br>
+
+
+
+
+      </span><span style="font-family: Tahoma;"><span style="color: rgb(153, 153, 153);"><span style="color: rgb(153, 153, 153);">SeedRnd MilliSecs()</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">R = Rnd(255)</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">G = Rnd(255)</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">B = Rnd(255)</span><br style="color: rgb(255, 255, 255);">
+
+
+
+
+      <span style="color: rgb(255, 255, 255);"><span style="color: rgb(255, 255, 102);"></span><br>
+
+
+
+
+      </span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);">A$ = <span style="color: rgb(51, 255, 51);">"RGB COLOR "</span>+R+<span style="color: rgb(51, 255, 51);">","</span>+G+<span style="color: rgb(51, 255, 51);">","</span>+B<span style="color: rgb(51, 255, 51);"></span><br>
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">DrawText a$,10,20</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <br style="color: rgb(153, 153, 153);">
+
+
+
+
+      </span></span></span></span></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">SetColor R,G,B</span></span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);">
+      <span style="color: rgb(153, 153, 153);">DrawRect 50,50,200,100</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">Flip</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">WaitMouse</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">End</span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<br>
+
+
+
+
+<span style="font-family: Arial;">The plus sign (+) that we 
+see above allow us to concatenate (add) multiple strings 
+together.<o:p></o:p></span>
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p></o:p>For example if we have the 
+assignments </span><b style=""><span style="font-family: &#39;Courier New&#39;;">A$=”MY <span class="GramE">“ <span style="font-weight: normal; font-family: Arial;">and</span></span></span></b><span style="font-family: Arial;"> </span><b style=""><span style="font-family: &#39;Courier New&#39;;">B$=”CAT”</span></b><span style="font-family: Arial;"><o:p></o:p></span></p>
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p></o:p>Then an assignment </span><b style=""><span style="font-family: &#39;Courier New&#39;;">C$=A$+B$</span></b><span style="font-family: Arial;"> will result in the string “MY CAT” being stored in 
+the string variable C$.<o:p></o:p></span></p>
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p></o:p>So what we are doing with 
+this assignment </span><b style=""><span style="font-family: &#39;Courier New&#39;;">A$ = "RGB COLOR "+R</span></b><span style="font-family: Arial;"> is assembling the string “RGB COLOR <span class="GramE">“ plus</span> the number stored in the variable R. To make our 
+displayed text to look nicer we also add in the comma before we assemble the 
+next number i.e. </span><b style=""><span style="font-family: &#39;Courier New&#39;;">A$ = "RGB COLOR "+R+”,”</span></b><span style="font-family: Arial;"><o:p></o:p></span></p>
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p></o:p>We then go on and assemble 
+the G and B parts resulting in the final <span class="GramE">line 
+;-</span></span></p>
+
+
+
+
+
+<table style="text-align: left; width: 732px; height: 37px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="width: 26px;" align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255); width: 655px;"><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"></span><span style="font-family: Tahoma;"><span style="color: rgb(153, 153, 153);"><span style="color: rgb(153, 153, 153);"></span><span style="color: rgb(255, 255, 255);"><span style="color: rgb(255, 255, 102);"></span><br>
+
+
+
+
+      </span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);">A$ = <span style="color: rgb(51, 255, 51);">"RGB COLOR "</span>+R+<span style="color: rgb(51, 255, 51);">","</span>+G+<span style="color: rgb(51, 255, 51);">","</span>+B<span style="color: rgb(51, 255, 51);"></span><br>
+
+
+
+
+      <span style="color: rgb(153, 153, 153);"></span></span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(153, 153, 153);"></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<br>
+
+
+
+
+<span style="font-family: Arial;">Note that BlitzMax makes its easy 
+for us by allowing us to mix numbers and strings in this manner.<br>
+
+
+
+
+</span>
+<h1><a class="mozTocH1" name="mozTocId578655"></a><small><small><span style="font-family: Tahoma;">Introduction to Loops</span></small></small></h1>
+
+
+
+
+<p class="MsoNormal"><span class="GramE"><span style="font-family: Arial;">Its</span></span><span style="font-family: Arial;"> 
+not that much fun having to run our program each time we want to see a different 
+colored rectangle. <span class="GramE">Lets</span> see whether BlitzMax can help us out 
+here. In order to do this, we need to be introduced to the concept of 
+loops.<o:p></o:p></span></p>
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p></o:p>So far what we have done was 
+to issue instructions to BlitzMax in a linear fashion. BlitzMax executes each instruction 
+one line at a time until it reaches the END instruction upon which BlitzMax then 
+stops. This is also known as a linear Program Flow.<o:p></o:p></span></p>
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p></o:p></span><span class="GramE"><span style="font-family: Arial;">Lets</span></span><span style="font-family: Arial;"> 
+see how a loop will work in BlitzMax<o:p></o:p></span></p>
+
+
+
+
+<table style="text-align: left; width: 732px; height: 119px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="width: 26px;" align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255); width: 655px;"><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">Graphics&nbsp;640,480,0<br>
+
+
+
+
+      </span><span style="font-family: Tahoma;"><span style="color: rgb(153, 153, 153);"><span style="color: rgb(153, 153, 153);">SeedRnd MilliSecs()</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">R = Rnd(255)</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">G = Rnd(255)</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">B = Rnd(255)<br>
+
+
+
+
+      <br>
+
+
+
+
+      </span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(153, 153, 153);"><span style="color: rgb(255, 255, 0);">Repeat</span><br style="color: rgb(255, 255, 0);">
+
+
+
+
+      <br style="color: rgb(255, 255, 0);">
+
+
+
+
+      <span style="color: rgb(255, 255, 0);">&nbsp;<span style="color: rgb(255, 255, 255);">&nbsp;&nbsp; R = <span style="color: rgb(255, 255, 102);">Rnd</span>(255)</span></span><br style="color: rgb(255, 255, 255);">
+
+
+
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; G = <span style="color: rgb(255, 255, 102);">Rnd</span>(255)</span><br style="color: rgb(255, 255, 255);">
+
+
+
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; B = <span style="color: rgb(255, 255, 102);">Rnd</span>(255)</span><br style="color: rgb(255, 255, 0);">
+
+
+
+
+      <br style="color: rgb(255, 255, 0);">
+
+
+
+
+      <span style="color: rgb(255, 255, 0);">&nbsp;&nbsp;&nbsp; SetColor<span style="color: rgb(255, 255, 255);"> R,G,B</span></span><br style="color: rgb(255, 255, 0);">
+
+
+
+
+      <span style="color: rgb(255, 255, 0);">&nbsp;&nbsp;&nbsp; DrawRect <span style="color: rgb(255, 255, 255);">50,50,200,100</span></span><br style="color: rgb(255, 255, 0);">
+
+
+
+
+      <span style="color: rgb(255, 255, 0);">&nbsp;&nbsp;&nbsp; Flip</span><br style="color: rgb(255, 255, 0);">
+
+
+
+
+      <br style="color: rgb(255, 255, 0);">
+
+
+
+
+      <span style="color: rgb(255, 255, 0);">Until MouseHit<span style="color: rgb(255, 255, 255);">(1)</span></span><br>
+
+
+
+
+      </span></span><span style="color: rgb(153, 153, 153);"></span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">End</span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<span style="font-family: Arial;"><br>
+
+
+
+
+</span>
+<p class="MsoNormal"><span style="font-family: Arial;">What we now see when we run 
+the above program is a flashing rectangle. This is because the loop is going 
+through too fast. We will fix this later. <o:p></o:p></span></p>
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p></o:p>We now have 2 new 
+instructions to look at<span style="font-weight: bold;">, Repeat</span></span><b style=""><span style="font-family: &#39;Courier New&#39;;"></span></b><span style="font-family: Arial;"> and <span style="font-weight: bold;">Until MouseHit(1)</span></span><span style="font-family: Arial;">&nbsp;</span></p>
+
+
+
+
+<table style="text-align: left; width: 732px; height: 119px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="width: 26px;" align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255); width: 655px;"><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"></span><span style="font-family: Tahoma;"><span style="color: rgb(153, 153, 153);"><span style="color: rgb(153, 153, 153);"></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(153, 153, 153);"><span style="color: rgb(255, 255, 0);">Repeat</span><br style="color: rgb(255, 255, 0);">
+
+
+
+
+      <br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp; R = Rnd(255)</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp; G = Rnd(255)</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp; B = Rnd(255)</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp; SetColor R,G,B</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp; DrawRect 50,50,200,100</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp; Flip</span><br style="color: rgb(255, 255, 0);">
+
+
+
+
+      <br style="color: rgb(255, 255, 0);">
+
+
+
+
+      <span style="color: rgb(255, 255, 0);">Until MouseHit<span style="color: rgb(255, 255, 255);">(1)</span></span><br>
+
+
+
+
+      </span></span><span style="color: rgb(153, 153, 153);"></span><span style="color: rgb(153, 153, 153);"></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;">When BlitzMax encounters the <span style="font-weight: bold;">Repeat</span></span><span style="font-family: Arial;"> instruction, it knows that it is now entering the 
+start of a loop. BlitzMax will then executes the other instructions line by line as 
+before.</span></p>
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p></o:p>When BX gets to the&nbsp;</span><span style="font-family: Arial;"><span style="font-weight: bold;">Until MouseHit(1)</span></span><span style="font-family: Arial;">&nbsp;</span><span style="font-family: Arial;"> 
+instruction, it will check to see whether we have click the left mouse button. 
+If we have not, it will then loop back to the line which contains the </span><span style="font-family: Arial;"><span style="font-weight: bold;">Repeat</span></span><span style="font-family: Arial;"> &nbsp;</span><span style="font-family: Arial;">instruction and continues to perform the 
+instructions in the subsequent lines below it.<o:p></o:p></span></p>
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p></o:p>This <st1:place w:st="on">LOOP</st1:place> will repeat infinitely until we click the mouse 
+button upon which it will exit the loop and then continues on to the next line 
+which in our particular example happens to be the instruction to<span style="font-weight: bold;"> End</span> the 
+program<o:p></o:p></span></p>
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;">Now <span class="GramE">lets</span> do something about that flashing rectangle by 
+introducing another instruction called <span style="font-weight: bold;">Delay</span><o:p></o:p></span></p>
+
+
+
+
+
+
+<table style="text-align: left; width: 732px; height: 119px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="width: 26px;" align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255); width: 655px;"><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">Graphics&nbsp;640,480,0<br>
+
+
+
+
+      </span><span style="font-family: Tahoma;">SeedRnd MilliSecs()<br>
+
+
+
+
+R = Rnd(255)<br>
+
+
+
+
+G = Rnd(255)<br>
+
+
+
+
+B = Rnd(255)<br>
+
+
+
+
+      <br>
+
+
+
+
+      </span><span style="font-family: Tahoma;">Repeat<br>
+
+
+
+
+      <br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; R = Rnd(255)<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; G = Rnd(255)<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; B = Rnd(255)<br>
+
+
+
+
+      <br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; SetColor R,G,B<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; DrawRect 50,50,200,100<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; Flip<br>
+
+
+
+
+&nbsp; &nbsp; <span style="color: rgb(255, 255, 102);">Delay</span><span style="color: rgb(255, 255, 255);">(500)</span><br>
+
+
+
+
+      <br>
+
+
+
+
+Until MouseHit(1)<br>
+
+
+
+
+      <br>
+
+
+
+
+
+      End</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<br>
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;">The <span style="font-weight: bold;">Delay (500)</span></span><b style=""><span style="font-family: &#39;Courier New&#39;;"></span></b><span style="font-family: Arial;"> instruction tells BlitzMax to pause our program for 500 
+milliseconds (which is half a second) before going to the next 
+line<o:p></o:p></span></p>
+
+
+
+
+<h1><a class="mozTocH1" name="mozTocId935409"></a><small><small><span style="font-family: Tahoma;">Moving an object on the Graphic Screen</span></small></small></h1>
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;">In games, we normally see 
+all sorts of objects whizzing around the screen. <span class="GramE">Lets</span> 
+now make a start to move our rectangle around the graphic 
+screen.<o:p></o:p></span></p>
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p></o:p></span><span class="GramE"><span style="font-family: Arial;">Lets</span></span><span style="font-family: Arial;"> 
+go back to our simple white rectangle but lets introduce two new integer 
+variables X and Y<o:p></o:p></span></p>
+
+
+
+
+<table style="text-align: left; width: 732px; height: 119px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="width: 26px;" align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255); width: 655px;"><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">Graphics&nbsp;640,480,0<br>
+
+
+
+
+      </span><span style="font-family: Tahoma;"><span style="color: rgb(153, 153, 153);"><span style="color: rgb(153, 153, 153);"></span><span style="color: rgb(153, 153, 153);"><span style="color: rgb(255, 255, 255);">X=50</span><br style="color: rgb(255, 255, 255);">
+
+
+
+
+      <span style="color: rgb(255, 255, 255);">Y=50</span><br>
+
+
+
+
+      </span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(153, 153, 153);"><span style="color: rgb(153, 153, 153);">Repeat</span><br style="color: rgb(255, 255, 0);">
+
+
+
+
+&nbsp;<span style="color: rgb(255, 255, 255);">&nbsp;&nbsp; A$ = <span style="color: rgb(51, 255, 51);">"RECTANGLE COORDINATES "</span>+X+<span style="color: rgb(51, 255, 51);">","</span>+Y</span><br style="color: rgb(255, 255, 255);">
+
+
+
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; <span style="color: rgb(255, 255, 102);">DrawText</span> A$, 10,25</span><br style="color: rgb(255, 255, 255);">
+
+
+
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; <span style="color: rgb(255, 255, 102);">DrawRect</span> X,Y,200,100</span><span style="color: rgb(255, 255, 0);"><span style="color: rgb(255, 255, 255);"></span></span><br style="color: rgb(255, 255, 0);">
+
+
+
+
+      <span style="color: rgb(255, 255, 0);">&nbsp;<span style="color: rgb(153, 153, 153);">&nbsp;&nbsp; Flip</span></span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">Until MouseHit(1)</span><br>
+
+
+
+
+      </span></span><span style="color: rgb(153, 153, 153);"></span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">End</span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<span style="font-family: Arial;"><br>
+
+
+
+
+</span>
+<p class="MsoNormal"><span style="font-family: Arial;">We can see that
+the values of the integer variables X and Y is now displayed on the
+screen with our familiar white 200x100 rectangle.</span></p>
+
+
+
+
+<table style="text-align: left; width: 389px; height: 224px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">
+
+
+
+
+      </span></span><img style="width: 410px; height: 319px;" alt="" src="./Learning 2D Game Programming: Getting Start Part 1 - Writing your first BlitzMax Program_files/first program 9.jpg"><br>
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"><br>
+
+
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;">We are now going to introduce another concept, 
+the concept of <span style="font-weight: bold;">incrementing</span> our variables. Let us add one new instruction to the previous program <o:p></o:p></span><span style="font-family: Arial;"></span><span style="font-family: Arial;"></span></p>
+
+
+
+
+<table style="text-align: left; width: 732px; height: 119px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="width: 26px;" align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255); width: 655px;"><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"></span><span style="font-family: Tahoma;"><span style="color: rgb(153, 153, 153);"><span style="color: rgb(153, 153, 153);"></span></span></span><span style="font-family: Tahoma;">Graphics&nbsp;640,480,0<br>
+
+
+
+
+      </span><span style="font-family: Tahoma;">X=50<br>
+
+
+
+
+Y=50<br>
+
+
+
+
+      </span><span style="font-family: Tahoma;">Repeat<br>
+
+
+
+
+&nbsp; &nbsp; &nbsp;<span style="color: rgb(255, 255, 255);">X :+ 1</span><br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; A$ = "RECTANGLE COORDINATES "+X+","+Y<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; DrawText A$, 10,25<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; DrawRect X,Y,200,100<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; Flip<br>
+
+
+
+
+Until MouseHit(1)<br>
+
+
+
+
+      <br>
+
+
+
+
+
+      End</span><span style="font-family: Tahoma;"><br>
+
+
+
+
+      </span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;">Building and running the above program yields an ever growing white rectangle</span><span style="font-family: Arial;">.</span><br>
+
+
+
+
+</p>
+
+
+
+
+<span style="font-family: Arial;"><o:p></o:p></span>
+<table style="text-align: left; width: 389px; height: 224px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">
+
+
+
+
+      </span></span><img style="width: 646px; height: 512px;" alt="" src="./Learning 2D Game Programming: Getting Start Part 1 - Writing your first BlitzMax Program_files/first program 10.jpg"><br>
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"><br>
+
+
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;">The reason this is the case 
+is because the number stored in the variable X is increasing by 1 each time we 
+go through the loop.<o:p> </o:p>This behavior is achieved by 
+the instruction<o:p></o:p></span></p>
+
+
+
+
+
+<table style="text-align: left; width: 732px; height: 38px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="width: 26px;" align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255); width: 655px;"><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"></span><span style="font-family: Tahoma;"><span style="color: rgb(153, 153, 153);"><span style="color: rgb(153, 153, 153);"></span></span></span><span style="font-family: Tahoma;"></span><span style="font-family: Tahoma;"></span><span style="font-family: Tahoma;">&nbsp; &nbsp; &nbsp;<span style="color: rgb(255, 255, 255);">X :+ 1</span><br>
+
+
+
+
+      </span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"></span></span></td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<br>
+
+
+
+
+<span style="font-family: Arial;">The above <span class="GramE">instruction tell</span> BlitzMax to increment the number stored in the 
+integer variable X by 1. So the first time round, X will contain the number 51 
+as initially we stored 50 into the integer variable X by our </span><b style=""><span style="font-family: &#39;Courier New&#39;;">X=50</span></b><span style="font-family: Arial;"> instruction.<o:p></o:p></span>
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p></o:p>The start of our rectangle 
+is then moved one pixel to the right as well. As we move around the loop, the 
+rectangles get drawn on top of each other, thus the rectangle appears to grow 
+longer rather than moving.<o:p></o:p></span></p>
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p></o:p>Now <span class="GramE">lets</span> make a small modification to our program by adding the 
+</span><b style=""><span style="font-family: &#39;Courier New&#39;;">CLS</span></b><span style="font-family: Arial;"> (Clearscreen) instruction and then see what 
+happens.</span></p>
+
+
+
+
+<table style="text-align: left; width: 732px; height: 119px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="width: 26px;" align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255); width: 655px;"><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"></span><span style="font-family: Tahoma;"><span style="color: rgb(153, 153, 153);"><span style="color: rgb(153, 153, 153);"></span></span></span><span style="font-family: Tahoma; color: rgb(153, 153, 153);">Graphics&nbsp;640,480,0<br>
+
+
+
+
+X=50<br>
+
+
+
+
+Y=50<br>
+
+
+
+
+Repeat<br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp; &nbsp; &nbsp;Cls</span><br>
+
+
+
+
+&nbsp; &nbsp; &nbsp;X :+ 1<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; A$ = "RECTANGLE COORDINATES "+X+","+Y<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; DrawText A$, 10,25<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; DrawRect X,Y,200,100<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; Flip<br>
+
+
+
+
+Until MouseHit(1)<br>
+
+
+
+
+      <br>
+
+
+
+
+
+      End<br>
+
+
+
+
+      </span><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+
+
+
+      </span></span></td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="color: rgb(153, 153, 153);" align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<br>
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;">Notice that instead of 
+growing bigger, the rectangle is now actually moving to the right. We can also 
+see the Rectangle Coordinates incrementing as per our <span style="font-weight: bold;">DrawText</span> 
+instruction.</span><br>
+
+
+
+
+</p>
+
+
+
+
+<table style="text-align: left; width: 389px; height: 224px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">
+
+
+
+
+      </span></span><img style="width: 646px; height: 512px;" alt="" src="./Learning 2D Game Programming: Getting Start Part 1 - Writing your first BlitzMax Program_files/first program 11.jpg"><br>
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"><br>
+
+
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;">Remember in the beginning of this tutorial&nbsp;we 
+came across this curious fact that the <span style="font-weight: bold;">DrawRect</span> instructions draws to a hidden 
+area and we had to <span style="font-weight: bold;">Flip</span> in order to see the rectangle?<o:p></o:p></span></p>
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p></o:p>When we issue the <span style="font-weight: bold;">Cls</span> 
+instruction, the hidden area (also known as the BACKBUFFER) is first cleared of 
+all previous drawings thus allowing us to clearly see the rectangle moving 
+instead of being drawn over the previous drawings (albeit moving slightly to the 
+right each time)<o:p></o:p></span></p>
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p></o:p>So there we have it, a 
+moving object on our graphic screen. These set of instructions (<span style="font-weight: bold;">Repeat Until</span>&nbsp; 
+<st1:place w:st="on">Loop</st1:place>, <span style="font-weight: bold;">Cls</span>, Drawing and <span style="font-weight: bold;">Flip</span>) forms the basis of 
+most game programs<o:p></o:p></span></p>
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p></o:p>In later tutorials we will 
+learn about two other elements, USER INPUT to control PLAYER Movement and 
+ARTIFICIAL INTELLIGENCE to control ENEMY Movement<o:p></o:p></span></p>
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p></o:p>But first, we need to be 
+introduced to the conditional <span style="font-weight: bold;">IF</span> statement</span></p>
+
+
+
+
+<h1><a class="mozTocH1" name="mozTocId578655"></a><small><small><span style="font-family: Tahoma;">The IF statement</span></small></small></h1>
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;">The IF statement is a class of programming concept called conditionals. &nbsp;Let us see how to use this in practice.</span></p>
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;">Lets us insert an IF statement 
+into our program and also make our rectangle move faster by incrementing with a 
+bigger number<o:p></o:p></span></p>
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p>&nbsp;</o:p></span></p>
+
+
+
+
+<table style="text-align: left; width: 732px; height: 119px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="width: 26px;" align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255); width: 655px;"><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"></span><span style="font-family: Tahoma;"><span style="color: rgb(153, 153, 153);"><span style="color: rgb(153, 153, 153);"></span></span></span><span style="font-family: Tahoma; color: rgb(153, 153, 153);"><span style="color: rgb(153, 153, 153);">Graphics&nbsp;640,480,0</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">X=50</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">Y=50</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">Repeat</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">&nbsp; &nbsp; &nbsp;Cls</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">&nbsp; &nbsp; &nbsp;<span style="color: rgb(255, 255, 255);">X :+ 1</span><br style="color: rgb(255, 255, 255);">
+
+
+
+
+      <span style="color: rgb(255, 255, 255);">&nbsp; &nbsp; &nbsp;<span style="color: rgb(255, 255, 0);">If</span> X&gt;400 <span style="color: rgb(255, 255, 0);">Then</span> X=0</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      </span><span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp; A$ = "RECTANGLE COORDINATES "+X+","+Y</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp; DrawText A$, 10,25</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp; DrawRect X,Y,200,100</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp; Flip</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">Until MouseHit(1)</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">
+      End</span><br>
+
+
+
+
+      </span><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+
+
+
+      </span></span></td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="color: rgb(153, 153, 153);" align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;">We now see our rectangle 
+moving much faster on the screen as well as moving back to the left side once it 
+reaches the far right of the screen.<o:p></o:p></span></p>
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p></o:p>This re-start back to the 
+left side is achieved by our new instruction </span><b style=""><span style="font-family: &#39;Courier New&#39;;">IF 
+<span style="color: red;">X&gt;400</span> THEN <span style="color: red;">X=0</span><o:p></o:p></span></b></p>
+
+
+
+
+
+
+<p class="MsoNormal"><b style=""><span style="font-family: &#39;Courier New&#39;;"><o:p></o:p></span></b><span class="GramE"><span style="font-family: Arial;">The IF 
+instruction works by evaluating the logic of </span><b style=""><span style="font-family: &#39;Courier New&#39;;">X&gt;400 </span></b><span style="font-family: Arial;">(read as X greater than 400</span><b style=""><span style="font-family: &#39;Courier New&#39;;">)</span></b><span style="font-family: Arial;">.</span></span><span style="font-family: Arial;"> The 
+expression </span><b style=""><span style="font-family: &#39;Courier New&#39;;">X&gt;400</span></b><span style="font-family: Arial;"> is a true statement when the number contained in the 
+X variable is bigger than 400. If this statement is true, the instruction after 
+THEN is then carried out i.e the value zero is stored into the integer variable 
+X.<o:p></o:p></span></p>
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p></o:p>If this statement is false, 
+then the instruction </span><b style=""><span style="font-family: &#39;Courier New&#39;;">X=0</span></b><span style="font-family: Arial;"> is not carried out and the variable X gets to retain 
+whatever value it held before.<o:p></o:p></span></p>
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p></o:p>In later tutorials we will 
+be introduced to more complicated forms of the IF statement. <span class="GramE">The IF statement (or more accurately conditionals) is the cornerstone of programming 
+logic.</span><o:p></o:p></span></p>
+
+
+
+
+<h1><a class="mozTocH1" name="mozTocId453626"></a><small><small><span style="font-family: Tahoma;">Reacting to User Input</span></small></small></h1>
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;">In the previous section, we 
+learnt how to move a rectangular object on the screen own its own accord. We 
+simply issue the right set of instructions (programming logic) to move the 
+object to the far right and back again.<o:p></o:p></span></p>
+
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p></o:p>Let
+us now see how we can control the movement of the object using our
+mouse. We will now replace two lines from the above program with two
+new functions, the <span style="font-weight: bold;">MouseX</span>() and <span style="font-weight: bold;">MouseY</span>() functions.<o:p>&nbsp;</o:p></span></p>
+
+
+
+
+<table style="text-align: left; width: 732px; height: 119px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="width: 26px;" align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255); width: 655px;"><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"></span><span style="font-family: Tahoma;"><span style="color: rgb(153, 153, 153);"><span style="color: rgb(153, 153, 153);"></span></span></span><span style="font-family: Tahoma; color: rgb(153, 153, 153);"><span style="color: rgb(153, 153, 153);">Graphics&nbsp;640,480,0</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">X=50</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">Y=50</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">Repeat</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">&nbsp; &nbsp; &nbsp;Cls</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);"><span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp;&nbsp; X = <span style="color: rgb(255, 255, 0);">MouseX</span>()</span><br style="color: rgb(255, 255, 255);">
+
+
+
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; &nbsp;Y = <span style="color: rgb(255, 255, 0);">MouseY</span>()</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      </span><span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp; A$ = "RECTANGLE COORDINATES "+X+","+Y</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp; DrawText A$, 10,25</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp; DrawRect X,Y,200,100</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp; Flip</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">Until MouseHit(1)</span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <br style="color: rgb(153, 153, 153);">
+
+
+
+
+      <span style="color: rgb(153, 153, 153);">
+      End</span><br>
+
+
+
+
+      </span><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+
+
+
+      </span></span></td>
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="color: rgb(153, 153, 153);" align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<p class="MsoNormal"></p>
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;">Now build and run the above program.</span><span style="font-family: Arial;"> You should now be able to move the rectangle by moving the mouse around the screen..<o:p></o:p></span></p>
+
+
+
+
+
+
+<table style="text-align: left; width: 389px; height: 224px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">
+
+
+
+
+      </span></span><img style="width: 646px; height: 512px;" alt="" src="./Learning 2D Game Programming: Getting Start Part 1 - Writing your first BlitzMax Program_files/first program 12.jpg"><br>
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"><br>
+
+
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<br>
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;">This behaviour is achieved 
+by the introduction of two new instructions </span><span class="GramE"><b style=""><span style="font-family: &#39;Courier New&#39;;">MOUSEX(</span></b></span><b style=""><span style="font-family: &#39;Courier New&#39;;">)</span></b><span style="font-family: Arial;"> 
+and </span><b style=""><span style="font-family: &#39;Courier New&#39;;">MOUSEY().</span></b><span style="font-family: Arial;"><o:p></o:p></span></p>
+
+
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;"><o:p></o:p>What <span style="font-weight: bold;">MouseX</span><span style="font-weight: bold;" class="GramE">(</span><span style="font-weight: bold;">)</span> does is it returns the X coordinate of the mouse and 
+the X=<span style="font-weight: bold;">MousxeX</span>() instruction then assigns this returned coordinate to the X 
+integer variable.<span style="">&nbsp; </span>Similarly for the 
+<span class="GramE"><span style="font-weight: bold;">MouseY</span>(</span>) instruction.</span></p>
+
+
+
+
+<h1><a class="mozTocH1" name="mozTocId453626"></a><small><small><span style="font-family: Tahoma;">What we have learnt so far</span></small></small></h1>
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial;">We have learnt some fairly fundamental stuff about programming today</span></p>
+
+
+
+<ul>
+
+
+
+  <li><span style="font-family: Arial;">We learnt how to compile a
+BlitzMax program and to execute it. With BlitzMax this is done easily
+by clicking the&nbsp;"Build and Run" button..</span></li>
+
+
+
+  <li><span style="font-family: Arial;">We've learnt about how the instructions in programs are executed sequentially unless told otherwise</span></li>
+
+
+
+  <li><span style="font-family: Arial;">We've learnt about variables; storage areas to store numbers and text</span></li>
+
+
+
+  <li><span style="font-family: Arial;">We've learnt about loops, where series of the same instructions gets repeated</span></li>
+
+
+
+  <li><span style="font-family: Arial;">We've learnt about conditionals, using the IF statement to only execute an instruction when the conditions are right</span></li>
+
+
+
+  <li><span style="font-family: Arial;">We've learnt how to display graphic objects onto a graphic screen</span></li>
+
+
+
+  <li><span style="font-family: Arial;">We've learnt how users can interact with our program using the mouse</span></li>
+
+
+
+  <li><span style="font-family: Arial;">We've learnt how to make our graphic object moves on the graphic screen</span></li>
+
+
+
+  <li><span style="font-family: Arial;">We've learnt how to use the help file<br>
+
+
+
+    </span></li>
+
+
+
+</ul>
+
+
+
+
+<span style="font-family: Arial;"><span style="font-weight: bold;"></span></span>
+<h1><a class="mozTocH1" name="mozTocId24810"></a><small><small><span style="font-family: Tahoma;">Blitzmax commands introduced so far</span></small></small></h1>
+
+<span style="font-family: Arial;">So even with our first tutorial we
+have covered quite a lot of new stuff. Don't worry if the full syntax
+of the functions below looks complicated. The simple usage are as per
+shown above:-<br>
+<br>
+
+</span>
+
+<table style="text-align: left; width: 712px; height: 55px; font-family: Tahoma;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+      <td style="background-color: rgb(204, 255, 255);">Function <span style="font-weight: bold;">Print</span>( str$="" )</td>
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+    </tr>
+
+    <tr>
+
+      <td align="undefined" valign="undefined"></td>
+
+      <td style="background-color: rgb(204, 255, 255);" align="undefined" valign="undefined">Write a string to the standard IO stream.</td>
+
+      <td align="undefined" valign="undefined"></td>
+
+    </tr>
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+<br>
+
+<table style="text-align: left; width: 712px; height: 55px; font-family: Tahoma;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+      <td style="background-color: rgb(204, 255, 255);">Function <span style="font-weight: bold;">Graphics</span>:TGraphics( width,height,depth=0,hertz=60,flags=0 )</td>
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+    </tr>
+
+    <tr>
+
+      <td align="undefined" valign="undefined"></td>
+
+      <td style="background-color: rgb(204, 255, 255);" align="undefined" valign="undefined">Create a graphics object.</td>
+
+      <td align="undefined" valign="undefined"></td>
+
+    </tr>
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+<br>
+
+<table style="text-align: left; width: 712px; height: 55px; font-family: Tahoma;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+      <td style="background-color: rgb(204, 255, 255);">Function <span style="font-weight: bold;">DrawRect</span>( x#,y#,width#,height# )</td>
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+    </tr>
+
+    <tr>
+
+      <td align="undefined" valign="undefined"></td>
+
+      <td style="background-color: rgb(204, 255, 255);" align="undefined" valign="undefined">Draw a Rectangle at position x,y of size width and height</td>
+
+      <td align="undefined" valign="undefined"></td>
+
+    </tr>
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+<br>
+
+<table style="text-align: left; width: 712px; height: 55px; font-family: Tahoma;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+      <td style="background-color: rgb(204, 255, 255);">Function <span style="font-weight: bold;">Flip</span>( sync=-1 )</td>
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+    </tr>
+
+    <tr>
+
+      <td align="undefined" valign="undefined"></td>
+
+      <td style="background-color: rgb(204, 255, 255);" align="undefined" valign="undefined"><span style="text-decoration: underline;">S</span>waps the front and back buffers of the current graphics 
+objects.</td>
+
+      <td align="undefined" valign="undefined"></td>
+
+    </tr>
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+<br>
+
+<table style="text-align: left; width: 712px; height: 55px; font-family: Tahoma;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+      <td style="background-color: rgb(204, 255, 255);">Function <span style="font-weight: bold;">WaitMouse</span>()</td>
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+    </tr>
+
+    <tr>
+
+      <td align="undefined" valign="undefined"></td>
+
+      <td style="background-color: rgb(204, 255, 255);" align="undefined" valign="undefined">Wait for mouse button click.</td>
+
+      <td align="undefined" valign="undefined"></td>
+
+    </tr>
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+<br>
+
+<table style="text-align: left; width: 712px; height: 55px; font-family: Tahoma;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+      <td style="background-color: rgb(204, 255, 255);">Function <span style="font-weight: bold;">SetColor</span>( red,green,blue )</td>
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+    </tr>
+
+    <tr>
+
+      <td align="undefined" valign="undefined"></td>
+
+      <td style="background-color: rgb(204, 255, 255);" align="undefined" valign="undefined">Set current color.</td>
+
+      <td align="undefined" valign="undefined"></td>
+
+    </tr>
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+<br>
+
+<table style="text-align: left; width: 712px; height: 55px; font-family: Tahoma;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+      <td style="background-color: rgb(204, 255, 255);">Function <span style="font-weight: bold;">DrawText</span>( t$,x#,y# )</td>
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+    </tr>
+
+    <tr>
+
+      <td align="undefined" valign="undefined"></td>
+
+      <td style="background-color: rgb(204, 255, 255);" align="undefined" valign="undefined"><span style="text-decoration: underline;"></span>Draw text (in t$) at location x,y</td>
+
+      <td align="undefined" valign="undefined"></td>
+
+    </tr>
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+<br>
+
+<table style="text-align: left; width: 712px; height: 55px; font-family: Tahoma;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+      <td style="background-color: rgb(204, 255, 255);">Function <span style="font-weight: bold;">WaitMouse</span>()</td>
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+    </tr>
+
+    <tr>
+
+      <td align="undefined" valign="undefined"></td>
+
+      <td style="background-color: rgb(204, 255, 255);" align="undefined" valign="undefined">Wait for mouse button click.</td>
+
+      <td align="undefined" valign="undefined"></td>
+
+    </tr>
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+<br>
+
+<table style="text-align: left; width: 712px; height: 55px; font-family: Tahoma;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+      <td style="background-color: rgb(204, 255, 255);">Function <span style="font-weight: bold;">MouseX</span>()</td>
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+    </tr>
+
+    <tr>
+
+      <td align="undefined" valign="undefined"></td>
+
+      <td style="background-color: rgb(204, 255, 255);" align="undefined" valign="undefined">Get mouse x location.</td>
+
+      <td align="undefined" valign="undefined"></td>
+
+    </tr>
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+<br>
+
+<table style="text-align: left; width: 712px; height: 55px; font-family: Tahoma;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+      <td style="background-color: rgb(204, 255, 255);">Function <span style="font-weight: bold;">MouseY</span>()</td>
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+    </tr>
+
+    <tr>
+
+      <td align="undefined" valign="undefined"></td>
+
+      <td style="background-color: rgb(204, 255, 255);" align="undefined" valign="undefined"><span style="text-decoration: underline;"></span>Get mouse Y location.</td>
+
+      <td align="undefined" valign="undefined"></td>
+
+    </tr>
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+<br>
+
+<table style="text-align: left; width: 712px; height: 55px; font-family: Tahoma;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+      <td style="background-color: rgb(204, 255, 255);">Function <span style="font-weight: bold;">Rnd!(</span> min_value!=1,max_value!=0 )</td>
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+    </tr>
+
+    <tr>
+
+      <td align="undefined" valign="undefined"></td>
+
+      <td style="background-color: rgb(204, 255, 255);" align="undefined" valign="undefined">Generate random double.</td>
+
+      <td align="undefined" valign="undefined"></td>
+
+    </tr>
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+<br>
+
+<table style="text-align: left; width: 712px; height: 55px; font-family: Tahoma;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+      <td style="background-color: rgb(204, 255, 255);">Function <span style="font-weight: bold;">RndSeed</span>()</td>
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+    </tr>
+
+    <tr>
+
+      <td align="undefined" valign="undefined"></td>
+
+      <td style="background-color: rgb(204, 255, 255);" align="undefined" valign="undefined">Get random number generator seed.</td>
+
+      <td align="undefined" valign="undefined"></td>
+
+    </tr>
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+<br>
+
+<table style="text-align: left; width: 712px; height: 55px; font-family: Tahoma;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+      <td style="background-color: rgb(204, 255, 255);">
+      
+      <table class="doc" id="If" cellspacing="3" width="100%">
+
+
+        <tbody>
+
+
+          <tr>
+
+
+            <td class="doctop" colspan="2">Keyword <span style="font-weight: bold;">If</span></td>
+
+          </tr>
+
+        
+        </tbody>
+      
+      </table>
+
+      </td>
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+    </tr>
+
+    <tr>
+
+      <td align="undefined" valign="undefined"></td>
+
+      <td style="background-color: rgb(204, 255, 255);" align="undefined" valign="undefined"><span style="text-decoration: underline;"></span>Begin a conditional block.</td>
+
+      <td align="undefined" valign="undefined"></td>
+
+    </tr>
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+<br>
+
+<table style="text-align: left; width: 712px; height: 55px; font-family: Tahoma;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+      <td style="background-color: rgb(204, 255, 255);">
+      
+      <table class="doc" id="End" cellspacing="3" width="100%">
+
+
+        <tbody>
+
+
+          <tr>
+
+
+            <td class="doctop" colspan="2">Keyword <span style="font-weight: bold;">End</span></td>
+
+          </tr>
+
+        
+        </tbody>
+      
+      </table>
+
+      </td>
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+    </tr>
+
+    <tr>
+
+      <td align="undefined" valign="undefined"></td>
+
+      <td style="background-color: rgb(204, 255, 255);" align="undefined" valign="undefined">End program execution.</td>
+
+      <td align="undefined" valign="undefined"></td>
+
+    </tr>
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+<br>
+
+<table style="text-align: left; width: 712px; height: 55px; font-family: Tahoma;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+      <td style="background-color: rgb(204, 255, 255);">Function <span style="font-weight: bold;">Delay</span>( millis )</td>
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+    </tr>
+
+    <tr>
+
+      <td align="undefined" valign="undefined"></td>
+
+      <td style="background-color: rgb(204, 255, 255);" align="undefined" valign="undefined">Delay suspends program execution for at least <b>millis</b> 
+milliseconds.<br>
+
+A millisecond is one thousandth of a second.</td>
+
+      <td align="undefined" valign="undefined"></td>
+
+    </tr>
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+<span style="font-family: Arial;"><br>
+Back to the <a href="http://web.archive.org/web/20070612142634/http://www.2dgamecreators.com/tutorials/gameprogramming/index.html">Main Index</a></span>
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal"></p>
+
+<p class="MsoNormal"></p>
+
+
+
+
+<p class="MsoNormal"><span style="font-family: Tahoma;"></span></p>
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"></span></span>
+
+
+
+
+
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">
+</span></span><span style="font-family: Tahoma;"></span>
+
+
+<!--
+     FILE ARCHIVED ON 14:26:34 Jun 12, 2007 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 05:40:01 Oct 04, 2021.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  RedisCDXSource: 8.58
+  PetaboxLoader3.resolve: 34.811
+  exclusion.robots: 0.528
+  captures_list: 206.326
+  CDXLines.iter: 28.376 (3)
+  PetaboxLoader3.datanode: 188.325 (4)
+  exclusion.robots.policy: 0.505
+  LoadShardBlock: 161.227 (3)
+  esindex: 0.023
+  load_resource: 84.912
+--></body></html>

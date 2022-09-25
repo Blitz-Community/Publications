@@ -1,0 +1,1679 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0096)http://web.archive.org/web/20061128025336/http://www.2dgamecreators.com/maxgui/GadgetEvents.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><script src="./The MaxGUI Beginner Tutorial Series - Tutorial 2: Buttons and Events_files/analytics.js" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app43.us.archive.org';v.server_ms=723;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="./The MaxGUI Beginner Tutorial Series - Tutorial 2: Buttons and Events_files/bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="./The MaxGUI Beginner Tutorial Series - Tutorial 2: Buttons and Events_files/wombat.js" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("http://web.archive.org/web");
+  __wm.wombat("http://www.2dgamecreators.com:80/maxgui/GadgetEvents.html","20061128025336","http://web.archive.org/","web","/_static/",
+	      "1164682416");
+</script>
+<link rel="stylesheet" type="text/css" href="./The MaxGUI Beginner Tutorial Series - Tutorial 2: Buttons and Events_files/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="./The MaxGUI Beginner Tutorial Series - Tutorial 2: Buttons and Events_files/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+
+
+
+
+
+  
+  
+  
+  
+
+
+
+  
+  
+  
+  <title>Tutorial 2: Buttons and Events</title>
+</head>
+
+
+<body><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  /*min-width:800px !important;*/
+}
+</style>
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr;">
+</div><div id="wm-ipp-print">The Wayback Machine - http://web.archive.org/web/20061128025336/http://www.2dgamecreators.com:80/maxgui/GadgetEvents.html</div>
+<div id="donato" style="position:relative;width:100%;">
+  <div id="donato-base">
+    <iframe id="donato-if" src="./The MaxGUI Beginner Tutorial Series - Tutorial 2: Buttons and Events_files/donate.html" scrolling="no" frameborder="0" style="width:100%; height:100%">
+    </iframe>
+  </div>
+</div><script type="text/javascript">
+__wm.bt(650,27,25,2,"web","http://www.2dgamecreators.com/maxgui/GadgetEvents.html","20061128025336",1996,"/_static/",["/_static/css/banner-styles.css?v=omkqRugM","/_static/css/iconochive.css?v=qtvMKcIJ"], "False");
+  __wm.rw(1);
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;">The MaxGUI Beginner Tutorial Series - Tutorial 2:</span></span></span>
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;">Buttons and Events&nbsp;</span><br style="font-weight: bold;">
+
+
+
+
+(c) Assari Dec 22 2005<br>
+
+
+
+<br>
+
+
+Gadgets and Events are central to MaxGUI. Unfortunately we cannot
+understand one without the other. What I'm trying to do here is
+introduce both concepts slowly. I am assuming that you have read my
+previous tutorial on <span style="font-weight: bold;">CreateWindows</span> and also knows some basic programming concepts.<br>
+
+
+<br>
+
+
+Lets start by introducing the Button gadget, something very familiar to us (whether on XP, Mac or Linux).<br>
+
+
+<br>
+
+
+
+
+</span></span>
+<table style="text-align: left; width: 732px; height: 160px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+      <span style="color: rgb(255, 255, 102);">SuperStrict</span><br>
+
+
+      <br>
+
+
+      <span style="color: rgb(255, 255, 102);">Local</span> MyWindow:TGadget=<span style="color: rgb(255, 255, 102);">CreateWindow</span>(<span style="color: rgb(51, 255, 51);">"Button Example"</span>, 200,200,320,240)<br>
+
+
+      <span style="color: rgb(255, 255, 102);">Local</span> MyButton:TGadget=<span style="color: rgb(255, 255, 102);">CreateButton</span>(<span style="color: rgb(51, 255, 51);">"Click Me"</span>,140,60,80,40, MyWindow)<br>
+
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Repeat</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;WaitEvent()</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Until
+EventID()</span>=EVENT_WINDOWCLOSE<br>
+
+
+
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">End</span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+Cut and paste the above code into the MaxIDE and run the program. You should see the following (for Windows XP users):-<br>
+
+
+
+
+<br>
+
+
+
+
+</span></span>
+<table style="text-align: left; width: 342px; height: 259px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><img style="width: 320px; height: 240px;" alt="" src="./The MaxGUI Beginner Tutorial Series - Tutorial 2: Buttons and Events_files/createbutton.jpg"><br>
+
+
+
+
+      </span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<br>
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">You can click the button but nothing very exciting happens. We will do more later.<br>
+
+
+
+<br>
+
+
+
+Now lets try and see what all
+those lines of Blitzmax code means</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"></span></span><br>
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"></span></span><br>
+
+
+<table style="text-align: left; width: 167px; height: 50px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">SuperStrict</span><span style="color: rgb(255, 255, 102);"><br>
+
+
+      </span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">In the previous tutorial I have kept thing simple and has not introduce the BlitzMax command <span style="font-weight: bold;">Superstrict</span>
+before. From now on this will appear in all my example. The only thing
+we need to know at this stage is that this command will make BlitzMax
+very strict on how we define variables in our program. Trust me, using
+this at the start of our BlitzMax code saves a lot of grief.<br>
+
+
+<br>
+
+
+I will not explain the <span style="font-weight: bold;">CreateWindow</span> command anymore as its been covered in the previous tutorial. The function of interest to us is the <span style="font-weight: bold;">CreateButton</span> function.<br>
+
+
+</span></span><br>
+
+
+
+
+<table style="text-align: left; width: 732px; height: 46px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Local</span> MyButton:TGadget=<span style="color: rgb(255, 255, 102);">CreateButton</span>(<span style="color: rgb(51, 255, 51);">"Click Me"</span>,140,60,80,40, MyWindow)</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">
+
+      </span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<br>
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">The above code creates a button and
+displays it in the window we have created just before this line. The central piece here is the
+MaxGUI function <span style="font-weight: bold; color: rgb(0, 0, 0);">CreateButton.</span><br>
+
+
+
+
+</span></span><br>
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">If we were to look at the
+Blitzmax Helpfile we will see the following syntax requirements</span></span><br>
+
+
+
+
+<table style="text-align: left; width: 712px; height: 55px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+      <td style="background-color: rgb(204, 255, 255); font-family: Tahoma;">Function CreateButton:TGadget(label$,x,y,w,h,group:TGadget,style=BUTTON_PUSH)</td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+As you can see, the <span style="font-weight: bold;">CreateButton</span> function has almost identical parameters to the <span style="font-weight: bold;">CreateWindow</span> function.<br>
+
+
+
+
+</span></span>
+<ul>
+
+
+  <li><span style="font-family: Tahoma;">The items
+between brackets are parameters, lets go through them one by one:-</span></li>
+
+
+
+
+  
+  
+  
+  <ul>
+
+
+
+
+    <li><span style="font-family: Tahoma;"><span style="font-weight: bold;">label$</span> is the text
+that will appear on the button</span></li>
+
+
+
+
+    <li><span style="font-family: Tahoma;">&nbsp;<span style="font-weight: bold;">x,y </span>is the x and y
+coordinates of the location where the button will appear within the parent window</span></li>
+
+
+
+
+    <li><span style="font-family: Tahoma;"><span style="font-weight: bold;">w,h</span> is the <span style="font-weight: bold;">w</span>idth and<span style="font-weight: bold;">
+h</span>eight of the window (ie its size)</span></li>
+
+
+
+
+    <li><span style="font-family: Tahoma;"><span style="font-weight: bold;">group:TGadget</span> is the
+group to whom this created button belongs to. The gadget which owns this button is also called its parent</span></li>
+
+
+
+
+    <li><span style="font-family: Tahoma;"><span style="font-weight: bold;">style</span> is the style
+of the button with BUTTON_PUSH as the default style</span></li>
+
+
+
+
+  
+  
+  
+  </ul>
+
+
+
+
+</ul>
+
+
+
+
+<span style="font-family: Tahoma;">Like<span style="font-weight: bold;"> CreateWindow, CreateButton </span>also returns a Gadget object (see CreateButton:TGadget)<span style="font-weight: bold;"><br>
+
+<br>
+
+Introducing Events</span><br>
+
+
+Before we continue further with the CreateButton function, lets talk a little bit&nbsp;about Events<br>
+
+
+<br>
+
+
+Blitzmax (and Blitzplus before this) introduces the concept of Events
+to the Blitz family. The Events system allows a Blitzmax program to
+react to an event that has happened. Examples of events:-<br>
+
+
+</span>
+<ul>
+
+
+  <li><span style="font-family: Tahoma;">A user clicking the left mouse button</span></li>
+
+
+  <li><span style="font-family: Tahoma;">A user moving a window</span></li>
+
+
+  <li><span style="font-family: Tahoma;">A user typing on his keyboard &nbsp;</span></li>
+
+
+</ul>
+
+
+<span style="font-family: Tahoma;">One of the function that Blitzmax has to handle events is called <span style="font-weight: bold;">WaitEvent()</span>. Lets look at the following piece of code from our earlier examples:-<br>
+
+
+<br>
+
+
+</span>
+<table style="text-align: left; width: 732px; height: 109px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Repeat</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp;WaitEvent()</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Until
+EventID()</span>=EVENT_WINDOWCLOSE<br>
+
+
+
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">End</span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+<span style="font-family: Tahoma;">I hope you are familiar with the <span style="font-weight: bold;">Repeat Until</span> loop. Basically, BlitzMax will repeat the <span style="font-weight: bold;">WaitEvent()</span> function call until the function <span style="font-weight: bold;">EventID()</span> returns a windowclose event (<span style="font-weight: bold;">EVENT_WINDOWCLOSE</span>)<br>
+
+
+<br>
+
+
+What <span style="font-weight: bold;">WaitEvent()</span> does is it checks whether an event has occured. It is important to note that <span style="font-weight: bold;">WaitEvent()</span> waits for an event to happen&nbsp;<span style="font-weight: bold;"></span>before it proceeds to the next line of code <br>
+
+
+<br>
+
+
+The <span style="font-weight: bold;">EventID()</span> function returns the identity number of the event<span style="font-weight: bold;"></span> which we then check against EVENT_WINDOWCLOSE. If they are the same, the program exits the repeat loop.<br>
+
+
+<br>
+
+
+So basically we can say that the above code does the following<br>
+
+
+</span>
+<ul>
+
+
+  <li><span style="font-family: Tahoma;">Waits for an event to happen. If something happens goto the next line otherwise keep checking</span></li>
+
+
+  <li><span style="font-family: Tahoma;">Check that the kind of event that happens was a Window being closed event.</span></li>
+
+
+  <li><span style="font-family: Tahoma;">If yes, we are done, otherwise go wait for the next event<br>
+
+
+    </span></li>
+
+
+</ul>
+
+
+<span style="font-family: Tahoma;">Now lets re-write the above program in a slightly different way<br>
+
+
+<br>
+
+
+</span>
+<table style="text-align: left; width: 732px; height: 160px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">SuperStrict</span><br>
+
+
+      <br>
+
+
+      <span style="color: rgb(255, 255, 102);">Local</span> MyWindow:TGadget=<span style="color: rgb(255, 255, 102);">CreateWindow</span>(<span style="color: rgb(51, 255, 51);">"Button Example"</span>, 200,200,320,240)<br>
+
+
+      <span style="color: rgb(255, 255, 102);">Local</span> MyButton:TGadget=<span style="color: rgb(255, 255, 102);">CreateButton</span>(<span style="color: rgb(51, 255, 51);">"Click Me"</span>,140,60,80,40, MyWindow)<br>
+
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Repeat</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp; WaitEvent()<br>
+
+
+&nbsp; Select EventID()<br style="color: rgb(255, 255, 102);">
+
+
+      </span>
+
+      <span style="color: rgb(255, 255, 102);">&nbsp; Case <span style="color: rgb(255, 255, 255);">EVENT_WINDOWCLOSE</span><br>
+
+
+&nbsp; &nbsp; &nbsp;End<br>
+
+
+&nbsp; &nbsp;End Select<br>
+
+
+Forever</span><br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+<span style="font-family: Tahoma;">Instead of using the Repeat/Until loop, we are now using the <span style="font-weight: bold;">Repeat/Forever</span> loop which as the name suggests will loop forever.<br>
+
+
+<br>
+
+
+We are also now using another programming construct call <span style="font-weight: bold;">Select/Case</span>. &nbsp;In the above example we <span style="font-weight: bold;">select</span> for the value of <span style="font-weight: bold;">EventID()</span> and when the <span style="font-weight: bold;">Case</span> is EVENT_WINDOWCLOSE the program <span style="font-weight: bold;">end</span>s.<br>
+
+
+<br>
+
+
+Now that we understand the above programming construct we are ready to check for other cases of <span style="font-weight: bold;">EventID</span>s.<br>
+
+
+<br>
+
+
+</span>
+<table style="text-align: left; width: 732px; height: 160px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">SuperStrict</span><br>
+
+
+      <br>
+
+
+      <span style="color: rgb(255, 255, 102);">Local</span> MyWindow:TGadget=<span style="color: rgb(255, 255, 102);">CreateWindow</span>(<span style="color: rgb(51, 255, 51);">"Button Example"</span>, 200,200,320,240)<br>
+
+
+      <span style="color: rgb(255, 255, 102);">Local</span> MyButton:TGadget=<span style="color: rgb(255, 255, 102);">CreateButton</span>(<span style="color: rgb(51, 255, 51);">"Click Me"</span>,140,60,80,40, MyWindow)<br>
+
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Repeat</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp; WaitEvent()<br>
+
+
+&nbsp; Select EventID()<br style="color: rgb(255, 255, 102);">
+
+
+      </span>
+
+      <span style="color: rgb(255, 255, 102);">&nbsp; Case <span style="color: rgb(255, 255, 255);">EVENT_WINDOWCLOSE</span><br>
+
+
+&nbsp; &nbsp; &nbsp;End<br>
+
+
+&nbsp; Case <span style="color: rgb(255, 255, 255);">EVENT_GADGETACTION</span><br>
+
+
+&nbsp; &nbsp; SetGadgetText(<span style="color: rgb(255, 255, 255);">MyButton</span>,<span style="color: rgb(51, 255, 51);">"Button&nbsp;clicked"</span>)<br>
+
+
+&nbsp; &nbsp;End Select<br>
+
+
+Forever</span><br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+<span style="font-family: Tahoma;">Notice now we have two cases to select from, EVENT_WINDOWCLOSE and EVENT_GADGETACTION.<br>
+
+
+EVENT_WINDOWCLOSE as we have seen earlier is triggered when a user
+clicks the close window icon. EVENT_GADGETACTION on the other hand is
+triggered when a user clicks our Button.<br>
+
+
+<br>
+
+
+Cut and Paste the above code and run it. You can see the text on the
+button changing when you click it. This is done via the MaxGUI function
+<span style="font-weight: bold;">SetGadgetText</span>.<br>
+
+
+<br>
+
+
+</span>
+<table style="text-align: left; width: 342px; height: 259px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><img style="width: 320px; height: 240px;" alt="" src="./The MaxGUI Beginner Tutorial Series - Tutorial 2: Buttons and Events_files/createbutton.jpg"><br>
+
+
+
+
+      </span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"><img style="width: 320px; height: 240px;" alt="" src="./The MaxGUI Beginner Tutorial Series - Tutorial 2: Buttons and Events_files/createbutton_before.jpg"><br>
+
+
+      </td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+<span style="font-family: Tahoma;">So lets try and summarize what we have learnt so far.<br>
+
+
+<br>
+
+
+For the time being, think of events as triggers that&nbsp;our Blitzmax program can react to.<br>
+
+
+Most MaxGUI gadgets can be used to trigger events. Gadgets are objects within MaxGUI. Examples of gadgets are&nbsp;<br>
+
+
+</span>
+<ul>
+
+
+  <li><span style="font-family: Tahoma;">Windows created via CreateWindow</span></li>
+
+
+  <li><span style="font-family: Tahoma;">Buttons created via CreateButton</span></li>
+
+
+</ul>
+
+
+<span style="font-family: Tahoma;">As an illustration, try the program below<br>
+
+
+<br>
+
+
+</span>
+<table style="text-align: left; width: 732px; height: 160px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">SuperStrict</span><br>
+
+
+      <br>
+
+
+      <span style="color: rgb(255, 255, 102);">Local</span> MyWindow:TGadget=<span style="color: rgb(255, 255, 102);">CreateWindow</span>(<span style="color: rgb(51, 255, 51);">"Button Example"</span>, 200,200,320,240)<br>
+
+
+      <span style="color: rgb(255, 255, 102);">Local</span> MyButton:TGadget=<span style="color: rgb(255, 255, 102);">CreateButton</span>(<span style="color: rgb(51, 255, 51);">"Click Me"</span>,140,60,80,40, MyWindow)<br>
+
+
+      <br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">Repeat</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp; WaitEvent()<br>
+
+
+&nbsp; Select EventID()<br style="color: rgb(255, 255, 102);">
+
+
+      </span>
+
+      <span style="color: rgb(255, 255, 102);">&nbsp; Case <span style="color: rgb(255, 255, 255);">EVENT_WINDOWCLOSE</span><br>
+
+
+&nbsp; &nbsp; &nbsp;End<br>
+
+
+&nbsp; Case <span style="color: rgb(255, 255, 255);">EVENT_GADGETACTION</span><br>
+
+
+&nbsp; &nbsp; SetGadgetText(<span style="color: rgb(255, 255, 255);">MyButton</span>,<span style="color: rgb(51, 255, 51);">"Button&nbsp;clicked"</span>)<br>
+
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; &nbsp; SetGadgetText(<span style="color: rgb(255, 255, 255);">MyWindow</span>,<span style="color: rgb(51, 255, 51);">"Someone clicked my button"</span>)</span></span></span><br>
+
+
+      <span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; &nbsp;End Select<br>
+
+
+Forever</span><br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+<span style="font-family: Tahoma;">Note the before clicking and after clicking picture. The title in the window also changed as a result of our 2nd <span style="font-weight: bold;">SetGadgetText</span> command which directs the text <span style="font-weight: bold;">Someone clicked my button</span> to the MyWindow Gadget. A button is a gadget, so is a window</span><br>
+
+<br>
+
+
+<table style="text-align: left; width: 342px; height: 259px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><img style="width: 320px; height: 240px;" alt="" src="./The MaxGUI Beginner Tutorial Series - Tutorial 2: Buttons and Events_files/createbutton.jpg"><br>
+
+
+
+
+      </span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"><img style="width: 320px; height: 240px;" alt="" src="./The MaxGUI Beginner Tutorial Series - Tutorial 2: Buttons and Events_files/createbutton_after.jpg"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+<table style="text-align: left; width: 732px; height: 57px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span><span style="color: rgb(255, 255, 102);">Local</span> MyWindow:TGadget=<span style="color: rgb(255, 255, 102);">CreateWindow</span>(<span style="color: rgb(51, 255, 51);">"Button Example"</span>, 200,200,320,240)<br>
+
+
+      <span style="color: rgb(255, 255, 102);">Local</span> MyButton:TGadget=<span style="color: rgb(255, 255, 102);">CreateButton</span>(<span style="color: rgb(51, 255, 51);">"Click Me"</span>,140,60,80,40, MyWindow)<span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"></span></span><br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+<span style="font-family: Tahoma;">Both of the gadgets that we
+created,&nbsp; MyWindow and MyButton,are of type&nbsp;Gadget. This you can
+see from the construct of the statement<br>
+
+
+<br>
+
+
+</span>
+<table style="text-align: left; width: 732px; height: 57px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span><span style="color: rgb(255, 255, 102);">Local</span> GadgetName:TGadget=<span style="color: rgb(255, 255, 102);"> ....</span><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"></span></span><br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+<span style="font-family: Tahoma;"></span><span style="font-family: Tahoma;"><span style="font-weight: bold;">Local</span>
+indicates that we are creating a local variable, limited in scope but
+faster. Then we put the name of the variable and finally the construct <span style="font-weight: bold;">:TGadget</span> indicate that we want a variable of type&nbsp;Gadget.<br>
+
+
+To illustrate how these variable declaration work, the following 3
+lines of code creates an integer, float and string variables
+respectively<br>
+
+
+<br>
+
+
+</span>
+<table style="text-align: left; width: 732px; height: 57px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span><span style="color: rgb(255, 255, 102);">Local</span> MyNumber:<span style="color: rgb(255, 255, 51);">Int</span><span style="color: rgb(255, 255, 102);"><br>
+
+
+      </span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Local</span> A:<span style="color: rgb(255, 255, 51);">Float<span style="color: rgb(255, 255, 255);"> = 1.234</span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><br>
+
+
+Local</span> Text:<span style="color: rgb(255, 255, 51);">String</span><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"></span></span><br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+<span style="font-family: Tahoma;">It is not the intention of this
+tutorial to teach you about the concept of variables. But for MaxGUI it
+is important to declare the variables explicitly.<br>
+
+
+<br>
+
+
+</span>
+<table style="text-align: left; width: 732px; height: 57px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span><span style="color: rgb(255, 255, 102);">Local</span> MyWindow=<span style="color: rgb(255, 255, 102);">CreateWindow</span>(<span style="color: rgb(51, 255, 51);">"Button Example"</span>, 200,200,320,240)<span style="color: rgb(255, 255, 102);"></span><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"></span></span><br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+<span style="font-family: Tahoma;">The above works, but it is wrong and will trip you up later. So declare them like so<br>
+
+
+</span><span style="font-family: Tahoma;"></span><br>
+
+
+<table style="text-align: left; width: 732px; height: 57px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span><span style="color: rgb(255, 255, 102);">Local</span> MyWindow:TGadget=<span style="color: rgb(255, 255, 102);">CreateWindow</span>(<span style="color: rgb(51, 255, 51);">"Button Example"</span>, 200,200,320,240)<span style="color: rgb(255, 255, 102);"></span><span style="color: rgb(51, 255, 51);"></span><span style="color: rgb(255, 255, 102);"><span style="color: rgb(255, 255, 255);"></span></span><br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+<span style="font-family: Tahoma;"><br>
+
+When we use <span style="font-weight: bold;">Superstrict</span> at the start of our BlitzMax code, the compiler will catch&nbsp;these errors.<br>
+
+<br>
+
+
+<span style="font-weight: bold;">EventSource</span><br>
+
+
+<br>
+
+
+So far our program has been checking the id of events, differentiating
+between EVENT_WINDOWCLOSE and EVENT_GADGETACTION. Now let see how we
+cope with 2 buttons.<br>
+
+
+<br>
+
+
+</span>
+<table style="text-align: left; width: 732px; height: 160px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">SuperStrict</span><br>
+
+
+      <br>
+
+
+      <span style="color: rgb(255, 255, 102);">Local</span> MyWindow:TGadget=<span style="color: rgb(255, 255, 102);">CreateWindow</span>(<span style="color: rgb(51, 255, 51);">"Two Buttons Example"</span>, 200,200,320,240)<br>
+
+
+      <span style="color: rgb(255, 255, 102);">Local</span>&nbsp;Button1:TGadget=<span style="color: rgb(255, 255, 102);">CreateButton</span>(<span style="color: rgb(51, 255, 51);">"One"</span>,140,40,80,40, MyWindow)<br>
+
+
+      </span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Local</span> Button2:TGadget=<span style="color: rgb(255, 255, 102);">CreateButton</span>(<span style="color: rgb(51, 255, 51);">"Two"</span>,140,100,80,40, MyWindow)<br>
+
+
+      <br>
+
+
+      </span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">
+
+      <span style="color: rgb(255, 255, 102);">Repeat</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp; WaitEvent()<br>
+
+
+&nbsp; Select EventID()<br style="color: rgb(255, 255, 102);">
+
+
+      </span>
+
+      <span style="color: rgb(255, 255, 102);">&nbsp; Case <span style="color: rgb(255, 255, 255);">EVENT_WINDOWCLOSE</span><br>
+
+
+&nbsp; &nbsp; &nbsp;End<br>
+
+
+&nbsp; Case <span style="color: rgb(255, 255, 255);">EVENT_GADGETACTION<br>
+
+
+&nbsp;<span style="font-weight: bold;"> &nbsp; </span><span style="color: rgb(255, 255, 102); font-weight: bold;">Select EventSource()</span><br style="font-weight: bold;">
+
+      <span style="font-weight: bold;">
+&nbsp; &nbsp; &nbsp; </span><span style="color: rgb(255, 255, 102); font-weight: bold;">Case</span><span style="font-weight: bold;"> Button1</span><br style="font-weight: bold;">
+
+
+      </span><span style="font-weight: bold;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;SetGadgetText(</span><span style="color: rgb(255, 255, 255); font-weight: bold;">Button1</span><span style="font-weight: bold;">,</span><span style="color: rgb(51, 255, 51); font-weight: bold;">"One clicked"</span><span style="font-weight: bold;">)</span><br style="font-weight: bold;">
+
+      <span style="font-weight: bold;">
+&nbsp; &nbsp; &nbsp; Case </span><span style="color: rgb(255, 255, 255); font-weight: bold;">Button2</span><br style="font-weight: bold;">
+
+
+      </span></span></span><span style="font-family: Lucida Console; font-weight: bold;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;SetGadgetText(<span style="color: rgb(255, 255, 255);">Button2</span>,<span style="color: rgb(51, 255, 51);">"Two clicked"</span>)</span></span></span><br style="font-weight: bold;">
+
+
+      <span style="font-family: Lucida Console; font-weight: bold;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"> &nbsp; &nbsp; &nbsp; End Select</span></span></span><br style="font-weight: bold;">
+
+
+      <span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="font-weight: bold;">&nbsp; </span>&nbsp;End Select<br>
+
+
+Forever</span><br>
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+<span style="font-family: Tahoma;">As you can see from the created window below, the <span style="font-weight: bold;">EventSource()</span>
+function allows us to check for the gadget that generated the mouse
+click &nbsp;allowing us to differentiate the action to be taken via
+another set of <span style="font-weight: bold;">Select/Case</span> construct.</span><br>
+
+
+<br>
+
+
+<table style="text-align: left; width: 342px; height: 259px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+      <td style="background-color: rgb(255, 255, 255);"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><img style="width: 320px; height: 240px;" alt="" src="./The MaxGUI Beginner Tutorial Series - Tutorial 2: Buttons and Events_files/create2buttons.jpg"><br>
+
+
+
+
+      </span></span></td>
+
+
+
+
+      <td align="undefined" valign="undefined"><br>
+
+
+      </td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+<span style="font-family: Tahoma;">Lets summarize what we have learnt in this tutorial<br>
+
+
+</span>
+<ul>
+
+
+  <li><span style="font-family: Tahoma;">We've learnt that we can create gadgets </span><span style="font-family: Tahoma;">via for example the <span style="font-weight: bold;">CreateButton </span>function </span><span style="font-family: Tahoma;">that can trigger events via for example user clicks</span></li>
+
+
+  <li><span style="font-family: Tahoma;">These events can then be acted upon by our Blitzmax code via functions such as <span style="font-weight: bold;">WaitEvent()</span> and <span style="font-weight: bold;">EventSource()</span> and standard programming constructs such as loops and <span style="font-weight: bold;">Select/Case</span>.</span></li>
+
+
+</ul>
+
+
+<span style="font-family: Tahoma;">There are more to learn, so lets move on to the next Tutorial.<br>
+<br>
+Return to Tutorial <a href="http://web.archive.org/web/20061128025336/http://www.2dgamecreators.com/maxgui/index.html">Index</a><br>
+</span>
+
+<span style="font-family: Tahoma;"><br>
+
+
+</span><span style="font-family: Tahoma;"></span>
+
+
+<!--
+     FILE ARCHIVED ON 02:53:36 Nov 28, 2006 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 05:36:50 Oct 04, 2021.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  PetaboxLoader3.resolve: 108.516 (2)
+  RedisCDXSource: 4.433
+  load_resource: 436.706
+  esindex: 0.022
+  exclusion.robots.policy: 0.454
+  captures_list: 248.566
+  PetaboxLoader3.datanode: 94.464 (4)
+  CDXLines.iter: 20.833 (3)
+  LoadShardBlock: 218.088 (3)
+  exclusion.robots: 0.473
+--></body></html>

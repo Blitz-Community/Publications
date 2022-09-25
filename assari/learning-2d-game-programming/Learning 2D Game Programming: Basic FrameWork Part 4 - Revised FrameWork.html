@@ -1,0 +1,4716 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0138)http://web.archive.org/web/20070204145055/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/F4%20-%20Revised%20Framework.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><script src="./Learning 2D Game Programming: Basic FrameWork Part 4 - Revised FrameWork_files/analytics.js" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app203.us.archive.org';v.server_ms=295;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="./Learning 2D Game Programming: Basic FrameWork Part 4 - Revised FrameWork_files/bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="./Learning 2D Game Programming: Basic FrameWork Part 4 - Revised FrameWork_files/wombat.js" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("http://web.archive.org/web");
+  __wm.wombat("http://www.2dgamecreators.com:80/tutorials/gameprogramming/basics/F4%20-%20Revised%20Framework.html","20070204145055","http://web.archive.org/","web","/_static/",
+	      "1170600655");
+</script>
+<link rel="stylesheet" type="text/css" href="./Learning 2D Game Programming: Basic FrameWork Part 4 - Revised FrameWork_files/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="./Learning 2D Game Programming: Basic FrameWork Part 4 - Revised FrameWork_files/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <title>Learning 2D Game Programming: Basic FrameWork Part 4 - Revised FrameWork</title>
+  <meta content="Assari" name="author">
+</head>
+
+
+<body><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  /*min-width:800px !important;*/
+}
+</style>
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr;">
+</div><div id="wm-ipp-print">The Wayback Machine - http://web.archive.org/web/20070204145055/http://www.2dgamecreators.com:80/tutorials/gameprogramming/basics/F4%20-%20Revised%20Framework.html</div>
+<div id="donato" style="position:relative;width:100%;">
+  <div id="donato-base">
+    <iframe id="donato-if" src="./Learning 2D Game Programming: Basic FrameWork Part 4 - Revised FrameWork_files/donate.html" scrolling="no" frameborder="0" style="width:100%; height:100%">
+    </iframe>
+  </div>
+</div><script type="text/javascript">
+__wm.bt(650,27,25,2,"web","http://www.2dgamecreators.com/tutorials/gameprogramming/basics/F4 - Revised Framework.html","20070204145055",1996,"/_static/",["/_static/css/banner-styles.css?v=omkqRugM","/_static/css/iconochive.css?v=qtvMKcIJ"], "False");
+  __wm.rw(1);
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;">Learning 2D Game Programming: Basic FrameWork Part 4 - Revised FrameWork </span></span></span><br>
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</span>(c) Assari 2006<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Table of Contents<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</span></span>
+<ol style="font-family: Tahoma;" id="mozToc">
+
+<!--mozToc h1 1 h2 2 h3 3 h4 4 h5 5 h6 6--><li><a href="http://web.archive.org/web/20070204145055/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/F4%20-%20Revised%20Framework.html#mozTocId578655">Introduction</a></li>
+
+  <li><a href="http://web.archive.org/web/20070204145055/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/F4%20-%20Revised%20Framework.html#mozTocId938547">Type Inheritance</a></li>
+
+  <li><a href="http://web.archive.org/web/20070204145055/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/F4%20-%20Revised%20Framework.html#mozTocId239364">The BlitzMax List</a></li>
+
+  <li><a href="http://web.archive.org/web/20070204145055/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/F4%20-%20Revised%20Framework.html#mozTocId929381">The GameObject List</a></li>
+
+  <li><a href="http://web.archive.org/web/20070204145055/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/F4%20-%20Revised%20Framework.html#mozTocId354679">The Revised Game Framework</a></li>
+
+  <li><a href="http://web.archive.org/web/20070204145055/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/F4%20-%20Revised%20Framework.html#mozTocId578655">Summary</a></li>
+
+  <li><a href="http://web.archive.org/web/20070204145055/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/F4%20-%20Revised%20Framework.html#mozTocId873993">Blitzmax commands introduced in this tutorial</a></li>
+
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1><a class="mozTocH1" name="mozTocId578655"></a><small><small><span style="font-family: Tahoma;">Introduction</span></small></small></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;"></span>In
+the previous tutorial we added the enemy to our Game. It wasn't doing
+anything very much. Before we proceed further with this program I want
+to introduce two concepts before we move on.<br>
+
+
+
+
+<br>
+
+
+
+
+This tutorial is what I really want to get to as it will get us
+into a situation where we would have completed a journey to a Game
+Framework which we can then use to create really sophisticated and fun
+games.<br>
+
+
+
+
+<br>
+
+
+
+
+Unfortunately we have to get through this little hump before we can get
+there. So let us make a start and get this done and over with.</span></span>
+<h1><a class="mozTocH1" name="mozTocId938547"></a><small><small><small><span style="font-family: Tahoma;">Type Inheritance</span></small></small></small></h1>
+
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"></span></span><span style="font-family: Arial;">If
+we were to take a look at the two types that we have created;
+TSpaceShip and TAlienShip types. We can see that they are rather
+similar in that they have the X,Y location attributes, Image attribute as well as a
+speed attribute.<br>
+
+
+
+
+
+<br>
+
+
+
+
+I am now going to introduce you to a very interesting and useful
+concept which allows types to inherit the attributes and behaviours of
+a parent type</span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">.<br>
+
+
+
+
+<br>
+
+
+
+
+So if we create a type as below:-</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+<br>
+
+
+
+
+
+</span></span>
+<table style="text-align: left; width: 732px; height: 89px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="width: 36px;" align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255); width: 639px;"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(102, 204, 204);"></span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 0);"><span style="color: rgb(255, 255, 0);">Type <span style="color: rgb(255, 255, 255);">TGameObject</span></span><br style="color: rgb(255, 255, 0);">
+
+
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 0);">
+      <br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; Field <span style="color: rgb(255, 255, 255);">X:</span>Int <span style="color: rgb(255, 255, 255);">= 320</span></span><br style="color: rgb(255, 255, 0);">
+
+
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 0);">
+&nbsp;&nbsp;&nbsp; Field <span style="color: rgb(255, 255, 255);">Y:</span>Int <span style="color: rgb(255, 255, 255);">= 420</span></span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><br>
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; Field <span style="color: rgb(255, 255, 255);">Speed</span>:Int<span style="color: rgb(255, 255, 255);">=3<br>
+
+
+
+
+      </span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);"><span style="color: rgb(255, 255, 102);">&nbsp; &nbsp; Field</span> Image:TImage<br>
+
+
+      <br>
+
+
+&nbsp; &nbsp; </span></span></span></span></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 0);">Method <span style="color: rgb(255, 255, 255);">DrawSelf()</span></span><span style="color: rgb(255, 255, 0);"><span style="color: rgb(255, 255, 255);"></span><br>
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; DrawImage <span style="color: rgb(255, 255, 255);">Image,X,Y</span><br>
+
+
+
+
+
+
+
+
+
+
+
+
+      </span><span style="color: rgb(255, 255, 0);">&nbsp;&nbsp;&nbsp; End Method</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span></span></span><br>
+
+
+      <span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);"><br>
+
+
+      </span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);">&nbsp; &nbsp; &nbsp;<span style="color: rgb(255, 255, 102);">Method</span> UpdateState() <span style="color: rgb(255, 255, 102);">Abstract<br>
+
+
+
+      <br>
+
+
+
+      </span></span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);">
+      <span style="color: rgb(255, 255, 102);">End Type</span></span>&nbsp;</span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"></span><span style="color: rgb(255, 255, 51);"></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">We can then create a child of this TGameObject type as follows:-<br>
+
+
+
+
+
+<br>
+
+
+
+
+
+</span></span>
+<table style="text-align: left; width: 732px; height: 89px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="width: 36px;" align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255); width: 639px;"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(102, 204, 204);"></span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">&nbsp;</span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 0);"><span style="color: rgb(255, 255, 0);">
+Type <span style="color: rgb(255, 255, 255);">TSpaceShip </span></span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 0);"><span style="color: rgb(255, 255, 0);">Extends <span style="color: rgb(255, 255, 255);">TGameObject</span></span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 0);"><span style="color: rgb(255, 255, 0);"><span style="color: rgb(255, 255, 255);"></span></span><br style="color: rgb(255, 255, 0);">
+
+
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 0);"></span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);"></span> <br>
+
+
+      </span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">
+
+&nbsp;&nbsp;&nbsp; Function <span style="color: rgb(255, 255, 255);">Create:TSpaceShip(File:</span>String<span style="color: rgb(255, 255, 255);">,xstart:</span>Int<span style="color: rgb(255, 255, 255);">,ystart:</span>Int<span style="color: rgb(255, 255, 255);">)</span><br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Local <span style="color: rgb(255, 255, 255);">Ship:TSpaceShip=</span>New <span style="color: rgb(255, 255, 255);">TSpaceShip</span><br>
+
+
+
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Ship.X=xstart</span><br style="color: rgb(255, 255, 255);">
+
+
+
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Ship.Y=ystart</span><br style="color: rgb(255, 255, 255);">
+
+
+
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Ship.Image=</span>LoadImage<span style="color: rgb(255, 255, 255);">(</span>LoadBank<span style="color: rgb(255, 255, 255);">(File))</span><br>
+
+
+
+
+      <br>
+
+
+
+
+      </span></span></span></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; &nbsp; &nbsp; &nbsp;If&nbsp;<span style="color: rgb(255, 255, 255);">Ship.Image=</span>Null</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Print <span style="color: rgb(51, 255, 51);">"Not able to load image file. Program aborting"</span></span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; End</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp; &nbsp; &nbsp; &nbsp;EndIf</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Return Ship<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; End Function<br>
+
+
+      </span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">&nbsp;&nbsp; <br>
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; Method <span style="color: rgb(255, 255, 255);">UpdateState()</span><br>
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; <br>
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; If KeyDown<span style="color: rgb(255, 255, 255);">(KEY_LEFT)</span><br>
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; X <span style="color: rgb(255, 255, 255);">:- Speed</span><br>
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; EndIf&nbsp;&nbsp;&nbsp; <br>
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; If KeyDown<span style="color: rgb(255, 255, 255);">(KEY_RIGHT)</span><br>
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; X <span style="color: rgb(255, 255, 255);">:+ Speed</span><br>
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; EndIf<br>
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; If <span style="color: rgb(255, 255, 255);">X&lt;0 </span>Then <span style="color: rgb(255, 255, 255);">X=0</span><br>
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; If <span style="color: rgb(255, 255, 255);">X&gt;620</span> Then <span style="color: rgb(255, 255, 255);">X=620</span><br>
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; End Method<br>
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; <br>
+
+
+
+
+
+
+
+
+
+      </span></span></span></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 0);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">End Type<br>
+
+
+
+
+
+      </span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">
+      </span></span></span></span></span></td>
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+
+<br>
+
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Similarly for the TAlienShip we do the following:-<br>
+
+
+
+</span></span>
+<table style="text-align: left; width: 732px; height: 89px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="width: 36px;" align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255); width: 639px;"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(102, 204, 204);"></span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">&nbsp;</span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 0);"><span style="color: rgb(255, 255, 0);">Type <span style="color: rgb(255, 255, 255);">TAlienShip</span></span><br style="color: rgb(255, 255, 0);">
+
+
+
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 0);"></span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);"></span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"></span></span><br>
+
+
+
+
+
+
+
+
+
+
+      <span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(102, 204, 204);"></span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">
+&nbsp;&nbsp;&nbsp; Function <span style="color: rgb(255, 255, 255);">Create:TAlienShip(File:</span>String<span style="color: rgb(255, 255, 255);">,xstart:</span>Int<span style="color: rgb(255, 255, 255);">,ystart:</span>Int<span style="color: rgb(255, 255, 255);">)</span><br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Local <span style="color: rgb(255, 255, 255);">Ship:TAlienShip=</span>New <span style="color: rgb(255, 255, 255);">TAlienShip</span><br>
+
+
+
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Ship.X=xstart</span><br style="color: rgb(255, 255, 255);">
+
+
+
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Ship.Y=ystart</span><br style="color: rgb(255, 255, 255);">
+
+
+
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Ship.Image=</span>LoadImage<span style="color: rgb(255, 255, 255);">(</span>LoadBank<span style="color: rgb(255, 255, 255);">(File))</span><br>
+
+
+
+
+      <br>
+
+
+
+
+      </span></span></span></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">&nbsp; &nbsp; &nbsp; &nbsp;If&nbsp;<span style="color: rgb(255, 255, 255);">Ship.Image=</span>Null</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Print <span style="color: rgb(51, 255, 51);">"Not able to load image file. Program aborting"</span></span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; End</span><br style="color: rgb(255, 255, 102);">
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);">&nbsp; &nbsp; &nbsp; &nbsp;EndIf</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Return Ship<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; End Function<br>
+
+
+
+      <br>
+
+
+
+      </span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">&nbsp;&nbsp;&nbsp; Method <span style="color: rgb(255, 255, 255);">UpdateState()</span><span style="color: rgb(255, 255, 255);"></span><br>
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<span style="color: rgb(255, 255, 255);"> X :- Speed</span><br>
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;If <span style="color: rgb(255, 255, 255);">X&lt;-</span>ImageWidth<span style="color: rgb(255, 255, 255);">(Image)</span> Then<span style="color: rgb(255, 255, 255);"> X=620</span><br>
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp; End Method</span></span></span></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 0);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><br>
+
+
+
+      <br>
+
+
+
+End Type</span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">
+
+
+      </span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">
+      </span></span></span></span></span></td>
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"> <br>
+
+
+
+Notice that for both types we now no longer need to define the X,Y
+position fields as well as the Image and speed field as these have already been
+defined in the parent TGameObject Definition earlier. The children
+types inherited the attributes and behaviours of the parent<br>
+
+
+
+ </span></span>
+<table style="text-align: left; width: 732px; height: 89px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="width: 36px;" align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255); width: 639px;"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(102, 204, 204);"></span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">Type TGameObject<br>
+
+
+
+
+
+
+
+
+
+
+
+      
+      <br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; Field X:Int = 320<br>
+
+
+
+
+
+
+
+
+
+
+
+      
+&nbsp;&nbsp;&nbsp; Field Y:Int = 420</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><br style="color: rgb(153, 153, 153);">
+
+
+
+      <span style="color: rgb(153, 153, 153);">
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; Field Speed:Int</span><span style="color: rgb(255, 255, 255);"><span style="color: rgb(153, 153, 153);">=3</span><br>
+
+
+
+
+      <br>
+
+
+
+      </span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);">&nbsp; &nbsp; <span style="color: rgb(255, 255, 102);"></span></span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);"></span></span></span></span></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 0);">Method <span style="color: rgb(255, 255, 255);">DrawSelf()</span></span><span style="color: rgb(255, 255, 0);"><span style="color: rgb(255, 255, 255);"></span><br>
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; DrawImage <span style="color: rgb(255, 255, 255);">Image,X,Y</span><br>
+
+
+
+
+
+
+
+
+
+
+
+
+      </span><span style="color: rgb(255, 255, 0);">&nbsp;&nbsp;&nbsp; End Method</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">&nbsp;&nbsp;&nbsp;&nbsp; <br>
+
+
+      </span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);"><span style="color: rgb(255, 255, 102);"></span><span style="color: rgb(255, 255, 102);"></span><br>
+
+
+
+&nbsp; &nbsp; &nbsp;<span style="color: rgb(255, 255, 102);">Method</span> UpdateState() <span style="color: rgb(255, 255, 102);">Abstract<br>
+
+
+
+      <br>
+
+
+
+      </span></span></span></span></span></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">
+      End Type&nbsp;</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"></span><span style="color: rgb(255, 255, 51);"></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+We can create the DrawSelf() behaviour in the parent but not the
+UpdateState() as they are different (one is player controlled the other
+not). <br>
+
+
+<br>
+
+
+The <span style="font-weight: bold;">Abstract</span> keyword after the
+UpdateState() Method declaration means that every child must have a
+UpdateState. The parent itself has an UpdateState() method which does
+nothing.</span></span><br>
+
+
+
+<h1><a class="mozTocH1" name="mozTocId239364"></a><small><small><span style="font-family: Tahoma;">The BlitzMax List</span></small></small></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Before
+we move on, let us introduce ourselves to the BlitzMax Lists. In later
+chapters we will learn more about lists but for now it's suffice to
+understand that just like shopping lists, the BlitzMax Lists allow us
+to keep items in this case, our gameobjects, in a BlitzMax List.<br>
+
+
+
+<br>
+
+
+
+Look at the simple example below:-<br>
+
+
+
+
+
+<br>
+
+
+
+
+
+</span></span>
+<table style="text-align: left; width: 732px; height: 89px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="width: 36px;" align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255); width: 639px;"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(102, 204, 204);"></span></span></span></span></span></span><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span><span style="color: rgb(255, 255, 102);">Local</span> ShoppingList:TList=<span style="color: rgb(255, 255, 102);">CreateList</span>()<br>
+
+
+
+      <br>
+
+
+
+      <span style="color: rgb(255, 255, 102);">ListAddLast</span> ShoppingList,<span style="color: rgb(51, 204, 0);">"Milk"</span><br>
+
+
+
+      <span style="color: rgb(255, 255, 102);">ListAddLast</span> ShoppingList,<span style="color: rgb(51, 204, 0);">"Eggs"</span><br>
+
+
+
+      <span style="color: rgb(255, 255, 102);">ListAddLast</span> ShoppingList,<span style="color: rgb(51, 204, 0);">"Butter"</span><br>
+
+
+
+      <br>
+
+
+
+      <span style="color: rgb(255, 255, 102);">For Local</span> s:<span style="color: rgb(255, 255, 102);">String=EachIn</span> ShoppingList<br>
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(255, 255, 102);">Print <span style="color: rgb(255, 255, 255);">s</span></span><br style="color: rgb(255, 255, 102);">
+
+
+
+      <span style="color: rgb(255, 255, 102);">Next</span><br style="color: rgb(255, 255, 102);">
+
+
+
+      <br style="color: rgb(255, 255, 102);">
+
+
+
+      <span style="color: rgb(255, 255, 102);">End</span><br>
+
+
+
+      </span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);"></span></span></span></span></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"></span><span style="color: rgb(255, 255, 51);"></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+
+<br>
+
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Running the above programs yields:-</span></span><br>
+
+
+
+
+
+<br>
+
+
+
+
+
+
+<table style="text-align: left; width: 732px; height: 89px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="width: 36px;" align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255); width: 639px;"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(102, 204, 204);"><span style="color: rgb(204, 204, 204);">Building untitled5</span><br style="color: rgb(204, 204, 204);">
+
+
+
+      <span style="color: rgb(204, 204, 204);">Compiling:untitled5.bmx</span><br style="color: rgb(204, 204, 204);">
+
+
+
+      <span style="color: rgb(204, 204, 204);">flat assembler&nbsp; version 1.64</span><br style="color: rgb(204, 204, 204);">
+
+
+
+      <span style="color: rgb(204, 204, 204);">3 passes, 3444 bytes.</span><br style="color: rgb(204, 204, 204);">
+
+
+
+      <span style="color: rgb(204, 204, 204);">Linking:untitled5.debug.exe</span><br style="color: rgb(204, 204, 204);">
+
+
+
+      <span style="color: rgb(204, 204, 204);">Executing:untitled5.debug.exe</span><br style="color: rgb(204, 204, 204);">
+
+
+
+      <span style="color: rgb(255, 255, 0);">Milk</span><br style="color: rgb(255, 255, 0);">
+
+
+
+      <span style="color: rgb(255, 255, 0);">Eggs</span><br style="color: rgb(255, 255, 0);">
+
+
+
+      <span style="color: rgb(255, 255, 0);">Butter</span><br style="color: rgb(204, 204, 204);">
+
+
+
+      <br style="color: rgb(204, 204, 204);">
+
+
+
+      <span style="color: rgb(204, 204, 204);">Process complete</span><br>
+
+
+
+      </span></span></span></span></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 0);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"></span></span></span></span></span><br>
+
+
+
+
+
+      <span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span style="font-family: Arial;">In order to use a list we first have to create it using the <span style="font-weight: bold;">CreateList</span>() function </span>
+<table style="text-align: left; width: 732px; height: 46px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="width: 36px;" align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255); width: 639px;"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(102, 204, 204);"></span></span></span></span></span></span><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span><span style="color: rgb(255, 255, 102);">Local</span> ShoppingList:TList=<span style="color: rgb(255, 255, 102);">CreateList</span>()<br>
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);"></span></span></span></span></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"></span><span style="color: rgb(255, 255, 51);"></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+<br>
+
+
+
+<span style="font-family: Arial;">Then we add items to it using the <span style="font-weight: bold;">ListAddLast</span> function</span>
+<table style="text-align: left; width: 732px; height: 89px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="width: 36px;" align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255); width: 639px;"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(102, 204, 204);"></span></span></span></span></span></span><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span><span style="color: rgb(255, 255, 102);">ListAddLast</span> ShoppingList,<span style="color: rgb(51, 204, 0);">"Milk"</span><br>
+
+
+
+      <span style="color: rgb(255, 255, 102);">ListAddLast</span> ShoppingList,<span style="color: rgb(51, 204, 0);">"Eggs"</span><br>
+
+
+
+      <span style="color: rgb(255, 255, 102);">ListAddLast</span> ShoppingList,<span style="color: rgb(51, 204, 0);">"Butter"</span><span style="color: rgb(255, 255, 102);"></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"></span></span></span></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+<span style="font-family: Arial;"><br>
+
+
+
+We then iterate through the list using the <span style="font-weight: bold;">For/Next ... EachIn</span> function</span>
+<table style="text-align: left; width: 732px; height: 89px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="width: 36px;" align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255); width: 639px;"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(102, 204, 204);"></span></span></span></span></span></span><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span><span style="color: rgb(255, 255, 102);">For</span> s:<span style="color: rgb(255, 255, 102);">String=EachIn</span> ShoppingList<br>
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(255, 255, 102);">Print <span style="color: rgb(255, 255, 255);">s</span></span><br style="color: rgb(255, 255, 102);">
+
+
+
+      <span style="color: rgb(255, 255, 102);">Next</span><span style="color: rgb(255, 255, 102);"></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);"></span></span></span></span></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+<span style="font-family: Arial;"><br>
+
+
+
+That is all we need to know about lists for the moment.<br>
+
+
+
+<br>
+
+
+
+</span>
+<h1><a class="mozTocH1" name="mozTocId929381"></a><small><small><span style="font-family: Tahoma;">The GameObject List</span></small></small></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">Now
+that we have an idea about lists, we can put our gameobjects into a
+list which we are calling the GameObjectList and can then simplify our
+Main Game Loop as follows:-<br>
+
+
+
+
+
+<br>
+
+
+
+
+
+</span></span>
+<table style="text-align: left; width: 732px; height: 89px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="width: 36px;" align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255); width: 639px;"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(102, 204, 204);"></span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"></span></span></span></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 0);">&nbsp;</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(102, 204, 204);">' ---------------------MAIN LOOP-------------------------</span><br>
+
+
+
+
+
+
+
+
+
+Repeat<br>
+
+      <span style="color: rgb(255, 255, 255);"></span>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Cls<br>
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(255, 255, 102);">For </span>o:TGameObject=<span style="color: rgb(255, 255, 102);">EachIn</span> GameObjectList</span><br style="color: rgb(255, 255, 255);">
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;o.DrawSelf()<br>
+
+
+
+
+
+      </span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;o.UpdateState()<br>
+
+      </span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: rgb(255, 255, 102);">Next</span></span></span></span></span></span></span><br style="color: rgb(255, 255, 255);">
+
+      <span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Flip&nbsp;<br>
+
+Until KeyDown<span style="color: rgb(255, 255, 255);">(KEY_ESCAPE)</span> Or AppTerminate()<br>
+
+
+
+
+
+
+
+
+
+End</span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">&nbsp;&nbsp;&nbsp; </span><span style="color: rgb(255, 255, 51);"></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 102);"></span></span></span></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<br>
+
+
+
+<span style="font-family: Arial;">If you look at the similarity of the
+<span style="font-weight: bold;">For/Next...EachIn</span> loop to the one above, we can see that but adding our
+GameObjects to the GameObjectList&nbsp; we have a much cleaner Main
+Loop.<br>
+
+
+
+<br>
+
+
+
+I'm sure you can appreciate that our Main Loop would have been messy if
+we have more than 3 gameobjects (i.e. 3 DrawSelf and UpdateState
+methods for each object)</span><span style="font-family: Arial;"><br>
+
+
+
+</span>
+<h1><a class="mozTocH1" name="mozTocId354679"></a><small><small><span style="font-family: Tahoma;">The Revised Game Framework</span></small></small></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="font-weight: bold;"></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"></span></span><span style="font-family: Arial;">Based
+on the new concepts above, our new revised Game Framework now looks
+like this (the text in grey are the same as the previous framework):-<br>
+
+</span>
+<table style="text-align: left; width: 732px; height: 89px;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="width: 36px;" align="undefined" valign="undefined">&nbsp;
+&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td style="background-color: rgb(1, 81, 107); color: rgb(255, 255, 255); width: 639px;"><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(102, 204, 204);"></span></span></span></span></span></span><br>
+
+
+
+
+
+
+
+
+
+      <span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(102, 204, 204);">' -----------------SETUP GAME CONDITIONS--------------------</span></span></span></span></span></span><br>
+
+
+
+
+
+
+
+
+
+      <span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);">
+
+      <span style="color: rgb(255, 255, 102);">Global</span> GameObjectList:<span style="color: rgb(255, 255, 102);">TList=CreateList()</span></span></span></span></span></span></span><br>
+
+      <span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">Graphics 640,480,0<br>
+
+
+
+
+
+
+
+
+
+
+
+
+      </span><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+
+
+      Local URL:String="http::www.2dgamecreators.com/tutorials/gameprogramming/basic/"<br>
+
+
+
+
+Local Player:TSpaceShip = TSpaceShip.Create(URL+"/blobship_1-1.png",320,420)<br>
+
+
+
+
+      </span><span style="font-family: Tahoma;"></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 0);"><span style="color: rgb(153, 153, 153);">
+Local Alien:TAlienShip = TAlienShip.Create(URL+"/cartoonufo_1-1.png"</span><span style="color: rgb(255, 255, 255);"><span style="color: rgb(153, 153, 153);">,320,0)</span><br style="color: rgb(153, 153, 153);">
+
+
+
+      <br style="color: rgb(153, 153, 153);">
+
+
+
+      </span></span></span></span></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">&nbsp;</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(153, 153, 153);">' ---------------------MAIN LOOP-------------------------</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">
+
+
+
+
+
+
+
+Repeat</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Cls</span><br>
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(255, 255, 102);">For </span>o:TGameObject=<span style="color: rgb(255, 255, 102);">EachIn</span> GameObjectList</span><br style="color: rgb(255, 255, 255);">
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;o.DrawSelf()<br>
+
+
+
+
+
+      </span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;o.UpdateState()<br>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: rgb(255, 255, 102);">Next</span><br style="color: rgb(255, 255, 255);">
+
+      </span>
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 255);"></span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">&nbsp;<span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Flip&nbsp;</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">Until KeyDown(KEY_ESCAPE) Or AppTerminate()</span><br style="color: rgb(153, 153, 153);">
+
+      <span style="color: rgb(153, 153, 153);">
+
+
+
+
+
+
+
+End</span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(153, 153, 153);">&nbsp;&nbsp;&nbsp;</span> </span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><br>
+
+
+
+
+
+
+
+
+
+      <br>
+
+
+
+
+
+
+
+
+
+      </span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(102, 204, 204);">' ---------------------TYPES, ATTRIBUTES AND BEHAVIOURS-------------------------</span></span></span></span></span></span><br>
+
+
+
+
+
+
+
+
+
+      <span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 0);"><span style="color: rgb(255, 255, 0);">Type <span style="color: rgb(255, 255, 255);">TGameObject</span></span><br style="color: rgb(255, 255, 0);">
+
+
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 0);">
+      <br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; Field <span style="color: rgb(255, 255, 255);">X:</span>Int <span style="color: rgb(255, 255, 255);">= 320</span></span><br style="color: rgb(255, 255, 0);">
+
+
+
+
+
+
+
+
+
+
+
+      <span style="color: rgb(255, 255, 0);">
+&nbsp;&nbsp;&nbsp; Field <span style="color: rgb(255, 255, 255);">Y:</span>Int <span style="color: rgb(255, 255, 255);">= 420</span></span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><br>
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; Field <span style="color: rgb(255, 255, 255);">Speed</span>:Int<span style="color: rgb(255, 255, 255);">=3<br>
+
+
+
+
+      </span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);"><span style="color: rgb(255, 255, 102);">&nbsp; &nbsp; Field</span> Image:TImage<br>
+
+
+      <br>
+
+
+&nbsp; &nbsp; </span></span></span></span></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 0);">Method <span style="color: rgb(255, 255, 255);">DrawSelf()</span></span><span style="color: rgb(255, 255, 0);"><span style="color: rgb(255, 255, 255);"></span><br>
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; DrawImage <span style="color: rgb(255, 255, 255);">Image,X,Y</span><br>
+
+
+
+
+
+
+
+
+
+
+
+
+      </span><span style="color: rgb(255, 255, 0);">&nbsp;&nbsp;&nbsp; End Method</span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span></span></span><br>
+
+
+      <span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);"><br>
+
+
+      </span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);">&nbsp; &nbsp; &nbsp;<span style="color: rgb(255, 255, 102);">Method</span> UpdateState() <span style="color: rgb(255, 255, 102);">Abstract<br>
+
+
+
+      <br>
+
+
+
+      </span></span></span></span></span></span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);">
+      <span style="color: rgb(255, 255, 102);">End Type</span></span> <br>
+
+      <br style="color: rgb(153, 153, 153);">
+
+      </span></span></span></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">&nbsp;Type TSpaceShip <span style="color: rgb(255, 255, 102);">Extends</span> <span style="color: rgb(255, 255, 255);">TGameObject</span><br>
+
+
+
+
+
+
+
+
+
+
+
+      </span><span style="font-family: Tahoma;"></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">&nbsp;&nbsp;&nbsp; <br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; Function Create:TSpaceShip(File:String,xstart:Int,ystart:Int)<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Local Ship:TSpaceShip=New TSpaceShip<br>
+
+
+
+
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Ship.X=xstart<br>
+
+
+
+
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Ship.Y=ystart<br>
+
+
+
+
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Ship.Image=LoadImage(LoadBank(File))<br>
+
+
+
+
+      <br>
+
+
+
+
+      </span><span style="font-family: Tahoma;">&nbsp; &nbsp; &nbsp; &nbsp;If&nbsp;Ship.Image=Null<br>
+
+
+
+
+
+
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Print "Not able to load image file. Program aborting"<br>
+
+
+
+
+
+
+      &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; End<br>
+
+
+
+
+
+
+      &nbsp; &nbsp; &nbsp; &nbsp;EndIf<br>
+
+      <br>
+
+      </span><span style="font-family: Tahoma;">
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);"><span style="color: rgb(255, 255, 102);">ListAddLast</span> GameObjectList, Ship</span></span></span></span></span></span><br>
+
+      <span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Return Ship<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; End Function<br>
+
+
+
+
+      <br>
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; Method UpdateState()<br>
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; <br>
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; If KeyDown(KEY_LEFT)<br>
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; X :- Speed<br>
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; EndIf&nbsp;&nbsp;&nbsp; <br>
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; If KeyDown(KEY_RIGHT)<br>
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; X :+ Speed<br>
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; EndIf<br>
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; If X&lt;0 Then X=0<br>
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; If X&gt;620 Then X=620<br>
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; End Method<br>
+
+
+
+
+
+
+
+
+
+&nbsp;</span><span style="font-family: Tahoma;"></span><span style="font-family: Tahoma;"><br>
+
+
+
+
+
+
+
+
+
+End Type<br>
+
+
+
+      <br>
+
+
+
+      </span></span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+
+
+
+
+
+
+      <span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"></span><span style="font-family: Tahoma;">Type TAlienShip </span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);">Extends</span> <span style="color: rgb(255, 255, 255);">TGameObject</span></span></span><br>
+
+      <span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">
+
+
+
+
+
+
+
+
+
+
+      </span><span style="font-family: Tahoma;"></span></span><span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"></span></span><br style="color: rgb(153, 153, 153);">
+
+
+
+
+
+
+
+
+
+
+      <span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;"></span><span style="font-family: Tahoma;">
+&nbsp;&nbsp;&nbsp; Function Create:TAlienShip(File:String,xstart:Int,ystart:Int)<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Local Ship:TAlienShip=New TAlienShip<br>
+
+
+
+
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Ship.X=xstart<br>
+
+
+
+
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Ship.Y=ystart<br>
+
+
+
+
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Ship.Image=LoadImage(LoadBank(File))<br>
+
+
+
+
+      <br>
+
+
+
+
+      </span><span style="font-family: Tahoma;">&nbsp; &nbsp; &nbsp; &nbsp;If&nbsp;Ship.Image=Null<br>
+
+
+
+
+
+
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Print "Not able to load image file. Program aborting"<br>
+
+
+
+
+
+
+      &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; End<br>
+
+
+
+
+
+
+      &nbsp; &nbsp; &nbsp; &nbsp;EndIf<br>
+
+      <br>
+
+      </span><span style="font-family: Tahoma;">
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(255, 255, 255);"><span style="color: rgb(255, 255, 102);">ListAddLast</span> GameObjectList, Ship</span></span></span></span></span></span><br>
+
+      <span style="font-family: Lucida Console; color: rgb(153, 153, 153);"><span style="font-family: Tahoma;">
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Return Ship<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; End Function<br>
+
+
+
+      <br>
+
+
+
+      </span><span style="font-family: Tahoma;">&nbsp;&nbsp;&nbsp; Method UpdateState()<br>
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; X :- Speed<br>
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;If X&lt;-ImageWidth(Image) Then X=620<br>
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp; End Method<br>
+
+
+
+      <br>
+
+
+
+      </span><span style="font-family: Tahoma;">&nbsp;</span></span><span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"><span style="color: rgb(255, 255, 102);"><span style="color: rgb(192, 192, 192);"><span style="color: rgb(255, 255, 51);"><span style="color: rgb(153, 153, 153);">End Type</span><br>
+
+
+
+      </span></span></span></span></span></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+<span style="font-family: Arial;">-.<br>
+
+
+
+
+
+<br>
+
+</span><span style="font-family: Arial;"><br>
+
+
+
+Running the above code should yield exactly the same behaviour as
+before. We now have a Game Framework from which our prize winning games
+can be built from.</span><br>
+
+
+
+
+
+
+
+
+
+
+
+<h1><a class="mozTocH1" name="mozTocId578655"></a><small><small><span style="font-family: Tahoma;">Summary</span></small></small></h1>
+
+
+
+
+
+
+
+
+
+
+
+<span style="font-family: Arial;">This Framework will form the basis of our 2D game structure. Next we will add some missile shooting capability to our player<br>
+
+
+</span>
+<h1><a class="mozTocH1" name="mozTocId873993"></a><small><small><span style="font-family: Tahoma;">Blitzmax commands introduced in this tutorial</span></small></small></h1>
+
+
+<span style="font-family: Arial;">Some more new keywords and&nbsp;functions here:-<br>
+
+
+<br>
+
+
+</span>
+
+<table style="text-align: left; width: 712px; height: 55px; font-family: Tahoma;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+      <td style="background-color: rgb(204, 255, 255);">Keyword <span style="font-weight: bold;">Extends</span></td>
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+      <td style="background-color: rgb(204, 255, 255);" align="undefined" valign="undefined">Specify user defined Type supertype.</td>
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+    </tr>
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+<table style="text-align: left; width: 712px; height: 55px; font-family: Tahoma;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+      <td style="background-color: rgb(204, 255, 255);">
+      
+      <table class="doc" id="CreateList" cellspacing="3" width="100%">
+
+
+        <tbody>
+
+
+          <tr>
+
+
+            <td class="doctop" colspan="2">Function <span style="font-weight: bold;">CreateList</span>:TList()</td>
+
+          </tr>
+
+        
+        </tbody>
+      
+      </table>
+
+      <span style="font-weight: bold;"></span></td>
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+      <td style="background-color: rgb(204, 255, 255);" align="undefined" valign="undefined">Create a linked list.</td>
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+    </tr>
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+<span style="font-family: Arial;"><br>
+
+
+</span>
+
+<table style="text-align: left; width: 712px; height: 55px; font-family: Tahoma;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+      <td style="background-color: rgb(204, 255, 255);">Function <span style="font-weight: bold;">ListAddLast</span>:TLink( list:TList,value:Object )<span style="font-weight: bold;"></span></td>
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+      <td style="background-color: rgb(204, 255, 255);" align="undefined" valign="undefined">Add an object to a linked list.</td>
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+    </tr>
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+<table style="text-align: left; width: 712px; height: 55px; font-family: Tahoma;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+      <td style="background-color: rgb(204, 255, 255);">Keyword <span style="font-weight: bold;">EachIn</span></td>
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+      <td style="background-color: rgb(204, 255, 255);" align="undefined" valign="undefined">Iterate through an array or collection/list.</td>
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+    </tr>
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+<span style="font-family: Arial;"><br>
+
+
+</span>
+
+<table style="text-align: left; width: 712px; height: 55px; font-family: Tahoma;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+      <td style="background-color: rgb(204, 255, 255);">Keyword <span style="font-weight: bold;">For</span></td>
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+      <td style="background-color: rgb(204, 255, 255);" align="undefined" valign="undefined">Marks the start of a loop that uses an iterator to execute a section of code 
+repeatedly.</td>
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+    </tr>
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+<span style="font-family: Arial;"><br>
+
+
+</span>
+
+<table style="text-align: left; width: 712px; height: 55px; font-family: Tahoma;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+      <td style="background-color: rgb(204, 255, 255);">Keyword <span style="font-weight: bold;">Next</span></td>
+
+
+
+
+
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+      <td style="background-color: rgb(204, 255, 255);" align="undefined" valign="undefined">End a For block.</td>
+
+
+      <td align="undefined" valign="undefined"></td>
+
+
+    </tr>
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+<span style="font-family: Arial;"></span><br>
+
+<span style="font-family: Arial;">
+
+
+
+
+
+
+Back to the <a href="http://web.archive.org/web/20070204145055/http://www.2dgamecreators.com/tutorials/gameprogramming/index.html">index</a>, <a href="http://web.archive.org/web/20070204145055/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/F3%20-%20Adding%20the%20Enemy.html">Previous</a> Tutorial, <a href="http://web.archive.org/web/20070204145055/http://www.2dgamecreators.com/tutorials/gameprogramming/basics/F5%20-%20Adding%20Missiles.html">Next</a> Tutorial</span><br>
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;"></span></span>
+
+
+
+
+
+
+
+
+
+<span style="font-family: Lucida Console;"><span style="font-family: Tahoma;">
+</span></span><span style="font-family: Tahoma;"></span>
+
+
+<!--
+     FILE ARCHIVED ON 14:50:55 Feb 04, 2007 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 12:39:58 Oct 03, 2021.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 81.749
+  exclusion.robots: 0.224
+  exclusion.robots.policy: 0.217
+  RedisCDXSource: 0.822
+  esindex: 0.009
+  LoadShardBlock: 59.667 (3)
+  PetaboxLoader3.datanode: 121.344 (4)
+  CDXLines.iter: 18.172 (3)
+  load_resource: 182.734
+  PetaboxLoader3.resolve: 79.539
+--></body></html>

@@ -22,7 +22,7 @@ If you are the original author and would like your works removed, please contact
 
 * 22 July 2005, [Version 10](wave/waves-blitzmax-tutorial-version-10-2005-07-22.pdf) :free:
 
-## 2D GameCreator Beginner Tutorials
+## 2DGameCreator Beginner Tutorials
 **By Assari**
 
 * [Learning 2D Game Programming](assari/assari-learning-2d-game-programming.md) ([ZIP](assari/assari-learning-2d-game-programming.zip)) :free:

@@ -5,7 +5,7 @@
 * [Max2D Fonts](learning-2d-game-programming/Learning-2D-Game-Programming-Max2D-Fonts.pdf)
 * Basic Game Framework
   * [Part 1 - Creating the Player Object](learning-2d-game-programming/Learning-2D-Game-Programming-Basic-Framework-Part1-Creating-the-Player-Object.pdf)
-  * [Part 2 - Introducing the Basic Game Framework](learning-2d-game-programming/Learning-2D-Game Programming-Basic-Framework-Part2-Introducing-the-Basic-Game-Framework.pdf)
+  * [Part 2 - Introducing the Basic Game Framework](learning-2d-game-programming/Learning-2D-Game-Programming-Basic-Framework-Part2-Introducing-the-Basic-Game-Framework.pdf)
   * [Part 3 - Adding the Enemy](learning-2d-game-programming/Learning-2D-Game-Programming-Basic-Framework-Part3-Adding-the-Enemy.pdf)
   * [Part 4 - Revised FrameWork](learning-2d-game-programming/Learning-2D-Game-Programming-Basic-Framework-Part4-Revised-Framework.pdf)
   * [Part 5 - Adding Missiles](learning-2d-game-programming/Learning-2D-Game-Programming-Basic-Framework-Part5-Adding-Missiles.pdf)

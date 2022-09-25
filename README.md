@@ -9,7 +9,7 @@ If you are the original author and would like your works removed, please contact
 **by Allan Rowntree**
 
 * Issue 0.1, Can be viewed on [ISSUU.COM](https://issuu.com/arowx/docs/blitzmaxcoder01heavy)
-* [Issue 0.2](BlitzMax-Coder/blitzmax-coder-02.pdf)
+* [Issue 0.2](blitzmax-coder/blitzmax-coder-02.pdf)
 
 # BlitzMax for Absolute Beginners
 **Copyright (c) 2016 by Sloan Kelly** and published by [Allite Books](www.allitebooks.com)

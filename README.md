@@ -7,7 +7,7 @@ If you are the original author and would like your works removed, please contact
 
 ## Blitz3D Manual
 
-* [by Alexis Jeansalle, Espanol](Alexis-Jeansalle/Manual Blitz3d - Español.pdf) :free:
+* [by Alexis Jeansalle, Espanol]("Alexis-Jeansalle/Manual Blitz3d - Español.pdf") :free:
 
 ## Blitz3D, 9 Lesson Crash Course
 **by Scott Jacobson (J-Man)**

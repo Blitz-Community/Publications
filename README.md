@@ -1,46 +1,37 @@
-# Blitz Publications #
+# Sandbox #
+I am trying out different formats for this library, so this is used to test layouts before moving into the production list
 
-This repository provides an archve for Blitz Publications from around the web.
+## Blitz3d ##
+| DATE | :white_flag: | PUBLICATION | :moneybag: | AUTHOR |  |
+|------|--------------|-------------|------------|--------|--|
+| 2006 | :uk: | [9 Lesson Crash Course](J-Man/Blitz3D_Crash_Course.pdf) | :free: | &copy; Scott Jacobson (J-Man) | 
+| 2008/Jan | :es: | [Blitz3d Manual](Alexis-Jeansalle/Manual-Blitz3d-Español.pdf) | :free: | &copy; Alexis Jeansalle | |
 
-Copyright of all these publications remains with the original author and no ownership is implied by their publication on this site.
-If you are the original author and would like your works removed or updated, please contact a member of the community.
+## BlitzBasic
+| DATE | :white_flag: | PUBLICATION | :moneybag: | AUTHOR |  |
+|------|--------------|-------------|------------|--------|--|
+| 2002 | :uk: | [Learn to Program 2D Games](Krylar/learn2programbb-final.pdf) | :free: | &copy; John P. Logsdon (Krylar)| [Addendum](Krylar/Krylar's_Games_Programming_Addendum.pdf)<br>[Examples](Krylar/ExampleCode.zip) |
 
-## Blitz3D Manual
+## BlitzMax
+| DATE | :white_flag: | PUBLICATION | :moneybag: | AUTHOR |  |
+|------|--------------|-------------|------------|--------|--|
+| 2005/JUL | :uk: | [Beginners Guide to Blitzmax](wave/waves-blitzmax-tutorial-version-10-2005-07-22.pdf) | :free: | &copy; wave |
+| 2009/AUG | :uk: | [BlitzMax Coder Issue 0.1](blitzmax-coder/blitzmax-coder-01.pdf) | :free: | &copy; Allan Rowntree |
+| 2009/SEP | :uk: | [BlitzMax Coder Issue 0.2](blitzmax-coder/blitzmax-coder-02.pdf) | :free: | &copy; Allan Rowntree |
+| 2016     | :uk: | [BlitzMax for Absolute Beginners](https://link.springer.com/book/10.1007/978-1-4842-2523-3)<br>*Permission to publish here not requested* | :heavy_dollar_sign: | &copy; Sloan Kelly<br>Published by Apress |
+| 2005     | :uk: | [MaxGUI beginner tutorial](assari/assari-maxgui-beginner-tutorial.md) | :free: | &copy; Assari, 2DGameCreators | [ZIP](assari/assari-maxgui-beginner-tutorial.zip) |
+| 2006     | :uk: | [Learning 2D Game Programming](assari/assari-learning-2d-game-programming.md) | :free: | &copy; Assari, 2DGameCreators | [ZIP](assari/assari-learning-2d-game-programming.zip) |
+| 2006     | :uk: | [How to write a BreakOut Game](assari/assari-how-to-write-a-breakout-game.md) | :free: | &copy; Assari, 2DGameCreators | [ZIP](assari/assari-how-to-write-a-breakout-game.zip) |
+| 2006     | :uk: | [Using SQLite with BlitzMax](assari/assari-using-sqlite-with-blitzmax.pdf) | :free: | &copy; Assari, 2DGameCreators | [ZIP](assari/assari-using-sqlite-with-blitzmax.zip) |
+| 2009     | :uk: | Games Programming for Teens, Third Edition<br>ISBN-10: 1-59863-518-2<br>Permission requested from Publisher on 23/Nov/2022| :heavy_dollar_sign: | &copy; Maneesh Sethi<br>Published by Cengage Learning | |
 
-* [by Alexis Jeansalle, Espanol](Alexis-Jeansalle/Manual-Blitz3d-Español.pdf") :free:
-
-## Blitz3D, 9 Lesson Crash Course
-* [Blitz3D_Crash_Course](J-Man/Blitz3D_Crash_Course.pdf), by Scott Jacobson (J-Man), 2006 :free:
-
-## BlitzMax Coder Magazine
-**by Allan Rowntree**
-
-* [Issue 0.1](blitzmax-coder/blitzmax-coder-01.pdf) AUG/2009 :free:
-* [Issue 0.2](blitzmax-coder/blitzmax-coder-02.pdf) SEP/2009 :free:
-
-## BlitzMax for Absolute Beginners
-**Copyright (c) 2016 by Sloan Kelly** and published by Apress
-
-* [Springer.com](https://link.springer.com/book/10.1007/978-1-4842-2523-3) :heavy_dollar_sign:
-* PDF published online.
-* Permission to publish here has not been requested.
-
-## Beginners Guide to Blitzmax
-**By wave**
-
-* [Version 10](wave/waves-blitzmax-tutorial-version-10-2005-07-22.pdf) 22/JUL/2005 :free:
-
-## 2DGameCreator Beginner Tutorials
-**By Assari**
-
-* [MaxGUI beginner tutorial](assari/assari-maxgui-beginner-tutorial.md) 2005 ([ZIP](assari/assari-maxgui-beginner-tutorial.zip)) :free:
-* [Learning 2D Game Programming](assari/assari-learning-2d-game-programming.md) 2006 ([ZIP](assari/assari-learning-2d-game-programming.zip)) :free:
-* [How to write a BreakOut Game](assari/assari-how-to-write-a-breakout-game.md) 2006 ([ZIP](assari/assari-how-to-write-a-breakout-game.zip)) :free:
-* [Using SQLite with BlitzMax](assari/assari-using-sqlite-with-blitzmax.pdf) 2006 ([ZIP](assari/assari-using-sqlite-with-blitzmax.zip)) :free:
-
-## Games Programming for Teens
-* Third Edition by Maneesh Sethi, 2009, ISBN-10: 1-59863-518-2 
-  * PDF Published online.
-  * Permission requested from Publisher on 23/Nov/2022
+# General
+| DATE | :white_flag: | PUBLICATION | :moneybag: | AUTHOR |  |
+|------|--------------|-------------|------------|--------|--|
+| 2005/JUN | :de: | [ProjectBlitzMag #0](project-blitzmag/PBM_00.pdf) | :free: | Various | [Home](https://www.blitzforum.de/scene/pbmags/) |
+| 2005/AUG | :de: | [ProjectBlitzMag #1](project-blitzmag/PBM_01.pdf) | :free: | Various | [Home](https://www.blitzforum.de/scene/pbmags/) |
+| 2005/DEC | :de: | [ProjectBlitzMag #2](project-blitzmag/PBM_02.pdf) | :free: | Various | [Home](https://www.blitzforum.de/scene/pbmags/) |
+| 2008/SEP | :de: | [ProjectBlitzMag #3](project-blitzmag/PBM_03.pdf) | :free: | Various | [Home](https://www.blitzforum.de/scene/pbmags/) |
+| 2011/DEC | :de: | [ProjectBlitzMag #4](project-blitzmag/PBM_04.pdf) | :free: | Various | [Home](https://www.blitzforum.de/scene/pbmags/) |
 
 

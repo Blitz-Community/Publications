@@ -17,7 +17,7 @@ This is an archive of publications and tutorials for Blitz products.
 | DATE | :white_flag: | PUBLICATION | :moneybag: | AUTHOR |  |
 |------|--------------|-------------|------------|--------|--|
 | 2022 | :uk: | Learning Basic For Total Beginners (BlitzMaxNG) | :free: | &copy; Midimaster | [syntaxbomb](https://www.syntaxbomb.com/tutorials/learning-basic-for-total-beginners-blitzmax-ng/) | 
-| 2016     | :uk: | BlitzMax for Absolute Beginners | :heavy_dollar_sign: | &copy; Sloan Kelly<br>Published by Apress | [Springer Books]](https://link.springer.com/book/10.1007/978-1-4842-2523-3) |
+| 2016     | :uk: | BlitzMax for Absolute Beginners | :heavy_dollar_sign: | &copy; Sloan Kelly<br>Published by Apress | [Springer Books](https://link.springer.com/book/10.1007/978-1-4842-2523-3) |
 | 2009/SEP | :uk: | [BlitzMax Coder Issue 0.2](blitzmax-coder/blitzmax-coder-02.pdf) | :free: | &copy; Allan Rowntree |
 | 2009/AUG | :uk: | [BlitzMax Coder Issue 0.1](blitzmax-coder/blitzmax-coder-01.pdf) | :free: | &copy; Allan Rowntree |
 | 2009     | :uk: | Games Programming for Teens, Third Edition<br>ISBN-10: 1-59863-518-2<br>Permission to publish here denied by Publisher on 01/Dec/2022| :heavy_dollar_sign: | &copy; Maneesh Sethi<br>Published by Cengage Learning | [Amazon.uk](https://www.amazon.co.uk/Game-Programming-Teens-Maneesh-Sethi/dp/1598635182) |

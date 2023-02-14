@@ -16,6 +16,7 @@ This is an archive of publications and tutorials for Blitz products.
 | DATE | :white_flag: | PUBLICATION | :moneybag: | AUTHOR |  |
 |------|--------------|-------------|------------|--------|--|
 | 2022 | :uk: | Learning Basic For Total Beginners (BlitzMaxNG) | :free: | &copy; Midimaster | [syntaxbomb.com/tutorial](https://www.syntaxbomb.com/tutorials/learning-basic-for-total-beginners-blitzmax-ng/)<br>[syntaxbomb.com/challenges](https://www.syntaxbomb.com/worklogs/the-challenges-to-the-tutorial/) | 
+| 2021 | :uk: | BlitzMax interacting with C tutorial | :free: | &copy; Midimaster | [syntaxbomb.com](https://www.syntaxbomb.com/tutorials/blitzmax-interacting-with-c/) |
 | 2016     | :uk: | BlitzMax for Absolute Beginners | :heavy_dollar_sign: | &copy; Sloan Kelly<br>Published by Apress | [Springer Books](https://link.springer.com/book/10.1007/978-1-4842-2523-3) |
 | 2009/SEP | :uk: | BlitzMax Coder Issue 0.2 | :free: | &copy; Allan Rowntree | [PDF](blitzmax-coder/blitzmax-coder-02.pdf) |
 | 2009/AUG | :uk: | BlitzMax Coder Issue 0.1 | :free: | &copy; Allan Rowntree | [PDF](blitzmax-coder/blitzmax-coder-01.pdf) |
